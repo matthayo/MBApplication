@@ -36,7 +36,6 @@ namespace MBApplication
             {
                 app.UseDeveloperExceptionPage();
             }
-
             LoggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
