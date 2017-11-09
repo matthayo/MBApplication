@@ -1,0 +1,11 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "system",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+
+    }
+}
