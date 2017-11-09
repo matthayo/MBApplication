@@ -27,12 +27,40 @@ namespace MBApplication
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(
+            IApplicationBuilder app, 
+            IHostingEnvironment env,
+            ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            LoggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            loggerFactory.AddDebug();
+
+            app.Use(async (context, next) => {
+                await next();
+                if (context.Response.StatusCode == 404
+                && !Path.HasExtension(context.Request.Path.Value)){
+                    context.Request.Path = "/index.html";
+                    await next();
+                }
+            });
+
+            //Configure a rewrite rule to auto-lookup for standard default files e.g. index.html
+            app.UseDefaultFiles();
+
+            //Serving static files i.e. .css, .js, images etc
+            app.UseStaticFiles(new StaticFileOptions(){
+                OnPrepareResponse = (context) =>
+                {
+                    //Disable caching for all stactic files.
+                    context.Context.Response.Headers["Cache-Control"] = Configuration["StaticFiles:Headers:Cache-Control"];
+                    context.Context.Response.Headers[""]
+                }
+            })
 
             app.UseMvc();
         }
