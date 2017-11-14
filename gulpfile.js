@@ -50,7 +50,7 @@ gulp.task('app_clean', function(){
 });
 
 // Copy all JS files from external libraries to wwwroot/js
-gulp.task('js', function () {
+gulp.task('js', ['js_clean'], function () {
     gulp.src(srcPaths.js_angular)
         .pipe(gulp.dest(destPaths.js_angular));
     gulp.src(srcPaths.js_rxjs)
@@ -58,7 +58,7 @@ gulp.task('js', function () {
     return gulp.src(srcPaths.js)
         //.pipe(gp_uglify({mangle: false}))
         //.pipe(gp_concat('all-js.min.js'))
-        .pipe(gulp.dest(destPaths.js))
+        .pipe(gulp.dest(destPaths.js));
 });
 
 // Delete wwwroot/js contents
