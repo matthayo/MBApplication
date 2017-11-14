@@ -15,7 +15,7 @@
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.5.2",
     "systemjs": "^0.20.19",
-    "typings":"^2.1.1",
+    "typings": "^2.1.1",
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
@@ -28,8 +28,7 @@
     "gulp-uglify": "^3.0.0",
     "typescript": "^2.6.1"
   },
-
   "scripts": {
-    "postinstall": "typings install dt~core-js --global"  
+    "postinstall": "typings install dt~core-js --global"
   }
 }
