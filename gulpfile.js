@@ -67,7 +67,6 @@ gulp.task('js_clean', function () {
         .pipe(gp_clean({force: true}));
 });
 
-
 //Watch specified files and define what to do upon file changes 
 gulp.task('watch', function () {
     gulp.watch([srcPaths.app, srcPaths.js], ['app', 'js']);
