@@ -5,7 +5,6 @@ import { Component } from "@angular/core";
          <DIV>
              WORK IN PROGRESS ....!
          </DIV>
-     `
-    // '../html/app.component.html'
+         `
 })
-export class AppComponent{}
+export class AppComponent { }

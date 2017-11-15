@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 ///Define paths
 
 var srcPaths = {
-    app: ['Scripts/app/main.ts', 'Scripts/app/*.ts'],
+    app: ['Scripts/app/main.ts', 'Scripts/app/**/*.ts'],
     js: [
         'Scripts/js/**/*.js',
         'node_modules/core-js/client/shim.min.js',
