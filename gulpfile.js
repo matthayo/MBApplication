@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 
 var srcPaths = {
     app: ['Scripts/app/main.ts', 'Scripts/app/**/*.ts'],
+    html: ['Scripts/html/**/*.html'],
     js: [
         'Scripts/js/**/*.js',
         'node_modules/core-js/client/shim.min.js',
@@ -27,6 +28,7 @@ var srcPaths = {
 
 var destPaths = {
     app: 'wwwroot/app/',
+    html: 'wwwroot/html/',
     js: 'wwwroot/js/',
     js_angular: 'wwwroot/js/@angular/',
     js_rxjs: 'wwwroot/js/rxjs/'
@@ -48,6 +50,21 @@ gulp.task('app_clean', function(){
     return gulp.src(destPaths.app + "*", {read: false})
         .pipe(gp_clean({force: true}));    
 });
+
+// Copy all HTML files from Scripts/html to wwwroot/html
+gulp.task('html', ['html_clean'], function(){
+    gulp.src(srcPaths.html)
+        .pipe(gulp.dest(destPaths.html));
+    return gulp.src(srcPaths.html)
+        .pipe(gulp.dest(destPaths.html));
+});
+
+// Delete wwwroot/html contents
+gulp.task('html_clean', function(){
+    return gulp.src(destPaths.html + '*', {read: false})
+        .pipe(gp_clean({force: true}));
+});
+
 
 // Copy all JS files from external libraries to wwwroot/js
 gulp.task('js', ['js_clean'], function () {
@@ -73,8 +90,8 @@ gulp.task('watch', function () {
 });
 
 // Global cleanup task
-gulp.task('cleanup', ['app_clean', 'js_clean']);
+gulp.task('cleanup', ['app_clean', 'html_clean', 'js_clean']);
 
 //Define the default task so it will launch all other tasks
-gulp.task('default', ['app', 'js', 'watch']);
+gulp.task('default', ['app', 'html', 'js', 'watch']);
 
