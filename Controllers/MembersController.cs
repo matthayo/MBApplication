@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MBApplication.Controllers
 {
-    public class MembersController : Controllers
+    public class MembersController : Controller
     {
         
     }
