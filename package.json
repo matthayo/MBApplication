@@ -11,7 +11,7 @@
     "@angular/http": "^4.4.6",
     "@angular/platform-browser": "^4.4.6",
     "@angular/platform-browser-dynamic": "^4.4.6",
-    "@angular/router": "4.4.6",
+    "@angular/router": "^4.4.6",
     "@angular/upgrade": "^4.4.6",
     "angularfire2": "^5.0.0-rc.3",
     "core-js": "^2.5.1",
