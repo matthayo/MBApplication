@@ -25,7 +25,7 @@ namespace MBApplication.Data
         public string Email { get; set; }
         public string Telephone { get; set; }
         [Required]
-        public char Gender { get; set; }
+        public string Gender { get; set; }
         [Required]
         public DateTime DateOfBirth { get; set; }
         [Required]
