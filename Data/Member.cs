@@ -22,6 +22,8 @@ namespace MBApplication.Data
         public string MiddleName { get; set; }
         [Required]
         public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Telephone { get; set; }
         [Required]
         public char Gender { get; set; }
         [Required]

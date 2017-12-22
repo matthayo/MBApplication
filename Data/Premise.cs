@@ -17,6 +17,13 @@ namespace MBApplication.Data
         [Required]
         public int AddressId { get; set; }
         [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Telephone { get; set; }
+        [Required]
+        public string Email { get; set; }
+        public string Website { get; set; }
+        [Required]
         public string Type { get; set; }
         [Required]
         public int Count { get; set; }
