@@ -16,7 +16,7 @@ namespace MBApplication.ViewModels
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Telephone { get; set; }
-        public char Gender { get; set; }
+        public string Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string MaritalStatus { get; set; }
         [JsonIgnore]
