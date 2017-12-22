@@ -13,6 +13,10 @@ namespace MBApplication.Data
         [Key]
         public int Id { get; set; }
         [Required]
+        public int MembershipID { get; set; }
+        [Required]
+        public int FamilyID { get; set; }
+        [Required]
         public string FirstName { get; set; }
         [Required]
         public string MiddleName { get; set; }
@@ -25,15 +29,7 @@ namespace MBApplication.Data
         [Required]
         public string MaritalStatus { get; set; }
         [Required]
-        public int MemberCount { get; set; }
-        [Required]
-        public int OrgID { get; set; }
-        [Required]
-        public int AddressID { get; set; }
-        [Required]
-        public int MembershipID { get; set; }
-        [Required]
-        public int FamilyID { get; set; }
+        public int Count { get; set; }
         [Required]
         public DateTime CreatedDate { get; set; }
         [Required]

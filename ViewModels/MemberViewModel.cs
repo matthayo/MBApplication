@@ -18,9 +18,7 @@ namespace MBApplication.ViewModels
         public DateTime DateOfBirth { get; set; }
         public string MaritalStatus { get; set; }
         [JsonIgnore]
-        public int MemberCount { get; set; }
-        public int OrgID { get; set; }
-        public int AddressID { get; set; }
+        public int Count { get; set; }
         public int MembershipID { get; set; }
         public int FamilyID { get; set; }
         public DateTime CreatedDate { get; set; }

@@ -15,6 +15,8 @@ namespace MBApplication.Data
         public int AddressId { get; set; }
         [Required]
         public string HeadOfHousehold { get; set; }
+        [Required]
+        public int Count { get; set; }
     }
     
 }
