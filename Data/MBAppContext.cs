@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MBApplication.Data{
 
-    public class AppContext : DbContext
+    public class MBAppContext : DbContext
     {
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-            optionsBuilder.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = MBAppData; Trusted_Connection = True");
+            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True");
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Family> Families { get; set; }
