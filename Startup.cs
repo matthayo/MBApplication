@@ -1,6 +1,8 @@
 ﻿using System.IO;
+using MBApplication.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -9,7 +11,12 @@ namespace MBApplication
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration) 
+        {
+            this.Configuration = configuration;
+               
+        }
+                public IConfiguration Configuration { get; }
 
         public Startup(IHostingEnvironment env)
         {
@@ -25,7 +32,24 @@ namespace MBApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+
+            // services.AddDbContext<MBAppContext>(options => 
+            //             options.UseSqlServer(Configuration.GetConnectionString("MBAppContext")));
+
+            // MBAppContext.ConnectionString = Configuration.GetConnectionString("DefaultConnection");
+
+            var sqlConnectionString = Configuration.GetConnectionString("DefaultConnection");
+ 
+            services.AddDbContext<MBAppContext>(options =>
+                options.UseMySQL(
+                    sqlConnectionString,
+                    b => b.MigrationsAssembly("AspNetCoreMultipleProject")
+                )
+            );
+
             services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
