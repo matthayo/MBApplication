@@ -7,7 +7,9 @@ namespace MBApplication.Data{
     public class MBAppContext : DbContext
     {
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
+        public MBAppContext(DbContextOptions<MBAppContext> options) : base(options) { }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
             optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True");
         }
         public DbSet<Address> Addresses { get; set; }
