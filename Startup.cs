@@ -11,18 +11,13 @@ namespace MBApplication
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration) 
-        {
-            this.Configuration = configuration;
-               
-        }
-                public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; }
 
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.json.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
 
@@ -32,21 +27,8 @@ namespace MBApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-
-            // services.AddDbContext<MBAppContext>(options => 
-            //             options.UseSqlServer(Configuration.GetConnectionString("MBAppContext")));
-
-            // MBAppContext.ConnectionString = Configuration.GetConnectionString("DefaultConnection");
-
-            var sqlConnectionString = Configuration.GetConnectionString("DefaultConnection");
- 
-            services.AddDbContext<MBAppContext>(options =>
-                options.UseMySQL(
-                    sqlConnectionString,
-                    b => b.MigrationsAssembly("AspNetCoreMultipleProject")
-                )
-            );
+            services.AddDbContext<MBAppContext>(options => 
+                        options.UseMySQL(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             services.AddMvc();
 
