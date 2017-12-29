@@ -23,14 +23,10 @@ namespace MBApplication.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Apartment");
-
                     b.Property<string>("City")
                         .IsRequired();
 
                     b.Property<int>("FamilyId");
-
-                    b.Property<int>("GeoLocation");
 
                     b.Property<string>("House")
                         .IsRequired();
@@ -46,6 +42,9 @@ namespace MBApplication.Migrations
                     b.Property<int>("Zip");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PremiseId")
+                        .IsUnique();
 
                     b.ToTable("Addresses");
                 });
@@ -66,6 +65,8 @@ namespace MBApplication.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AddressId");
+
                     b.ToTable("Families");
                 });
 
@@ -82,7 +83,7 @@ namespace MBApplication.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<int>("FamilyID");
+                    b.Property<int>("FamilyId");
 
                     b.Property<string>("FirstName")
                         .IsRequired();
@@ -98,14 +99,14 @@ namespace MBApplication.Migrations
                     b.Property<string>("MaritalStatus")
                         .IsRequired();
 
-                    b.Property<int>("MembershipID");
-
                     b.Property<string>("MiddleName")
                         .IsRequired();
 
                     b.Property<string>("Telephone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FamilyId");
 
                     b.ToTable("Members");
                 });
@@ -131,6 +132,12 @@ namespace MBApplication.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MemberId")
+                        .IsUnique();
+
+                    b.HasIndex("PremiseId")
+                        .IsUnique();
+
                     b.ToTable("Memberships");
                 });
 
@@ -138,8 +145,6 @@ namespace MBApplication.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AddressId");
 
                     b.Property<int>("Count");
 
@@ -149,8 +154,6 @@ namespace MBApplication.Migrations
                         .IsRequired();
 
                     b.Property<DateTime>("LastModifiedDate");
-
-                    b.Property<int>("MembershipId");
 
                     b.Property<string>("Name")
                         .IsRequired();
@@ -166,6 +169,43 @@ namespace MBApplication.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Premises");
+                });
+
+            modelBuilder.Entity("MBApplication.Data.Address", b =>
+                {
+                    b.HasOne("MBApplication.Data.Premise", "Premise")
+                        .WithOne("Address")
+                        .HasForeignKey("MBApplication.Data.Address", "PremiseId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("MBApplication.Data.Family", b =>
+                {
+                    b.HasOne("MBApplication.Data.Address", "Address")
+                        .WithMany("Family")
+                        .HasForeignKey("AddressId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("MBApplication.Data.Member", b =>
+                {
+                    b.HasOne("MBApplication.Data.Family", "Family")
+                        .WithMany("Members")
+                        .HasForeignKey("FamilyId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("MBApplication.Data.Membership", b =>
+                {
+                    b.HasOne("MBApplication.Data.Member", "Member")
+                        .WithOne("Membership")
+                        .HasForeignKey("MBApplication.Data.Membership", "MemberId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("MBApplication.Data.Premise", "Premise")
+                        .WithOne("Membership")
+                        .HasForeignKey("MBApplication.Data.Membership", "PremiseId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -11,8 +12,9 @@ namespace MBApplication.Data
         public int Id { get; set; }
         [Required]
         public int MemberId { get; set; }
+        public List<Member> Members { get; set; }
         [Required]
-        public int AddressId { get; set; }
+        public Address Address { get; set; }
         [Required]
         public string HeadOfHousehold { get; set; }
         [Required]

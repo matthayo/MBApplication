@@ -13,9 +13,9 @@ namespace MBApplication.Data
         [Key]
         public int Id { get; set; }
         [Required]
-        public int MembershipID { get; set; }
+        public Membership Membership { get; set; }
         [Required]
-        public int FamilyID { get; set; }
+        public Family Family { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]

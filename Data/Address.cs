@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MBApplication.Data
@@ -13,10 +14,11 @@ namespace MBApplication.Data
         [Key]
         public int Id { get; set; }
         public int FamilyId { get; set; }
+        public List<Family> Family { get; set; }
         public int PremiseId { get; set; }
+        public Premise Premise { get; set; }
         [Required]
         public string House { get; set; }
-        public string Apartment { get; set; }
         [Required]
         public string Street { get; set; }
         [Required]
@@ -25,8 +27,6 @@ namespace MBApplication.Data
         public string State { get; set; }
         [Required]
         public int Zip { get; set; }
-        [Required]
-        public int GeoLocation { get; set; }
     }
 
     
