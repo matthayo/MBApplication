@@ -1,4 +1,5 @@
 using System;
+using MBApplication.Data;
 using Newtonsoft.Json;
 
 namespace MBApplication.ViewModels
@@ -21,8 +22,8 @@ namespace MBApplication.ViewModels
         public string MaritalStatus { get; set; }
         [JsonIgnore]
         public int Count { get; set; }
-        public int MembershipID { get; set; }
-        public int FamilyID { get; set; }
+        public Membership Membership { get; set; }
+        public Family Family { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime LastModifiedDate { get; set; }
   

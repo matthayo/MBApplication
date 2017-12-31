@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using MBApplication.Data;
 using Newtonsoft.Json;
 
 namespace MBApplication.ViewModels
@@ -11,7 +13,8 @@ namespace MBApplication.ViewModels
         // Attributes
         public int Id { get; set; }
         public int MemberId { get; set; }
-        public int AddressId { get; set; }
+        public List<Member> Members { get; set; }
+        public Address Address { get; set; }
         public string HeadOfHousehold { get; set; }
         [JsonIgnore]
         public int Count { get; set; }

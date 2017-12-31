@@ -10,9 +10,10 @@ using System;
 namespace MBApplication.Migrations
 {
     [DbContext(typeof(MBAppContext))]
-    partial class MBAppContextModelSnapshot : ModelSnapshot
+    [Migration("20171231212609_EditMember")]
+    partial class EditMember
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,6 +56,8 @@ namespace MBApplication.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("AddressId");
+
+                    b.Property<int>("Count");
 
                     b.Property<string>("HeadOfHousehold")
                         .IsRequired();

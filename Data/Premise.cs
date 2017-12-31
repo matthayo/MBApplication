@@ -26,8 +26,6 @@ namespace MBApplication.Data
         [Required]
         public string Type { get; set; }
         [Required]
-        public int Count { get; set; }
-        [Required]
         public DateTime CreatedDate { get; set; }
         [Required]
         public DateTime LastModifiedDate { get; set; }
