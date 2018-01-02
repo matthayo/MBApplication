@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MBApplication.Data
 {
@@ -9,23 +11,27 @@ namespace MBApplication.Data
         public Membership() {}
 
         //Properties
-        [Required]
-        [Key]
         public int Id { get; set; }
-        [Required]
-        public int MemberId { get; set; }
-        public Member Member { get; set; }
-        [Required]
-        public int PremiseId { get; set; }
-        public Premise Premise { get; set; }
-        [Required]
+
         public string Status { get; set; }
-        [Required]
+
         public string MembershipBy { get; set; }
-        [Required]
+
+        public int? PremiseId { get; set; }
+
+        public int? MemberId { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime CreatedDate { get; set; }
-        [Required]
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime LastModifiedDate { get; set; }
+
+
+        public virtual Member Member { get; set; }
+        public virtual Premise Premise { get; set; }
     }
     
 }

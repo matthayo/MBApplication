@@ -14,7 +14,7 @@ namespace MBApplication.ViewModels
         public int Id { get; set; }
         public int MemberId { get; set; }
         public List<Member> Members { get; set; }
-        public Address Address { get; set; }
+        // public Address Address { get; set; }
         public string HeadOfHousehold { get; set; }
         [JsonIgnore]
         public int Count { get; set; }

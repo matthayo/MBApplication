@@ -22,7 +22,7 @@ namespace MBApplication.ViewModels
         public string MaritalStatus { get; set; }
         [JsonIgnore]
         public int Count { get; set; }
-        public Membership Membership { get; set; }
+        // public Membership Membership { get; set; }
         public Family Family { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime LastModifiedDate { get; set; }
