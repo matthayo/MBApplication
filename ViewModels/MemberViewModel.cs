@@ -11,21 +11,23 @@ namespace MBApplication.ViewModels
         public MemberViewModel(){}
 
         //Attributes
-        public int Id{get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
-        public string MiddleName { get; set; } 
+        public string MiddleName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Telephone { get; set; }
         public string Gender { get; set; }
-        public DateTime DateOfBirth { get; set; }
         public string MaritalStatus { get; set; }
-        [JsonIgnore]
-        public int Count { get; set; }
-        // public Membership Membership { get; set; }
-        public Family Family { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime LastModifiedDate { get; set; }
+        [JsonIgnore]
+        public int Count { get; set; }
+
+        public virtual Membership Membership { get; set; }
+        public virtual Family Family { get; set; }
+
   
     }
 }

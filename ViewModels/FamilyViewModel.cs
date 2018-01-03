@@ -12,12 +12,13 @@ namespace MBApplication.ViewModels
 
         // Attributes
         public int Id { get; set; }
-        public int MemberId { get; set; }
-        public List<Member> Members { get; set; }
-        // public Address Address { get; set; }
-        public string HeadOfHousehold { get; set; }
+        public string FamilyName { get; set; }
+        public string House { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public int Zip { get; set; }
         [JsonIgnore]
         public int Count { get; set; }
-
     }
 }

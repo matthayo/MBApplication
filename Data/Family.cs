@@ -23,7 +23,6 @@ namespace MBApplication.Data
         public int Zip { get; set; }
 
 
-      //  public virtual Address Address { get; set; }
         public virtual List<Member> Members { get; set; }
     }
     
