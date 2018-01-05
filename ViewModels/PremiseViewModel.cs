@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using MBApplication.Data;
 using Newtonsoft.Json;
 
@@ -23,11 +24,13 @@ namespace MBApplication.ViewModels
         public string State { get; set; }
         public int Zip { get; set; }
         public string Type { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime CreatedDate { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime LastModifiedDate { get; set; }
         [JsonIgnore]
         public int Count { get; set; }
-
-        public virtual ICollection<Membership> Membership { get; set; }
     }
 }
