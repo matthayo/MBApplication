@@ -1,11 +1,13 @@
 ﻿using System.IO;
 using MBApplication.Data;
+using MBApplication.MappingProfile;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+
 
 namespace MBApplication
 {
@@ -30,8 +32,20 @@ namespace MBApplication
             services.AddDbContext<MBAppContext>(options => 
                         options.UseMySQL(Configuration["Data:DefaultConnection:ConnectionString"]));
 
+            var config = new AutoMapper.MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new AutoMapperProfile());
+            });
+
+            var mapper = config.CreateMapper();
+
+            services.AddSingleton(mapper);
+
             services.AddMvc();
 
+            // var config = new AutoMapper.MapperConfiguration(cfg => {
+            //     cfg.CreateMap<Member, MemberViewModel>().ReverseMap();
+            // });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

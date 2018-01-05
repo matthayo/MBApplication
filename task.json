@@ -1,0 +1,18 @@
+{
+    "version": "0.1.0",
+    "tasks": [
+        {
+            "taskName": "build",
+            "suppressTaskName": true,
+            "command": "dotnet",
+            "args": [
+                "build",
+                "--configuration",
+                "Debug"
+            ],
+            "showOutput": "always",
+            "isBuildCommand": true,
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
