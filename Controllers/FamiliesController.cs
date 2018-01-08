@@ -21,7 +21,6 @@ namespace MBApplication.Controllers
             _mapper = mapper;
         }
 
-        
         //GET api/families/Get/1
         [HttpGet("Get/{id}")]
         public IActionResult Get(int? id)
@@ -89,17 +88,20 @@ namespace MBApplication.Controllers
                 //Return newly-created Family to browser
                 return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);
             }
+            else
+            {
+                //Return a generic HTTP Status 500 (Not Found) if the client payload is invalid.
+                return new StatusCodeResult(500);
+            }
 
-            //Return a generic HTTP Status 500 (Not Found) if the client payload is invalid.
-            return new StatusCodeResult(500);
         }
 
         //PUT api/families/12
         [HttpPut("{id}")]
         // [Authorize]
-        public IActionResult Update(int id, [FromBody]FamilyViewModel familyToUpdate)
+        public IActionResult Update(int? id, [FromBody]FamilyViewModel familyToUpdate)
         {
-            if (familyToUpdate != null)
+            if (id != null)
             {
                 var family = _dbContext.Families.Where(i => i.Id == id).FirstOrDefault();
 
@@ -119,8 +121,16 @@ namespace MBApplication.Controllers
                     //return the updated Family to browser
                     return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);
                 }
+                else
+                {
+                    return NotFound(new { Error = String.Format("Family ID {0} has not been found.", id) });
+                }
             }
-            return NotFound(new { Error = String.Format("Family ID {0} has not been found.", id) });
+            else
+            {
+                return NotFound(new { Error = String.Format("Family ID {0} has not been found.", id) });
+            }
+            
         }
 
         //DELETE api/families/1
@@ -132,7 +142,7 @@ namespace MBApplication.Controllers
 
             if(item != null)
             {
-                //remove the item item to delete from the DbContext.
+                //remove the item to delete from the DbContext.
                 _dbContext.Families.Remove(item);
 
                 //Persist the changes to Database
@@ -141,7 +151,11 @@ namespace MBApplication.Controllers
                 //Return HTTP Status 200 (OK)
                 return new OkResult();
             }
-            return NotFound(new {Error = String.Format("Family ID {0} has not been found.", id)});
+            else
+            {
+                return NotFound(new { Error = String.Format("Family ID {0} has not been found.", id) });
+            }
+            
         }
 
         //Return the total number of Families
