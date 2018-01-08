@@ -17,8 +17,8 @@ namespace MBApplication.Controllers
         
         public MembersController(MBAppContext dbContext, IMapper mapper) 
         {
-            _dbContext = dbContext; 
-            _mapper = mapper;   
+            _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         //GET api/members/Get/1
@@ -26,14 +26,13 @@ namespace MBApplication.Controllers
         public IActionResult Get(int? id)
         {
             var member = _dbContext.Members.Where(i => i.Id == id).FirstOrDefault();    
-            if (id != null)
+            if (id != null && int.TryParse(id.ToString(), out var n))
             {
-                
                 return new JsonResult (_mapper.Map<MemberViewModel>(member), DefaultJsonSettings);
             }
             else
             {
-                return NotFound();
+                return NotFound(new { Error = String.Format("Member ID {0} has not been found", id) });
             }
         }
 
@@ -41,7 +40,7 @@ namespace MBApplication.Controllers
         [HttpGet("GetMembers")]
         public IActionResult GetMembers()
         {
-            var members = _dbContext.Members.OrderBy(m => m.DateOfBirth).Take(AllMembers).ToList();
+            var members = _dbContext.Members.OrderBy(m => m.Id).Take(AllMembers).ToList();
 
             return new JsonResult(ToMemberViewModelList(members), DefaultJsonSettings);
         }
@@ -50,24 +49,39 @@ namespace MBApplication.Controllers
         [HttpGet("GetMembers/{n}")]
         public IActionResult GetMembers(int n)
         {
-            var members = _dbContext.Members.OrderBy(m => m.DateOfBirth).Take(n).ToList();
+            var members = _dbContext.Members.OrderBy(m => m.Id).Take(n).ToList();
 
             return new JsonResult(ToMemberViewModelList(members), DefaultJsonSettings);
         }
 
-        //GET api/members/GetFamilyMembers/1
-        [HttpGet("GetFamilyMembers/{id}")]
-        public IActionResult GetFamilyMembers(int? id)
-        {
-            var members = _dbContext.Members.Where(i => i.FamilyId == id);
-            if (id != null)
-            {
+        //GET api/members/GetFamilyMembers/Anderson
 
+        [HttpGet("GetFamilyMembersByName/{familyName}")]
+        public IActionResult GetFamilyMembersByName(string familyName)
+        {
+            var members = _dbContext.Members.Where(i => i.LastName == familyName);
+            if (familyName != null)
+            {
                 return new JsonResult(ToMemberViewModelList(members), DefaultJsonSettings);
             }
             else
             {
-                return NotFound(new {Error = String.Format("Family ID {0} has not been found")});
+                return NotFound(new { Error = String.Format("Family Name {0} has not been found", familyName) });
+            }
+        }
+
+        //GET api/members/GetFamilyMembers/1
+        [HttpGet("GetFamilyMembersById/{id}")]
+        public IActionResult GetFamilyMembersById(int? id)
+        {
+            var members = _dbContext.Members.Where(i => i.FamilyId == id);
+            if (id != null)
+            {
+                return new JsonResult(ToMemberViewModelList(members), DefaultJsonSettings);
+            }
+            else
+            {
+                return NotFound(new {Error = String.Format("Family ID {0} has not been found", id)});
             }
         }
 
