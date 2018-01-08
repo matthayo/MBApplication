@@ -37,7 +37,7 @@ namespace MBApplication.Controllers
             }
         }
 
-        //GET api/families/Get/Anderson
+        //GET api/families/GetByName/Anderson
         [HttpGet("GetByName/{familyname}")]
         public IActionResult GetByName(string familyName)
         {
