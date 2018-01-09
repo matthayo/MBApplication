@@ -12,10 +12,10 @@ namespace MBApplication.Controllers
     [Route("api/[controller]")]
     public class MembersController : Controller
     {
-        private readonly MBAppContext _dbContext;
+        private readonly MBAppDBContext _dbContext;
         private readonly IMapper _mapper;
         
-        public MembersController(MBAppContext dbContext, IMapper mapper) 
+        public MembersController(MBAppDBContext dbContext, IMapper mapper) 
         {
             _dbContext = dbContext;
             _mapper = mapper;
@@ -37,8 +37,8 @@ namespace MBApplication.Controllers
         }
 
         //GET api/members/GetMembers
-        [HttpGet("GetMembers")]
-        public IActionResult GetMembers()
+        [HttpGet("GetAllMembers")]
+        public IActionResult GetAllMembers()
         {
             var members = _dbContext.Members.OrderBy(m => m.Id).Take(AllMembers).ToList();
 
@@ -85,6 +85,99 @@ namespace MBApplication.Controllers
             }
         }
 
+        //POST /api/members
+        [HttpPost()]
+        public IActionResult Add([FromBody]PremiseViewModel memberToAdd)
+        {
+            if(memberToAdd != null)
+            {   
+                //Create a new Member from Json data
+                var member = _mapper.Map<Member>(memberToAdd);
+
+                //Override system-based variable
+                member.CreatedDate = DateTime.Now;
+                member.LastModifiedDate = DateTime.Now;
+
+                //Add the new member
+                _dbContext.Members.Add(member);
+
+                //Persist the changes
+                _dbContext.SaveChanges();
+
+                //Return the newly created member object
+                return new JsonResult(_mapper.Map<MemberViewModel>(member), DefaultJsonSettings);
+            }
+            else
+            {
+                return new StatusCodeResult(500);
+            }
+        }
+
+        //PUT api/members/1
+        [HttpPut("{id}")]
+        public IActionResult Update(int? id, [FromBody]MemberViewModel memberToUpdate)
+        {
+            if(id != null)
+            {
+                var member = _dbContext.Members.Where(i => i.Id == id).FirstOrDefault();
+
+                if(member != null)
+                {
+                    //Handling changes on property-basis
+                    member.FamilyId = memberToUpdate.FamilyId;
+                    member.FirstName = memberToUpdate.FirstName;
+                    member.MiddleName = memberToUpdate.MiddleName;
+                    member.LastName = memberToUpdate.LastName;
+                    member.Email = memberToUpdate.Email;
+                    member.Telephone = memberToUpdate.Telephone;
+                    member.Gender = memberToUpdate.Gender;
+                    member.MaritalStatus = memberToUpdate.MaritalStatus;
+                    member.DateOfBirth = memberToUpdate.DateOfBirth;
+
+                    //Overriding System-based variables
+                    member.LastModifiedDate = DateTime.Now;
+
+                    //Return the newly update results
+                    return new JsonResult(_mapper.Map<MemberViewModel>(member));
+                }
+                else
+                {
+                    return NotFound(new { Error = String.Format("Member ID {0} has not been found", id) });
+                }
+            }
+            else
+            {
+                return new StatusCodeResult(500);
+            }
+        }
+
+        //DELETE /api/delete/5
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int? id)
+        {
+            if(id != null)
+            {
+                var member = _dbContext.Members.Where(i => i.Id == id).FirstOrDefault();
+                if(member != null)
+                {
+                    //Delete member from database
+                    _dbContext.Members.Remove(member);
+
+                    //Persist data to database
+                    _dbContext.SaveChanges();
+
+                    return new OkResult();
+                }
+                else
+                {
+                    return NotFound(new { Error = String.Format("Member ID {0} has not been found", id) });
+                }
+            }
+            else
+            {
+                return new StatusCodeResult(500);
+            }
+        }
 
         //Return the total number of Members
         public int  AllMembers

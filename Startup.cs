@@ -29,7 +29,7 @@ namespace MBApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MBAppContext>(options => 
+            services.AddDbContext<MBAppDBContext>(options => 
                         options.UseMySQL(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             var config = new AutoMapper.MapperConfiguration(cfg =>
@@ -43,9 +43,6 @@ namespace MBApplication
 
             services.AddMvc();
 
-            // var config = new AutoMapper.MapperConfiguration(cfg => {
-            //     cfg.CreateMap<Member, MemberViewModel>().ReverseMap();
-            // });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

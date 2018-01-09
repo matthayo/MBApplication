@@ -12,10 +12,10 @@ namespace MBApplication.Controllers
     [Route("api/[controller]")]
     public class FamiliesController : Controller
     {
-        private readonly MBAppContext _dbContext;
+        private readonly MBAppDBContext _dbContext;
         private readonly IMapper _mapper;
 
-        public FamiliesController(MBAppContext dbContext, IMapper mapper)
+        public FamiliesController(MBAppDBContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

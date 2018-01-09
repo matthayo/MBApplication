@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 namespace MBApplication.Data
 {
 
-    public class MBAppContext : DbContext
+    public class MBAppDBContext : DbContext
     {
-        public MBAppContext(DbContextOptions<MBAppContext> options) : base(options)
+        public MBAppDBContext(DbContextOptions<MBAppDBContext> options) : base(options)
         {
 
         }

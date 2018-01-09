@@ -12,13 +12,21 @@ namespace MBApplication.Controllers{
     [Route("api/[controller]")]
     public class Premises : Controller
     {
-        private MBAppContext _dbContext;
+        private MBAppDBContext _dbContext;
         private IMapper _mapper;
 
-        public Premises(MBAppContext dbContext, IMapper mapper)
+        public Premises(MBAppDBContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
+        }
+
+        //GET api/premises/get
+        [HttpGet("GetAll")]
+        public IActionResult GetAll()
+        {
+
+            return new JsonResult(ToPremisesViewModelList(_dbContext.Premises.OrderBy(i => i.Id).Take(AllPremises).ToList()), DefaultJsonSettings);
         }
 
         //GET api/premises/get/1
@@ -49,7 +57,7 @@ namespace MBApplication.Controllers{
             }
             else
             {
-                return NotFound();
+                return NotFound(new { Error = String.Format("{0} has not been found.", name) });
             }
         }
 
@@ -91,7 +99,7 @@ namespace MBApplication.Controllers{
 
                 if(premise != null)
                 {
-                    //handle updates on property-basis
+                    //Handle updates on property-basis
                     premise.Name = premiseToUpdate.Name;
                     premise.Telephone = premiseToUpdate.Telephone;
                     premise.Email = premiseToUpdate.Email;

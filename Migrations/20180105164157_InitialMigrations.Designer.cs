@@ -9,7 +9,7 @@ using System;
 
 namespace MBApplication.Migrations
 {
-    [DbContext(typeof(MBAppContext))]
+    [DbContext(typeof(MBAppDBContext))]
     [Migration("20180105164157_InitialMigrations")]
     partial class InitialMigrations
     {

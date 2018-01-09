@@ -41,7 +41,6 @@ namespace MBApplication.Data
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime LastModifiedDate { get; set; }
 
-
         public virtual List<Membership> Membership { get; set; }
     }
 }

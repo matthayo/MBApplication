@@ -9,8 +9,8 @@ using System;
 
 namespace MBApplication.Migrations
 {
-    [DbContext(typeof(MBAppContext))]
-    partial class MBAppContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(MBAppDBContext))]
+    partial class MBAppDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
