@@ -4,48 +4,49 @@
     <RuntimeFrameworkVersion>2.0.3</RuntimeFrameworkVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\"/>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.0.1"/>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.1"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.1"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1"/>
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.1.4"/>
-    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.1.0"/>
-    <PackageReference Include="Mysql.data.entityframeworkcore" Version="6.10.5"/>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3"/>
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.1.4"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0"/>
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.0.0"/>
-    <PackageReference Include="System.Data.SqlClient" Version="4.4.2"/>
-    <PackageReference Include="AutoMapper" Version="5.0.0"/>
+    <PackageReference Include="bootstrap" Version="3.3.7" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.1.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.1.0" />
+    <PackageReference Include="Mysql.data.entityframeworkcore" Version="6.10.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.4.2" />
+    <PackageReference Include="AutoMapper" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0"/>
-    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0"/>
-    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0"/>
-    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1"/>
-    <DotNetCliToolReference Include="AutoMapper" Version="5.0.0"/>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+    <DotNetCliToolReference Include="AutoMapper" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
 
