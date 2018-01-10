@@ -1,6 +1,20 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+
 @Component({
     selector: "start",
     templateUrl: `../html/app.component.html`
 })
-export class AppComponent { }
+export class AppComponent { 
+    title = "Angular App"
+
+    constructor(
+        public router: Router){
+        }
+
+    isActive(data: any[]): boolean{
+        return this.router.isActive(
+            this.router.createUrlTree(data), 
+            true);
+    }
+}
