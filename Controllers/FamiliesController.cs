@@ -40,7 +40,7 @@ namespace MBApplication.Controllers
         [HttpGet("GetByName/{familyname}")]
         public IActionResult GetByName(string familyName)
         {
-            var family = _dbContext.Families.Where(f => f.FamilyName == familyName).FirstOrDefault();
+            var family = _dbContext.Families.Where(f => f.FamilyName.Equals(familyName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
             if (familyName != null)
             {
                 return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);

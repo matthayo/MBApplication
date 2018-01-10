@@ -59,7 +59,7 @@ namespace MBApplication.Controllers
         [HttpGet("GetFamilyMembersByName/{familyName}")]
         public IActionResult GetFamilyMembersByName(string familyName)
         {
-            var members = _dbContext.Members.Where(i => i.LastName == familyName);
+            var members = _dbContext.Members.Where(i => i.LastName.Equals(familyName, StringComparison.OrdinalIgnoreCase));
             if (familyName != null)
             {
                 return new JsonResult(ToMemberViewModelList(members), DefaultJsonSettings);

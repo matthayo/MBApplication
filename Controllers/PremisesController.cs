@@ -25,7 +25,6 @@ namespace MBApplication.Controllers{
         [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
-
             return new JsonResult(ToPremisesViewModelList(_dbContext.Premises.OrderBy(i => i.Id).Take(AllPremises).ToList()), DefaultJsonSettings);
         }
 
@@ -49,7 +48,7 @@ namespace MBApplication.Controllers{
         [HttpGet("GetByName/{name}")]
         public IActionResult GetByName(string name)
         {
-            var premise = _dbContext.Premises.Where(n => n.Name == name).FirstOrDefault();
+            var premise = _dbContext.Premises.Where(n => n.Name.Equals(name, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
 
             if(premise != null)
             {
