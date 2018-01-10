@@ -38,7 +38,7 @@
     "gulp-sourcemaps": "latest",
     "gulp-typescript": "latest",
     "gulp-uglify": "^3.0.0",
-    "typescript": "^2.4.2"
+    "typescript": "^2.6.0"
   },
   "scripts": {
     "postinstall": "typings install dt~core-js --global"
