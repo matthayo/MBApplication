@@ -6,10 +6,9 @@ import { Router } from "@angular/router";
     templateUrl: `../html/app.component.html`
 })
 export class AppComponent { 
-    title = "Angular App"
+    title = "Angular App";
 
-    constructor(
-        public router: Router){
+    constructor(public router: Router){
         }
 
     isActive(data: any[]): boolean{

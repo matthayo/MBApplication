@@ -9,12 +9,14 @@ import { AppRouting } from "./app.routing";
 import { AppComponent } from "./app.component";
 
 import { HomeComponent } from "./home.component";
+import { NavBarComponent } from "./navbar.component";
 
 @NgModule({
     // directives, components and pipes
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        NavBarComponent
     ],
 
     // modules
