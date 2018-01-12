@@ -5,14 +5,16 @@ import { HomeComponent } from "./home.component";
 
 const appRoutes: Routes = [
     {
-        path: "",
+        path: "home",
         component: HomeComponent
     },
-
     {
-        path: "home",
-        redirectTo: ""
+        path: "",
+        redirectTo: "/home",
+        pathMatch: "full"
     }
+
+
 ];
 
 export const AppRouting: ModuleWithProviders = RouterModule.forRoot(appRoutes);
