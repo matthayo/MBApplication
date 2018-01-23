@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 
 @Component({
     selector: "start",
-    templateUrl: `../html/app.component.html`
+    templateUrl: `./app.component.html`
 })
 export class AppComponent { 
     title = "Angular App";
