@@ -8,14 +8,18 @@ import "rxjs/Rx";
 import { AppRouting } from "./app.routing";
 import { AppComponent } from "./app.component";
 
-import { HomeComponent } from "./home.component";
-import { NavBarComponent } from "./navbar.component";
+import { MemberService } from "../app/member/member.service";
+
+import { HomeComponent } from "../app/home/home.component";
+import { MemberListComponent } from "../app/member/member-list.component";
+import { NavBarComponent } from "../app/nav/navbar.component";
 
 @NgModule({
     // directives, components and pipes
     declarations: [
         AppComponent,
         HomeComponent,
+        MemberListComponent,
         NavBarComponent
     ],
 
@@ -30,7 +34,9 @@ import { NavBarComponent } from "./navbar.component";
      exports: [],
 
      // providers
-    providers: [],
+    providers: [
+        MemberService
+    ],
 
     bootstrap: [
         AppComponent
