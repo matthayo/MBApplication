@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
 var srcPaths = {
     app: ['Scripts/app/main.ts', 'Scripts/app/**/*.ts'],
-    html: ['Scripts/html/**/*.html'],
+    html: ['Scripts/app/**/*.html'],
     js: [
         'Scripts/js/**/*.js',
         'node_modules/core-js/client/shim.min.js',
@@ -26,7 +26,7 @@ var srcPaths = {
 
 var destPaths = {
     app: 'wwwroot/app/',
-    html: 'wwwroot/html/',
+    html: 'wwwroot/app/',
     js: 'wwwroot/js/',
     js_angular: 'wwwroot/js/@angular/',
     js_rxjs: 'wwwroot/js/rxjs/',
@@ -50,17 +50,15 @@ gulp.task('app_clean', function(){
         .pipe(gp_clean({force: true}));    
 });
 
-// Copy all HTML files from Scripts/html to wwwroot/html
-gulp.task('html', ['html_clean'], function(){
-    gulp.src(srcPaths.html)
-        .pipe(gulp.dest(destPaths.html));
+// Copy all HTML files from external libraries to wwwroot/app/**/*.html
+gulp.task('html', ['html_clean'], function () {
     return gulp.src(srcPaths.html)
         .pipe(gulp.dest(destPaths.html));
 });
 
-// Delete wwwroot/html contents
-gulp.task('html_clean', function(){
-    return gulp.src(destPaths.html + '*', {read: false})
+// Delete wwwroot/app/**/*.html contents
+gulp.task('html_clean', function () {
+    return gulp.src(destPaths.html + "*", {read:false })
         .pipe(gp_clean({force: true}));
 });
 
@@ -97,7 +95,7 @@ gulp.task('less_clean', function () {
 
 //Watch specified files and define what to do upon file changes 
 gulp.task('watch', function () {
-    gulp.watch([srcPaths.app, srcPaths.html, srcPaths.js, srcPaths.less ],['app','html','js', 'less']);
+    gulp.watch([srcPaths.app, srcPaths.js, srcPaths.less ],['app', 'html', 'js', 'less']);
 });
 
 // Global cleanup task
