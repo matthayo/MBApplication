@@ -31,6 +31,10 @@ namespace MBApplication.Data
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime LastModifiedDate { get; set; }
 
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime MembershipDate { get; set; }
 
         [ForeignKey("MemberId")]
         public virtual Member Member { get; set; }
