@@ -87,7 +87,7 @@ namespace MBApplication.Controllers
 
         //POST /api/members
         [HttpPost()]
-        public IActionResult Add([FromBody]PremiseViewModel memberToAdd)
+        public IActionResult Add([FromBody]OrganizationViewModel memberToAdd)
         {
             if(memberToAdd != null)
             {   

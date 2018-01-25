@@ -15,7 +15,7 @@ namespace MBApplication.MappingProfile
             CreateMap<Family, FamilyViewModel>().ReverseMap();
             CreateMap<Member, MemberViewModel>().ReverseMap();
             CreateMap<Membership, MembershipViewModel>().ReverseMap();
-            CreateMap<Premise, PremiseViewModel>().ReverseMap();
+            CreateMap<Organization, OrganizationViewModel>().ReverseMap();
         }
     }
 }

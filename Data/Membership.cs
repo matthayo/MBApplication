@@ -19,7 +19,7 @@ namespace MBApplication.Data
         [Required]
         public string MembershipBy { get; set; }
         [Required]
-        public int PremiseId { get; set; }
+        public int OrganizationId { get; set; }
         [Required]
         public int MemberId { get; set; }
         [Required]
@@ -40,7 +40,7 @@ namespace MBApplication.Data
         public virtual Member Member { get; set; }
 
         [ForeignKey("PremiseId")]
-        public virtual Premise Premise { get; set; }
+        public virtual Organization Organization { get; set; }
     }
 
 }

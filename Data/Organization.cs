@@ -5,11 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MBApplication.Data
 {
-    public class Premise
+    public class Organization
     {
 
         // Constructor
-        public Premise() { }
+        public Organization() { }
 
         // Properties
         public int Id { get; set; }

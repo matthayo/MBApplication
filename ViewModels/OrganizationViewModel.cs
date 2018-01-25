@@ -7,10 +7,10 @@ using Newtonsoft.Json;
 namespace MBApplication.ViewModels
 {
     [JsonObject(MemberSerialization.OptOut)]
-    public class PremiseViewModel
+    public class OrganizationViewModel
     {
         // Constructor
-        public PremiseViewModel() {}
+        public OrganizationViewModel() {}
 
         // Attributes
         public int Id { get; set; }

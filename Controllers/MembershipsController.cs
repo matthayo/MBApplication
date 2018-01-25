@@ -84,7 +84,7 @@ namespace MBApplication.Controllers
                     //Update changes on property basis
                     membership.Status = membershipToUpdate.Status;
                     membership.MembershipBy = membershipToUpdate.MembershipBy;
-                    membership.PremiseId = membershipToUpdate.PremiseId;
+                    membership.OrganizationId = membershipToUpdate.OrganizationId;
 
                     //Overriding system-based variables
                     membership.LastModifiedDate = DateTime.Now;

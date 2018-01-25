@@ -16,6 +16,6 @@ namespace MBApplication.Data
         public DbSet<Family> Families { get; set; }
         public DbSet<Member> Members { get; set; }
         public DbSet<Membership> Memberships { get; set; }
-        public DbSet<Premise> Premises { get; set; }
+        public DbSet<Organization> Organizations { get; set; }
     }
 }

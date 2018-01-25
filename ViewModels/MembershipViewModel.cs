@@ -15,7 +15,7 @@ namespace MBApplication.ViewModels
         public int Id { get; set; }
         public string Status { get; set; }
         public string MembershipBy { get; set; }
-        public int PremiseId { get; set; }
+        public int OrganizationId { get; set; }
         public int MemberId { get; set; }
 
         [DataType(DataType.Date)]
