@@ -10,7 +10,7 @@ import { MemberService } from "./member.service";
     template: `
     <div class="member-list">
     <h2>All Members</h2>
-    <ol>
+    <ol class="members">
         <hr/>
         <li *ngFor="let member of members"
             [class.selected]="member === selectedMember"
