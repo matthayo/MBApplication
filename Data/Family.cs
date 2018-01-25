@@ -12,6 +12,7 @@ namespace MBApplication.Data
         public int Id { get; set; }
         [Required]
         public string FamilyName { get; set; }
+        public string AptNumber { get; set; }
         [Required]
         public string House { get; set; }
         [Required]
