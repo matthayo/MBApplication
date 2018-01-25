@@ -27,7 +27,7 @@ namespace MBApplication.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Premises",
+                name: "Organizations",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -47,7 +47,7 @@ namespace MBApplication.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Premises", x => x.Id);
+                    table.PrimaryKey("PK_Organizations", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -90,7 +90,7 @@ namespace MBApplication.Migrations
                     MemberId = table.Column<int>(nullable: false),
                     MembershipBy = table.Column<string>(nullable: false),
                     MembershipDate = table.Column<DateTime>(nullable: false),
-                    PremiseId = table.Column<int>(nullable: false),
+                    OrganizationId = table.Column<int>(nullable: false),
                     Status = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -103,9 +103,9 @@ namespace MBApplication.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Memberships_Premises_PremiseId",
-                        column: x => x.PremiseId,
-                        principalTable: "Premises",
+                        name: "FK_Memberships_Organizations_OrganizationId",
+                        column: x => x.OrganizationId,
+                        principalTable: "Organizations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -122,9 +122,9 @@ namespace MBApplication.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Memberships_PremiseId",
+                name: "IX_Memberships_OrganizationId",
                 table: "Memberships",
-                column: "PremiseId");
+                column: "OrganizationId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -136,7 +136,7 @@ namespace MBApplication.Migrations
                 name: "Members");
 
             migrationBuilder.DropTable(
-                name: "Premises");
+                name: "Organizations");
 
             migrationBuilder.DropTable(
                 name: "Families");

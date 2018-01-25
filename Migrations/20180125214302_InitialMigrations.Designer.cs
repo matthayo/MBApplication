@@ -10,7 +10,7 @@ using System;
 namespace MBApplication.Migrations
 {
     [DbContext(typeof(MBAppDBContext))]
-    [Migration("20180123164013_InitialMigrations")]
+    [Migration("20180125214302_InitialMigrations")]
     partial class InitialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -103,7 +103,7 @@ namespace MBApplication.Migrations
 
                     b.Property<DateTime>("MembershipDate");
 
-                    b.Property<int>("PremiseId");
+                    b.Property<int>("OrganizationId");
 
                     b.Property<string>("Status")
                         .IsRequired();
@@ -113,12 +113,12 @@ namespace MBApplication.Migrations
                     b.HasIndex("MemberId")
                         .IsUnique();
 
-                    b.HasIndex("PremiseId");
+                    b.HasIndex("OrganizationId");
 
                     b.ToTable("Memberships");
                 });
 
-            modelBuilder.Entity("MBApplication.Data.Premise", b =>
+            modelBuilder.Entity("MBApplication.Data.Organization", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -157,7 +157,7 @@ namespace MBApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Premises");
+                    b.ToTable("Organizations");
                 });
 
             modelBuilder.Entity("MBApplication.Data.Member", b =>
@@ -175,9 +175,9 @@ namespace MBApplication.Migrations
                         .HasForeignKey("MBApplication.Data.Membership", "MemberId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("MBApplication.Data.Premise", "Premise")
+                    b.HasOne("MBApplication.Data.Organization", "Organization")
                         .WithMany("Membership")
-                        .HasForeignKey("PremiseId")
+                        .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
