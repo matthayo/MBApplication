@@ -39,7 +39,7 @@ namespace MBApplication.Data
         [ForeignKey("MemberId")]
         public virtual Member Member { get; set; }
 
-        [ForeignKey("PremiseId")]
+        [ForeignKey("OrganizationId")]
         public virtual Organization Organization { get; set; }
     }
 
