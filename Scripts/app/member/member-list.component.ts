@@ -6,7 +6,19 @@ import { MemberService } from "./member.service";
 //Decorator
 @Component({
     selector: "member-list",
-    templateUrl: `./member-list.component.html`
+    //templateUrl: `./member-list.component.html`
+    template: `
+    <div class="member-list">
+    <h2>All Members</h2>
+    <ul>
+        <li *ngFor="let member of members"
+            [class.selected]="member === selectedMember"
+            (click) = "onSelect(member)">
+            <span>{{member.FirstName}} {{member.LastName}}</span>        
+        </li>
+    </ul>
+</div>
+    `
 })
 
 //Export

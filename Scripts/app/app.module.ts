@@ -25,10 +25,10 @@ import { NavBarComponent } from "../app/nav/navbar.component";
 
     // modules
     imports: [
-        AppRouting,
+       AppRouting,
         BrowserModule,
         HttpModule,
-        RouterModule
+       RouterModule
      ],
 
      exports: [],
