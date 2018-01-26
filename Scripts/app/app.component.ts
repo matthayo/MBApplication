@@ -3,17 +3,7 @@ import { Router } from "@angular/router";
 
 @Component({
     selector: "start",
-    //templateUrl: "./app.component.html"
-    template: `
-        <nav-bar></nav-bar>
-<h1 class="header">{{title}}</h1>
-<div class="main-container">
-    <hr>
-    <!--<router-outlet></router-outlet>-->
-    <home></home>
-
-</div>
-    `
+    templateUrl: "app/app.component.html"
 })
 export class AppComponent { 
     title = "Angular App";

@@ -2,16 +2,25 @@ import { ModuleWithProviders } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./home/home.component";
+import { LoginComponent } from "./login/login.component";
+import { PageNotFoundComponent } from "./misc/page-not-found.component";
 
 const appRoutes: Routes = [
     {
-        path: "home",
+        path: "",
         component: HomeComponent
     },
     {
-        path: "",
-        redirectTo: "/home",
-        pathMatch: "full"
+        path: "home",
+        redirectTo: ""
+    },
+    {
+        path: "login",
+        component: LoginComponent
+    },
+    {
+        path: '**',
+        component: PageNotFoundComponent
     }
 ];
 

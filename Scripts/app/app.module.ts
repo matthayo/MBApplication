@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
 import { Observable } from "rxjs/Rx";
@@ -13,8 +14,10 @@ import { FamilyService } from "../app/family/family.service";
 
 import { FamilyListComponent } from "../app/family/family-list.component";
 import { HomeComponent } from "../app/home/home.component";
+import { LoginComponent } from "../app/login/login.component";
 import { MemberListComponent } from "../app/member/member-list.component";
 import { NavBarComponent } from "../app/nav/navbar.component";
+import { PageNotFoundComponent } from "../app/misc/page-not-found.component";
 
 @NgModule({
     // directives, components and pipes
@@ -22,16 +25,19 @@ import { NavBarComponent } from "../app/nav/navbar.component";
         AppComponent,
         FamilyListComponent,
         HomeComponent,
+        LoginComponent,
         MemberListComponent,
-        NavBarComponent
+        NavBarComponent,
+        PageNotFoundComponent
     ],
 
     // modules
     imports: [
-       AppRouting,
+        AppRouting,
         BrowserModule,
+        FormsModule,
         HttpModule,
-       RouterModule
+        RouterModule
      ],
 
      exports: [],
