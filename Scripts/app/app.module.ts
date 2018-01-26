@@ -9,7 +9,9 @@ import { AppRouting } from "./app.routing";
 import { AppComponent } from "./app.component";
 
 import { MemberService } from "../app/member/member.service";
+import { FamilyService } from "../app/family/family.service";
 
+import { FamilyListComponent } from "../app/family/family-list.component";
 import { HomeComponent } from "../app/home/home.component";
 import { MemberListComponent } from "../app/member/member-list.component";
 import { NavBarComponent } from "../app/nav/navbar.component";
@@ -18,6 +20,7 @@ import { NavBarComponent } from "../app/nav/navbar.component";
     // directives, components and pipes
     declarations: [
         AppComponent,
+        FamilyListComponent,
         HomeComponent,
         MemberListComponent,
         NavBarComponent
@@ -35,7 +38,8 @@ import { NavBarComponent } from "../app/nav/navbar.component";
 
      // providers
     providers: [
-        MemberService
+        MemberService,
+        FamilyService
     ],
 
     bootstrap: [

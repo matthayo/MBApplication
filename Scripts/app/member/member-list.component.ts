@@ -8,9 +8,9 @@ import { MemberService } from "./member.service";
     selector: "member-list",
     //templateUrl: `./member-list.component.html`
     template: `
-    <div class="member-list">
+    <div class="lists">
     <h2>All Members</h2>
-    <ol class="members">
+    <ol class="lists">
         <hr/>
         <li *ngFor="let member of members"
             [class.selected]="member === selectedMember"
