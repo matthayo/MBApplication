@@ -1,10 +1,10 @@
-<div class="member-list">
+<div>
     <h2>All Members</h2>
-    <ul>
-        <li *ngFor="let member of members"
-            [class.selected]="member === selectedMember"
-            (click) = "onSelect(member)">
-            <span>{{member.FirstName}} {{member.LastName}}</span>        
+    <ol class="lists">
+        <hr/>
+        <li *ngFor="let member of members" [class.selected]="member === selectedMember" (click)="onSelect(member)">
+            <span>{{member.LastName}}, {{member.FirstName}}</span>
+            <hr/>
         </li>
-    </ul>
+    </ol>
 </div>
