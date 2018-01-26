@@ -6,37 +6,7 @@ import { FamilyService } from "./family.service";
 //Decorator
 @Component({
     selector: "family-list",
-    // templateUrl: "./family-list.component.html"
-    template:
-        `
-        <div class="list">
-        <h2>Family List</h2>
-        <ol class="list">
-            <hr/>
-            <li *ngFor="let family of families"
-                [class.selected]="family === selectedFamily"
-                (click) = "onSelect(family)">
-                <span *ngIf="family.AptNumber != null; else displayWithoutAptNumber">
-                    Family Name: {{family.FamilyName}} <br/>
-                    Apt #: {{family.AptNumber}}, House #: {{family.House}} <br/> 
-                    Street: {{family.Street}}<br/>
-                    City: {{family.City}}, State: {{family.State}},<br/> 
-                    Zip: {{family.Zip}}<br/>
-                 </span>
- 
-                <ng-template #displayWithoutAptNumber>
-                    Family Name: {{family.FamilyName}}<br/> 
-                    House #:{{family.House}} 
-                    Street: {{family.Street}}<br/>
-                    City: {{family.City}}, State: {{family.State}}<br/> 
-                    Zip: {{family.Zip}}<br/>
-                </ng-template>
-               
-                <hr/>
-            </li>
-        </ol>
-    </div>
-    `
+    templateUrl: "app/family/family-list.component.html"
 })
 
 //Exports

@@ -1,0 +1,29 @@
+<div>
+    <h2>Family List</h2>
+    <ol class="list">
+        <hr/>
+        <li *ngFor="let family of families" [class.selected]="family === selectedFamily" (click)="onSelect(family)">
+            <div *ngIf="family.AptNumber != null; else displayWithoutAptNumber">
+                <div>Family Name: {{family.FamilyName}}</div>
+                <div class="left-div">Address: </div>
+                <div class="right-div">
+                      Apt #: {{family.AptNumber}}, House #: {{family.House}}
+                <br/> Street: {{family.Street}}
+                <br/> City: {{family.City}}, State: {{family.State}},
+                <br/> Zip: {{family.Zip}}
+                </div>>
+            </div>
+
+            <ng-template #displayWithoutAptNumber>
+                <div>Family Name: {{family.FamilyName}}</div>
+                <div class="left-div">Address: </div>
+                <div class="right-div"> House #:{{family.House}} Street: {{family.Street}}
+                <br/> City: {{family.City}}, State: {{family.State}}
+                <br/> Zip: {{family.Zip}}
+                </div>
+            </ng-template>
+
+            <hr/>
+        </li>
+    </ol>
+</div>
