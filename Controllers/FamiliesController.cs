@@ -55,7 +55,7 @@ namespace MBApplication.Controllers
         [HttpGet("GetFamilies")]
         public IActionResult GetFamilies()
         {
-            var families = _dbContext.Families.OrderBy(f => f.FamilyName).Take(AllFamilies).ToList();
+            var families = _dbContext.Families.OrderByDescending(f => f.LastModifiedDate).Take(AllFamilies).ToList();
 
             return new JsonResult(ToFamiliesViewModelList(families), DefaultJsonSettings);
         }
@@ -78,6 +78,10 @@ namespace MBApplication.Controllers
             {
                 //Create a new Family with the client-sent json data
                 var family = _mapper.Map<Family>(familyToAdd);
+
+                //Override system-based variable
+                family.CreatedDate = DateTime.Now;
+                family.LastModifiedDate = DateTime.Now;
 
                 //Add the new Family
                 _dbContext.Families.Add(family);
@@ -109,11 +113,15 @@ namespace MBApplication.Controllers
                 {
                     //handle the update on property-basis
                     family.FamilyName = familyToUpdate.FamilyName;
+                    family.AptNumber = familyToUpdate.AptNumber;
                     family.City = familyToUpdate.City;
                     family.House = familyToUpdate.House;
                     family.State = familyToUpdate.State;
                     family.Street = familyToUpdate.Street;
                     family.Zip = familyToUpdate.Zip;
+
+                    //Override system-based variable
+                    family.LastModifiedDate = DateTime.Now;
 
                     //persist changes to Database
                     _dbContext.SaveChanges();
