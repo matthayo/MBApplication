@@ -1,0 +1,301 @@
+﻿Gender,GivenName,MiddleInitial,Surname,StreetAddress,City,State,ZipCode,EmailAddress,TelephoneNumber,Birthday,Latitude,Longitude
+male,Mark,D,Ragsdale,"642 Midway Road","Fort Smith",AR,72901,MarkDRagsdale@armyspy.com,479-709-7196,12/9/1962,35.459299,-94.490442
+male,Larry,J,Schreiber,"4130 Owagner Lane",Seattle,WA,98119,LarryJSchreiber@superrito.com,206-273-7593,12/20/1993,47.694769,-122.35046
+female,Helen,R,Anderson,"331 Golden Ridge Road",Albany,NY,12207,HelenRAnderson@superrito.com,518-328-6199,11/21/1993,42.746607,-73.814173
+male,Michael,E,Pope,"1043 Levy Court",Boston,MA,02110,MichaelEPope@einrot.com,978-709-3809,7/25/1950,42.400307,-70.960943
+female,Gail,R,Amundson,"1791 Derek Drive",Lisbon,OH,44432,GailRAmundson@fleckens.hu,330-420-6851,9/28/1986,40.805249,-80.845032
+male,Fernando,A,Maldonado,"4831 Snider Street",Denver,CO,80216,FernandoAMaldonado@einrot.com,720-217-0959,12/8/1977,39.752412,-104.871988
+male,Ronald,M,Fritz,"4655 Fulton Street",Weirton,WV,26062,RonaldMFritz@fleckens.hu,304-479-2005,2/2/1981,40.455658,-80.551129
+female,Cecilia,J,Cole,"2409 Stockert Hollow Road",Redmond,WA,98052,CeciliaJCole@dayrep.com,425-835-6526,10/17/1977,47.750322,-122.027703
+female,Marilyn,T,Redd,"4751 Dale Avenue",Tacoma,WA,98407,MarilynTRedd@einrot.com,253-752-4033,5/21/1942,47.33331,-122.488917
+male,Eric,N,Witt,"4857 Benson Street","Eau Claire",WI,54701,EricNWitt@rhyta.com,715-338-5116,8/23/1946,44.704306,-91.472898
+female,Lisa,J,Smith,"1457 Thunder Road",Concord,CA,94520,LisaJSmith@dayrep.com,650-539-9969,6/14/1945,37.911247,-121.976172
+female,Kristina,P,Lang,"4356 Shady Pines Drive",Elizabethtown,KY,42701,KristinaPLang@einrot.com,270-940-9853,8/18/1997,37.654122,-85.935255
+female,Emilia,M,McClure,"3819 Oak Avenue","Rolling Meadows",IL,60008,EmiliaMMcClure@jourrapide.com,847-978-1043,12/2/1954,42.004182,-88.07296
+male,Anthony,S,Alicea,"4440 Quilly Lane","Upper Arlington",OH,43221,AnthonySAlicea@armyspy.com,614-486-2398,1/30/1993,40.053835,-83.005002
+female,Natalie,M,Waldron,"357 Pooz Street","New Brunswick",NJ,08901,NatalieMWaldron@einrot.com,732-214-3475,2/7/1971,40.511401,-74.390377
+male,Christopher,M,Garcia,"771 Maple Avenue",Stockton,CA,95204,ChristopherMGarcia@teleworm.us,209-260-0170,3/8/1948,37.974764,-121.386717
+female,Doris,K,Viramontes,"2415 Oak Drive",Albany,NY,12207,DorisKViramontes@einrot.com,518-557-4635,7/15/1947,42.671659,-73.711586
+female,Bronwyn,B,Pimentel,"1723 Whitetail Lane",Dallas,TX,75207,BronwynBPimentel@dayrep.com,469-449-6545,11/14/1956,32.844369,-96.852638
+female,Elizabeth,R,Horn,"2453 Hillside Street",Phoenix,AZ,85012,ElizabethRHorn@dayrep.com,480-467-8686,3/31/1963,33.445992,-112.088148
+male,Lynn,R,Gerber,"4873 Carriage Lane",Lima,OH,45806,LynnRGerber@cuvox.de,567-940-2160,7/26/1958,40.774852,-84.165096
+male,Danny,G,Ruiz,"77 Hide A Way Road",Orlando,FL,32810,DannyGRuiz@armyspy.com,407-970-1534,12/7/1983,28.656174,-81.484993
+male,Jeffrey,I,Gates,"3028 Hart Ridge Road",Lakeview,MI,48850,JeffreyIGates@armyspy.com,989-352-8303,12/18/1992,43.339162,-85.355175
+female,Shirley,D,Burke,"3464 Ward Road","El Paso",TX,79906,ShirleyDBurke@einrot.com,915-274-1381,4/22/1996,31.84399,-106.482607
+female,Lakisha,R,Robinson,"4747 Essex Court",Montpelier,VT,05602,LakishaRRobinson@gustr.com,802-371-3731,4/27/1938,44.353396,-72.709392
+female,Lela,Z,Highsmith,"2240 Woodlawn Drive","New Berlin",WI,53151,LelaZHighsmith@dayrep.com,414-748-1523,6/11/1984,42.94117,-88.093723
+female,Michelle,F,Rodgers,"1964 Meadow Lane",Oakland,CA,94612,MichelleFRodgers@gustr.com,707-356-8502,6/18/1977,37.866475,-122.249518
+female,Kelly,J,McCaughey,"2491 Oakridge Farm Lane","Lake Geneva",WI,53147,KellyJMcCaughey@jourrapide.com,262-348-8607,6/18/1998,42.538992,-88.428353
+male,Willie,S,Royal,"193 Selah Way",Brattleboro,VT,05301,WillieSRoyal@fleckens.hu,802-714-7807,6/25/1950,42.799624,-72.75205
+female,Josephine,B,Booher,"961 Locust Court",Anaheim,CA,92805,JosephineBBooher@jourrapide.com,562-478-8549,6/8/1981,33.828892,-117.811751
+female,Francine,J,Caldwell,"2956 Vesta Drive","Hickory Hills",IL,60457,FrancineJCaldwell@jourrapide.com,773-720-9436,7/19/1962,41.705496,-87.929243
+female,Norma,E,Hardin,"587 Breezewood Court",Tribune,KS,67879,NormaEHardin@fleckens.hu,620-376-9080,6/12/1932,38.432324,-101.890947
+male,Paul,A,Valles,"379 Cooks Mine Road",Albuquerque,NM,87102,PaulAValles@gustr.com,505-724-6722,5/9/1954,35.012337,-106.552661
+female,Alice,G,Hills,"1686 Harper Street",Elizabethtown,KY,42701,AliceGHills@fleckens.hu,270-461-7913,12/7/1992,37.801318,-85.786963
+female,Lucille,L,Macaulay,"1797 Coolidge Street",Billings,MT,59102,LucilleLMacaulay@superrito.com,406-924-9801,3/2/1978,45.695082,-108.483813
+male,Sam,S,Michael,"3289 Rowes Lane",Franklin,KY,42134,SamSMichael@superrito.com,270-598-1131,9/20/1953,36.739132,-86.488368
+female,Juliane,D,Juarez,"4152 Browning Lane",Madison,WI,53718,JulianeDJuarez@gustr.com,608-225-8054,8/7/1953,43.125806,-89.319805
+female,Lura,D,Bright,"3083 Kidd Avenue","Healy Lake",AK,99737,LuraDBright@gustr.com,907-876-5421,2/20/1998,63.989528,-144.725961
+male,Willie,D,Foster,"3826 Bailey Drive",Waterloo,IA,50703,WillieDFoster@einrot.com,319-272-0208,7/16/1981,42.510366,-92.189187
+male,Johnny,E,Adkison,"3679 Michigan Avenue",Bridgeville,PA,15017,JohnnyEAdkison@superrito.com,724-622-6579,3/22/1955,40.327154,-80.22099
+female,Frances,C,Graybill,"3896 Lake Floyd Circle",Hagerstown,MD,21740,FrancesCGraybill@jourrapide.com,301-992-4268,1/8/1982,39.726846,-77.711661
+female,Elizabeth,P,Dozier,"3783 Flynn Street","Garfield Heights",OH,44128,ElizabethPDozier@einrot.com,440-854-5923,3/28/1985,41.452394,-81.585259
+female,Nora,J,Brown,"3550 Sycamore Street","San Jose",CA,95120,NoraJBrown@jourrapide.com,408-927-4001,4/18/1998,37.23754,-121.775139
+female,Sabra,W,Cline,"3141 Coolidge Street",Gardiner,MT,59030,SabraWCline@dayrep.com,406-848-3216,3/25/1998,45.042766,-110.403201
+male,Samuel,C,Flowers,"1275 Haven Lane",Onondaga,MI,49264,SamuelCFlowers@gustr.com,517-628-6906,3/25/1938,42.462506,-84.4916
+male,Thomas,A,Haas,"2178 Blackwell Street","Fort Wainwright",AK,99703,ThomasAHaas@fleckens.hu,907-356-7521,3/9/1934,64.788831,-147.553484
+male,Joe,V,Reese,"509 Grant Street","Pine Hill",TX,75652,JoeVReese@fleckens.hu,903-889-5957,12/26/1932,31.926574,-95.497552
+female,Madeline,E,Greenwalt,"2899 Scenic Way",Champaign,IL,61820,MadelineEGreenwalt@einrot.com,217-703-7948,8/16/1958,40.183627,-88.24394
+male,Moshe,N,Francis,"1437 Capitol Avenue",Indianapolis,IN,46204,MosheNFrancis@einrot.com,765-514-3322,2/16/1991,39.71355,-86.094459
+male,Dave,M,Chambers,"3607 Stanton Hollow Road",Lexington,MA,02421,DaveMChambers@armyspy.com,781-532-4615,1/31/1981,42.511928,-71.324078
+male,Rick,J,Crank,"1946 Emma Street",Laie,HI,96762,RickJCrank@teleworm.us,808-232-3947,1/12/1990,21.631548,-157.89325
+male,Anthony,F,McGee,"178 Harley Brook Lane","State College",PA,16803,AnthonyFMcGee@armyspy.com,814-523-0825,1/22/1985,40.760797,-77.88716
+female,Thelma,N,Carvalho,"4971 Maple Avenue",Boise,ID,83702,ThelmaNCarvalho@superrito.com,208-975-7351,5/1/1953,43.688109,-116.224255
+male,David,K,Baird,"3552 Conifer Drive",Tukwila,WA,98188,DavidKBaird@jourrapide.com,425-420-5924,7/8/1983,47.39365,-122.250817
+male,Frederick,J,Conkle,"547 Cantebury Drive","New York",NY,10013,FrederickJConkle@superrito.com,646-667-7854,2/22/1974,40.716229,-74.021103
+male,James,M,Doak,"3393 Clay Lick Road",Denver,CO,80211,JamesMDoak@fleckens.hu,720-855-9523,6/29/1996,39.747842,-105.000261
+male,Paul,S,Jackson,"3581 Spirit Drive","Boys Ranch",FL,32060,PaulSJackson@rhyta.com,386-842-6251,7/15/1959,30.360683,-82.950578
+male,Nathan,E,Davis,"940 North Avenue",Sutton,NE,68979,NathanEDavis@gustr.com,402-773-4034,1/7/1993,40.602926,-97.831198
+male,Louis,S,Bailey,"3703 Clement Street",Roswell,GA,30076,LouisSBailey@fleckens.hu,404-423-8170,2/22/1972,33.942754,-84.369129
+female,Ramona,M,Johnson,"1053 Foley Street","Fort Lauderdale",FL,33304,RamonaMJohnson@fleckens.hu,954-689-5382,7/24/1952,26.168534,-80.190888
+female,Mary,D,Beckman,"3255 Jarvis Street",Buffalo,NY,14202,MaryDBeckman@jourrapide.com,716-840-5324,2/14/1992,42.85094,-78.931821
+female,Linda,J,Harris,"1368 Traders Alley","St Joseph",MO,64507,LindaJHarris@fleckens.hu,816-351-4268,11/8/1959,39.696382,-94.856381
+female,Annette,R,Heng,"3086 Bombardier Way",Southfield,MI,48075,AnnetteRHeng@teleworm.us,734-853-1361,12/4/1938,42.510418,-83.286708
+female,Dawn,J,Balducci,"2642 Masonic Drive",Missoula,MT,59802,DawnJBalducci@rhyta.com,406-540-0349,10/17/1984,46.9055,-113.791302
+female,Emma,E,Moore,"4107 Bridge Avenue",Washington,LA,70589,EmmaEMoore@dayrep.com,337-826-4735,2/26/1947,30.610989,-92.110716
+male,Fred,B,Stephenson,"4767 Nutters Barn Lane",Farnhamville,IA,50538,FredBStephenson@einrot.com,515-544-8187,9/18/1952,42.228998,-94.400487
+female,Patricia,L,Blackburn,"2284 Oakwood Circle","Los Angeles",CA,90017,PatriciaLBlackburn@armyspy.com,949-342-0636,10/8/1960,34.024545,-118.172489
+male,Thomas,A,Kruse,"3762 Seltice Way",Plummer,ID,83851,ThomasAKruse@armyspy.com,208-686-1240,7/16/1958,47.234909,-116.940409
+male,Harry,M,Loomis,"1039 Christie Way","North Billerica",MA,01862,HarryMLoomis@superrito.com,978-846-7715,7/1/1936,42.512805,-71.301205
+female,Bernadette,I,Snider,"4824 Benson Park Drive",Arcadia,OK,73007,BernadetteISnider@dayrep.com,405-396-7161,4/28/1945,35.737593,-97.336452
+female,Sara,R,Pierson,"1067 Petunia Way",Birmingham,AL,35208,SaraRPierson@superrito.com,205-786-2684,6/11/1993,33.49918,-86.805217
+female,Cynthia,S,Hewes,"2929 Colony Street",Norwalk,CT,06851,CynthiaSHewes@superrito.com,203-292-1513,3/26/1982,41.108567,-73.424154
+male,Larry,K,Thompson,"2882 Fulton Street",Welch,WV,24801,LarryKThompson@dayrep.com,304-436-3965,1/25/1983,37.468809,-81.541606
+female,Jaime,R,McVey,"3589 Jenna Lane","West Des Moines",IA,50266,JaimeRMcVey@fleckens.hu,515-222-4407,10/7/1949,41.485461,-93.711417
+male,Brett,A,Westbrook,"151 Victoria Street",Chicago,IL,60631,BrettAWestbrook@gustr.com,224-659-5294,4/23/1965,41.954774,-87.826555
+male,Daniel,L,Laliberte,"908 Ash Street",Dallas,TX,75201,DanielLLaliberte@fleckens.hu,972-850-6840,3/30/1974,32.710999,-96.869417
+male,Michael,C,Rankin,"4940 Adonais Way",Alpharetta,GA,30201,MichaelCRankin@rhyta.com,678-393-5456,1/20/1965,34.140655,-84.193281
+female,Marjorie,D,Bishop,"2986 Ocello Street","San Diego",CA,92121,MarjorieDBishop@einrot.com,619-941-8414,4/9/1981,32.829705,-117.114932
+female,Cynthia,T,Murphy,"3174 Bryan Avenue",Minneapolis,MN,55415,CynthiaTMurphy@gustr.com,651-323-2596,6/29/1935,44.963561,-93.17992
+male,Bennie,B,Lafollette,"2542 Romines Mill Road",Dallas,TX,75247,BennieBLafollette@fleckens.hu,214-642-4175,8/20/1946,32.867357,-96.830186
+female,Pamela,D,Gessner,"4393 Friendship Lane","San Francisco",CA,94108,PamelaDGessner@cuvox.de,408-674-3547,1/17/1950,37.787215,-122.418874
+female,Nadia,E,Edwards,"1169 Philli Lane","Buffalo Valley",OK,74571,NadiaEEdwards@superrito.com,918-522-7495,7/10/1995,34.666969,-95.242233
+female,Terry,D,Desmond,"4894 Sardis Station",Eagan,MN,55121,TerryDDesmond@einrot.com,612-483-9525,9/8/1992,44.828746,-93.127152
+female,Louise,D,Ramos,"3621 Morris Street",Seguin,TX,78155,LouiseDRamos@einrot.com,830-372-2685,1/15/1963,29.593946,-97.933374
+female,Sofia,A,Roberts,"492 Stuart Street",Portland,PA,97205,SofiaARoberts@jourrapide.com,724-386-2863,6/8/1962,45.480321,-122.633417
+male,Christopher,A,Watley,"1168 Whitetail Lane",Dallas,TX,75207,ChristopherAWatley@fleckens.hu,469-361-8222,11/28/1995,32.741444,-96.739593
+male,Guadalupe,S,Montgomery,"3241 Cottonwood Lane","Grand Rapids",MI,49503,GuadalupeSMontgomery@dayrep.com,616-291-6398,8/14/1986,43.018265,-85.562694
+male,Richard,V,Santana,"4757 Maple Court",Sikeston,MO,63801,RichardVSantana@jourrapide.com,573-360-1283,10/15/1950,36.807732,-89.569534
+female,Beulah,B,Roark,"4170 Aspen Court",Boston,MA,02107,BeulahBRoark@gustr.com,617-330-7968,10/1/1943,42.439117,-71.137754
+female,Amy,A,Cuellar,"4657 Bingamon Road",Cleveland,OH,44115,AmyACuellar@superrito.com,440-545-8007,9/4/1985,41.583724,-81.601914
+female,Kathleen,R,Poindexter,"1558 Roane Avenue",Savage,MD,20763,KathleenRPoindexter@einrot.com,301-267-6238,10/28/1953,39.085295,-76.864991
+female,Melody,A,Graves,"1183 Spring Street",Elwin,IL,62521,MelodyAGraves@superrito.com,217-767-4426,3/26/1941,39.822458,-89.000038
+male,Noah,L,Cifuentes,"1717 Private Lane",Albany,GA,31701,NoahLCifuentes@gustr.com,229-312-6950,5/17/1980,31.561743,-84.148883
+female,Sheri,P,Powell,"1379 Lake Floyd Circle",Gaithersburg,MD,20877,SheriPPowell@armyspy.com,301-975-5241,9/22/1997,39.124131,-77.140828
+female,Cindy,K,Clarkson,"2289 Winding Way",Pawtucket,RI,02860,CindyKClarkson@cuvox.de,401-725-1456,12/7/1934,41.968368,-71.461849
+male,Lonnie,J,Quezada,"2200 Pike Street","San Diego",CA,92123,LonnieJQuezada@gustr.com,858-546-0573,12/18/1985,32.808876,-117.208355
+male,Thomas,E,Ragan,"767 George Avenue",Mobile,AL,36602,ThomasERagan@rhyta.com,251-434-5252,4/20/1948,30.772264,-87.982018
+male,Glen,P,Marquez,"3756 Hood Avenue","San Diego",CA,92128,GlenPMarquez@superrito.com,858-655-7105,11/2/1990,33.040521,-117.099861
+female,Mamie,D,Billups,"316 August Lane",Alexandria,LA,71302,MamieDBillups@fleckens.hu,318-463-0118,1/1/1942,31.183449,-92.318146
+male,Andres,A,Terrell,"4342 Edsel Road","Sherman Oaks",CA,91403,AndresATerrell@cuvox.de,818-372-3957,3/11/1937,34.081689,-118.540071
+male,Gavin,M,Godbey,"4104 Whitetail Lane",Dallas,TX,75201,GavinMGodbey@gustr.com,469-447-7985,1/12/1943,32.800788,-96.852619
+female,Victoria,C,Thompson,"1216 Edington Drive",Fayetteville,GA,30214,VictoriaCThompson@fleckens.hu,678-817-5616,12/1/1956,33.436521,-84.485173
+male,Alvaro,N,Anderson,"3081 Marcus Street",Anniston,AL,36201,AlvaroNAnderson@jourrapide.com,256-591-6958,3/12/1972,33.573373,-85.982468
+female,Maggie,C,Stepp,"4767 Hemlock Lane","San Benito",TX,78586,MaggieCStepp@fleckens.hu,956-399-3551,6/17/1940,26.183718,-97.729161
+female,Donna,T,Mims,"276 Sycamore Road",Eugene,OR,97404,DonnaTMims@superrito.com,541-463-1774,12/24/1978,44.098635,-123.073652
+male,Kyle,J,Rodriguez,"1910 Nickel Road",Irvine,CA,92618,KyleJRodriguez@cuvox.de,626-703-1140,4/16/1959,33.591466,-117.769775
+female,Yolanda,D,McClellan,"2153 Jody Road",Glenolden,PA,19036,YolandaDMcClellan@superrito.com,610-583-8069,7/26/1938,39.821687,-75.284377
+female,Christine,M,Peterson,"2010 Illinois Avenue",Aumsville,OR,97325,ChristineMPeterson@jourrapide.com,503-749-5700,6/19/1948,44.78466,-122.808273
+male,Maurice,N,Jones,"4748 Grove Avenue",Lawton,OK,73501,MauriceNJones@rhyta.com,580-354-3824,7/19/1940,34.776936,-98.553587
+female,Racquel,M,Durfee,"1673 Meadow Lane",Concord,CA,94520,RacquelMDurfee@fleckens.hu,707-301-9190,12/17/1965,37.907923,-122.001547
+female,Betty,B,Ash,"2449 Post Farm Road",Atlanta,GA,30309,BettyBAsh@teleworm.us,404-280-9485,5/4/1987,33.815521,-84.325777
+female,Corrine,R,Gill,"1619 Drainer Avenue","Panama City",FL,32401,CorrineRGill@dayrep.com,850-588-3754,5/27/1997,30.200209,-85.530394
+male,Craig,A,Hosley,"2141 Austin Avenue",Brunswick,GA,31520,CraigAHosley@einrot.com,912-261-9004,2/21/1936,31.204224,-81.439843
+male,Michael,A,Lewis,"3827 Cooks Mine Road","Truth Or Consequences",NM,87901,MichaelALewis@fleckens.hu,505-740-0531,11/7/1989,33.142796,-107.088406
+female,Karen,D,Childers,"1563 Angus Road","New York",NY,10014,KarenDChilders@gustr.com,212-419-4501,1/11/1932,40.806273,-74.041988
+male,Douglas,M,White,"1158 Irish Lane",Madison,WI,53718,DouglasMWhite@gustr.com,608-818-9767,1/13/1993,43.031444,-89.191595
+male,Robert,S,Comes,"3817 Oakmound Drive",Westchester,IL,60154,RobertSComes@dayrep.com,773-393-1839,10/21/1968,41.899186,-87.839541
+female,Karina,W,Armstrong,"4102 Retreat Avenue",Oneonta,AL,35121,KarinaWArmstrong@cuvox.de,205-274-3016,10/2/1951,34.047208,-86.548887
+male,James,J,Phillips,"670 May Street",Winchester,KY,40391,JamesJPhillips@superrito.com,606-262-4636,11/2/1973,37.944939,-84.181772
+female,Laurie,J,Stricklin,"3846 Village View Drive","Fort Myers",FL,33901,LaurieJStricklin@jourrapide.com,239-890-7971,8/30/1932,26.529357,-81.875718
+male,Steven,K,Ibanez,"487 Franklee Lane",Coopersburg,PA,18036,StevenKIbanez@gustr.com,484-499-4345,10/10/1964,40.577716,-75.405303
+female,Phyllis,J,Castro,"85 Chandler Hollow Road","West Mifflin",PA,15122,PhyllisJCastro@dayrep.com,412-466-1466,7/5/1944,40.395792,-79.84031
+female,Alberta,C,Mejia,"837 Pinnickinick Street",Bellingham,WA,98225,AlbertaCMejia@jourrapide.com,360-733-6638,7/23/1970,48.696354,-122.389153
+male,Walter,E,Bridwell,"2403 Gregory Lane",Louisville,KY,40202,WalterEBridwell@jourrapide.com,502-589-3379,7/11/1974,38.233468,-85.812329
+male,David,D,Jury,"4828 Bryan Avenue","Saint Paul",MN,55102,DavidDJury@teleworm.us,651-293-6649,4/19/1966,44.953941,-93.062078
+female,Robin,R,Elston,"2309 Gateway Avenue",Anaheim,CA,92801,RobinRElston@einrot.com,661-803-3702,12/25/1974,33.811688,-117.956279
+male,Angel,J,Lantz,"2477 Green Avenue",Oakland,CA,94609,AngelJLantz@einrot.com,510-818-1578,5/26/1934,37.825429,-122.229623
+male,Bryan,T,Schutz,"3589 Green Hill Road","Little Rock",AR,72212,BryanTSchutz@jourrapide.com,479-355-5732,12/20/1955,34.873661,-92.342239
+male,James,L,Newcomer,"4328 Stuart Street",Pittsburgh,PA,15219,JamesLNewcomer@jourrapide.com,724-470-6017,3/17/1991,40.534184,-80.047885
+female,Laverne,J,Pike,"2429 Finwood Road",Freehold,NJ,07728,LaverneJPike@cuvox.de,732-467-0015,1/21/1954,40.312212,-74.265747
+male,Roy,K,Smith,"426 Baker Avenue",Dallas,TX,75201,RoyKSmith@jourrapide.com,817-869-2598,10/21/1982,32.757122,-96.774201
+female,Amy,P,Lyle,"2453 Henry Ford Avenue",Tulsa,OK,74133,AmyPLyle@cuvox.de,918-250-2253,1/30/1942,36.067652,-95.953569
+female,Emma,E,Lamas,"4847 Fleming Street",Montgomery,AL,36109,EmmaELamas@superrito.com,334-409-0710,5/20/1944,32.429098,-86.286228
+male,Douglas,A,Riding,"1839 White Avenue","Corpus Christi",TX,78405,DouglasARiding@jourrapide.com,361-653-7990,2/21/1975,27.692004,-97.491487
+female,Gertrude,B,Spears,"469 Poplar Lane",Miami,FL,33165,GertrudeBSpears@fleckens.hu,305-554-2265,2/2/1962,25.768458,-80.29664
+female,Ha,J,Nelson,"2605 Fleming Way",Richmond,VA,23224,HaJNelson@dayrep.com,804-674-7607,11/27/1970,37.484662,-77.454937
+male,William,H,Macias,"1193 Wines Lane",Houston,TX,77002,WilliamHMacias@fleckens.hu,832-261-0181,5/2/1940,29.724583,-95.392706
+female,Kelly,C,Brennan,"4629 Robinson Court",Clare,MI,48617,KellyCBrennan@gustr.com,989-386-1413,5/30/1992,43.840549,-84.812464
+male,Gary,J,Hosier,"260 Broadway Street",Bluffton,SC,29910,GaryJHosier@rhyta.com,843-705-2888,9/2/1948,32.264,-80.819177
+female,Nancy,M,Tatum,"4846 Briarwood Drive",Camden,NJ,08102,NancyMTatum@gustr.com,856-462-5740,3/20/1959,39.898018,-75.109614
+male,Douglas,E,Kauffman,"3961 Public Works Drive",Chattanooga,TN,37421,DouglasEKauffman@dayrep.com,423-362-4220,10/4/1943,35.069603,-85.193296
+female,Lan,T,Michelson,"1651 Willison Street","Golden Valley",MN,55427,LanTMichelson@einrot.com,763-293-2150,8/14/1965,45.01828,-93.306128
+male,Keith,M,Larmon,"4825 Leo Street",Denver,CO,80202,KeithMLarmon@jourrapide.com,720-907-3858,2/4/1951,39.704344,-104.963182
+male,Ernest,A,Barber,"3446 Nickel Road",Alhambra,CA,91801,ErnestABarber@jourrapide.com,626-589-2883,4/28/1991,34.047172,-118.199259
+female,Kathleen,H,Anderson,"3986 Willis Avenue","Flagler Beach",FL,32136,KathleenHAnderson@jourrapide.com,386-517-6220,3/3/1959,29.490437,-81.228144
+male,Richard,M,Miller,"2273 Still Street",Sandusky,OH,44870,RichardMMiller@armyspy.com,419-626-0319,10/31/1988,41.464461,-82.762361
+female,Patricia,J,Coonrod,"3391 Raver Croft Drive",Chattanooga,TN,37421,PatriciaJCoonrod@gustr.com,423-645-0037,6/26/1939,35.130216,-85.204277
+male,James,A,Jackson,"2205 Jarvisville Road",Lansing,MI,48933,JamesAJackson@fleckens.hu,517-204-6349,1/8/1949,42.769904,-84.535136
+male,Robert,B,Brock,"1742 Atha Drive","Los Angeles",CA,90017,RobertBBrock@superrito.com,661-673-8495,3/30/1987,34.066715,-118.340273
+male,Scott,A,Anderson,"2144 Mandan Road",Deering,MO,63840,ScottAAnderson@gustr.com,573-757-6724,1/4/1977,36.167569,-89.924637
+male,Douglas,M,Hess,"2616 Lowland Drive",Tonica,IL,61370,DouglasMHess@teleworm.us,815-442-0023,2/22/1944,41.240647,-89.12051
+male,Marcus,S,Hanley,"1450 Whiteman Street",Camden,NJ,08102,MarcusSHanley@armyspy.com,609-847-6692,12/19/1964,40.025441,-75.022163
+female,Michelle,S,Green,"3871 Capitol Avenue",Indianapolis,IN,46202,MichelleSGreen@einrot.com,765-562-8113,8/26/1946,39.787087,-86.244322
+male,Clair,J,Mikkelson,"1326 Delaware Avenue","San Francisco",CA,94108,ClairJMikkelson@superrito.com,415-263-7272,8/8/1992,37.836574,-122.340417
+female,Asia,M,Harris,"1166 Williams Lane",Wichita,KS,67202,AsiaMHarris@cuvox.de,316-677-4412,5/14/1985,37.740917,-97.357001
+female,Caroline,L,Wade,"4814 Blue Spruce Lane",Hanover,MD,21076,CarolineLWade@jourrapide.com,410-322-1368,5/19/1973,39.259787,-76.734363
+female,Susan,D,Luck,"1206 Woodrow Way",Waller,TX,77484,SusanDLuck@rhyta.com,936-389-0488,2/8/1984,30.10238,-95.848542
+male,Jimmy,P,Williamson,"1902 Still Pastures Drive",Chester,SC,29706,JimmyPWilliamson@superrito.com,803-375-9094,9/8/1981,34.677534,-81.218147
+male,James,R,Wagner,"1757 Dye Street",Phoenix,AZ,85034,JamesRWagner@jourrapide.com,480-688-8501,9/23/1991,33.453397,-112.073121
+female,Cheryl,B,Bradford,"3752 Hewes Avenue","Windsor Mill",MD,21244,CherylBBradford@dayrep.com,443-624-5523,11/5/1977,39.390353,-76.836112
+female,Donna,C,Beauchamp,"4756 Victoria Street","Baton Rouge",LA,70802,DonnaCBeauchamp@dayrep.com,225-212-8254,12/25/1986,30.340502,-91.230275
+male,Charles,T,Bethune,"4657 Hickory Ridge Drive","Las Vegas",NV,89119,CharlesTBethune@armyspy.com,702-677-5530,10/6/1952,36.103114,-115.175589
+female,Leslie,J,Mendez,"3229 Neville Street",Chandler,IN,47610,LeslieJMendez@cuvox.de,812-631-8437,10/18/1998,38.133348,-87.3597
+male,Mark,B,Marlow,"3835 May Street",Danville,KY,40422,MarkBMarlow@rhyta.com,606-344-1827,2/26/1944,37.675384,-84.840738
+female,Ursula,C,Poirier,"3410 Ashmor Drive",Fargo,MN,58102,UrsulaCPoirier@cuvox.de,218-236-9634,4/15/1954,46.970392,-96.846727
+female,Brenda,K,Jaramillo,"1102 Forest Avenue","New York",NY,10019,BrendaKJaramillo@gustr.com,646-756-7809,12/23/1963,40.726909,-74.074953
+male,David,O,Cornwell,"2562 Lynn Avenue","Prairie Farm",WI,54762,DavidOCornwell@gustr.com,715-455-0096,3/29/1958,45.314108,-91.987
+female,Lisa,G,Mortensen,"4325 Diamond Cove","West Warwick",RI,02893,LisaGMortensen@armyspy.com,401-405-9791,10/5/1974,41.606579,-71.587756
+male,Gerardo,T,Weaver,"2018 Main Street",Seattle,WA,98109,GerardoTWeaver@rhyta.com,425-651-2666,9/27/1986,47.589452,-122.316504
+female,Rosa,T,McReynolds,"4151 Wilkinson Court","Fort Myers",FL,33901,RosaTMcReynolds@armyspy.com,239-476-5983,11/7/1962,26.631461,-81.863599
+male,James,R,Lane,"4975 Viking Drive",Columbus,OH,43215,JamesRLane@cuvox.de,740-777-5657,7/8/1972,39.889196,-83.036165
+female,Kathlyn,S,Weimer,"3718 Alpaca Way",Burbank,CA,91505,KathlynSWeimer@rhyta.com,714-767-0469,10/4/1942,34.226756,-118.325898
+female,Heather,D,Williams,"2916 Lincoln Drive",Harrisburg,PA,17111,HeatherDWilliams@cuvox.de,717-564-6642,8/17/1946,40.32405,-76.786594
+male,David,R,Young,"1352 Diane Street","Santa Barbara",CA,93101,DavidRYoung@gustr.com,805-478-9934,8/7/1995,34.327217,-119.798552
+female,Anne,W,Hill,"1102 Lena Lane",Jackson,MS,39201,AnneWHill@dayrep.com,601-475-2006,5/1/1971,32.218022,-90.27503
+male,Billy,S,Harris,"1944 Tecumsah Lane","Cedar Rapids",IA,52404,BillySHarris@jourrapide.com,319-242-5975,11/6/1955,41.904004,-91.745018
+male,Travis,P,Morris,"2224 Stuart Street",Gibsonia,PA,15044,TravisPMorris@cuvox.de,724-449-3316,12/6/1986,40.723211,-79.946784
+female,Vickie,D,Reed,"4618 Kelley Road",Gulfport,MS,39501,VickieDReed@jourrapide.com,228-572-3621,2/1/1987,30.333482,-89.076334
+male,Bret,K,Stanley,"378 Flint Street",Atlanta,GA,30329,BretKStanley@teleworm.us,678-215-7226,9/26/1944,33.776741,-84.293226
+male,Gerard,J,Stanton,"2478 Haul Road",Minneapolis,MN,55401,GerardJStanton@dayrep.com,651-236-5184,1/14/1994,44.946494,-93.198451
+male,Stanley,C,Kay,"4790 Snowbird Lane",Waco,NE,68460,StanleyCKay@einrot.com,402-728-9215,9/2/1958,40.964879,-97.406347
+female,Tammy,W,Ruiz,"61 Rosebud Avenue","Diamond City",AR,72619,TammyWRuiz@superrito.com,870-422-0458,7/25/1972,36.392085,-92.84345
+male,David,M,White,"1509 Despard Street",Roswell,GA,30076,DavidMWhite@jourrapide.com,404-759-0453,8/15/1989,34.11372,-84.333631
+female,Nichole,A,Wheeler,"3200 Hill Street",Defiance,OH,43512,NicholeAWheeler@teleworm.us,419-769-5489,4/18/1946,41.438563,-84.442835
+female,Katherine,R,Marion,"1105 Bicetown Road","New York",NY,10022,KatherineRMarion@cuvox.de,917-367-9577,11/9/1981,40.794751,-74.030611
+male,Sam,S,Fishman,"1506 Old Dear Lane",Poughkeepsie,NY,12603,SamSFishman@rhyta.com,845-866-5002,10/15/1982,41.759878,-73.901493
+male,Scott,S,Piper,"3044 Park Avenue","Rancho Cordova",CA,95742,ScottSPiper@fleckens.hu,916-416-9554,2/17/1983,38.482824,-121.133176
+female,Donna,R,Keeney,"113 Leisure Lane","San Luis Obispo",CA,93401,DonnaRKeeney@dayrep.com,805-541-3732,3/1/1934,35.287269,-120.698951
+male,Al,E,Crawley,"4837 Hamill Avenue","San Diego",CA,92103,AlECrawley@einrot.com,858-235-3124,9/22/1957,32.824942,-117.150733
+female,Hope,J,McConnell,"3725 Callison Lane","Ocean View",DE,19970,HopeJMcConnell@fleckens.hu,302-541-3428,1/24/1971,38.514997,-75.175373
+female,Sylvia,J,Hughes,"1761 Weekley Street","San Antonio",TX,78225,SylviaJHughes@teleworm.us,210-403-5662,1/23/1989,29.400362,-98.56268
+male,Mike,L,Love,"4938 Gnatty Creek Road","Garden City",NY,11530,MikeLLove@teleworm.us,516-357-6951,1/26/1958,40.766081,-73.70791
+male,Michael,R,Woodard,"165 Green Gate Lane",Baltimore,MD,21201,MichaelRWoodard@teleworm.us,443-828-1306,11/17/1978,39.228726,-76.547956
+female,Maria,G,Ramirez,"2372 Raoul Wallenberg Place",Orange,CT,06477,MariaGRamirez@armyspy.com,203-891-6074,11/23/1967,41.192067,-73.002592
+male,Brian,V,Cook,"3491 Wines Lane",Houston,TX,77036,BrianVCook@gustr.com,832-324-8123,8/31/1952,29.777308,-95.625601
+male,Troy,S,Phillips,"2646 Sharon Lane","South Bend",IN,46625,TroySPhillips@dayrep.com,574-203-8138,3/19/1944,41.632211,-86.3341
+female,Sara,G,Reese,"3608 Wilson Street",Oceanside,CA,92054,SaraGReese@jourrapide.com,760-966-0798,5/22/1955,33.309623,-117.470853
+male,Elwood,S,Fallon,"1244 Selah Way","White River Junction",VT,05001,ElwoodSFallon@dayrep.com,802-552-2741,1/29/1943,43.722003,-72.318004
+male,Michael,H,Baker,"2501 Baker Avenue","Farmers Branch",TX,75244,MichaelHBaker@gustr.com,817-819-1614,2/25/1987,32.858789,-96.860031
+female,Jessica,R,Rittenberry,"2242 May Street",Lexington,KY,40507,JessicaRRittenberry@jourrapide.com,606-317-9325,12/13/1953,38.028534,-84.529834
+male,Joseph,I,Taylor,"3505 Joes Road",Albany,NY,12207,JosephITaylor@gustr.com,518-713-8681,1/14/1944,42.732828,-73.803163
+female,Dollie,J,Peter,"4838 Bates Brothers Road",Columbus,OH,43215,DollieJPeter@gustr.com,614-306-3576,12/8/1983,39.997067,-83.043227
+female,Kelli,M,Steadman,"3619 Crosswind Drive","Beaver Dam",KY,42320,KelliMSteadman@superrito.com,270-878-9948,8/11/1938,37.405294,-86.83223
+male,Luis,T,Moran,"4049 Pheasant Ridge Road",Philadelphia,PA,19104,LuisTMoran@cuvox.de,215-518-7924,11/28/1959,39.997459,-75.208377
+male,Nelson,S,Stewart,"4527 Grim Avenue","San Diego",CA,92117,NelsonSStewart@armyspy.com,619-694-4993,12/5/1954,32.859394,-117.125735
+female,Georgia,D,Gilchrist,"104 Rockford Mountain Lane",Ogdensburg,WI,54962,GeorgiaDGilchrist@dayrep.com,920-244-5407,12/27/1943,44.472094,-89.02259
+female,Edith,C,Harris,"9 Prudence Street",Detroit,MI,48219,EdithCHarris@rhyta.com,313-412-2989,8/15/1944,42.387517,-83.206632
+female,Samatha,J,Beebe,"3379 Stroop Hill Road",Atlanta,GA,30305,SamathaJBeebe@gustr.com,404-812-4622,1/13/1991,33.899079,-84.463184
+female,Judy,R,Burgess,"4317 Spruce Drive",Clinton,PA,15026,JudyRBurgess@dayrep.com,724-899-6236,6/12/1958,40.450461,-80.42093
+female,Susie,G,Silva,"2240 Valley View Drive",Boston,MA,02115,SusieGSilva@armyspy.com,617-683-5177,1/10/1968,42.299254,-71.10218
+male,Herman,L,Valentin,"1831 Marietta Street","Santa Rosa",CA,95401,HermanLValentin@superrito.com,707-591-5504,8/9/1946,38.476303,-122.724312
+female,Beverly,D,Stacy,"641 Walnut Avenue","Eden Hazelton",ID,83325,BeverlyDStacy@rhyta.com,208-825-3738,3/8/1974,42.612562,-114.127021
+female,Samantha,R,Dye,"2336 Nicholas Street",Topeka,KS,66617,SamanthaRDye@einrot.com,785-246-3432,5/15/1948,39.151369,-95.531716
+female,Una,J,Lewis,"1098 Kidd Avenue","Sag River Camp",AK,99501,UnaJLewis@armyspy.com,907-824-8574,8/23/1971,63.495663,-154.581308
+male,Michael,B,Radford,"3974 Trymore Road","Redwood Falls",MN,56283,MichaelBRadford@armyspy.com,507-697-4287,7/9/1987,44.566779,-95.12743
+female,Danielle,D,Adrian,"4576 Crosswind Drive",Madisonville,KY,42431,DanielleDAdrian@superrito.com,270-817-2305,10/10/1949,37.421859,-87.498887
+female,Theresa,T,Rodriguez,"1538 Valley Lane",Austin,TX,78758,TheresaTRodriguez@dayrep.com,512-699-0613,7/20/1940,30.41226,-97.792341
+female,Lisa,T,Thomas,"136 Wildwood Street",Akron,OH,44333,LisaTThomas@dayrep.com,330-670-5764,6/25/1954,41.08428,-81.585243
+male,Jose,R,Griffin,"2649 Sugarfoot Lane",Lafayette,IN,47904,JoseRGriffin@dayrep.com,765-446-9415,7/3/1942,40.374141,-86.843497
+male,Dennis,M,Taylor,"4685 Middleville Road","El Monte",CA,91731,DennisMTaylor@superrito.com,626-415-1760,9/23/1935,34.025106,-118.02159
+female,Leticia,J,Kelly,"3030 Metz Lane",Cambridge,MA,02142,LeticiaJKelly@gustr.com,857-453-3941,2/23/1947,42.323845,-71.159422
+male,Tim,E,Hubbard,"1230 Travis Street",Hialeah,FL,33012,TimEHubbard@cuvox.de,772-576-8433,4/29/1966,25.942141,-80.357606
+female,Joan,J,Hershberger,"3426 Winifred Way",Anderson,IN,46016,JoanJHershberger@dayrep.com,765-649-4940,6/25/1959,40.136272,-85.70067
+male,Ronald,M,McGuire,"1173 Dancing Dove Lane","New York",NY,10011,RonaldMMcGuire@superrito.com,347-623-0665,2/17/1983,40.722429,-74.031484
+female,Amy,L,Oakes,"4861 Simons Hollow Road",Mandata,PA,17830,AmyLOakes@rhyta.com,570-758-6289,2/2/1934,40.683851,-76.870955
+male,Victor,B,King,"4757 Nickel Road","Los Angeles",CA,90017,VictorBKing@armyspy.com,626-713-0846,12/19/1970,34.144555,-118.255211
+female,Terry,M,Thomas,"2921 Wood Duck Drive",Chassell,MI,49916,TerryMThomas@superrito.com,906-481-8034,8/15/1967,46.962389,-88.535656
+male,Richard,S,Childs,"540 Haven Lane",Lansing,MI,48933,RichardSChilds@gustr.com,517-689-5176,1/12/1940,42.777787,-84.567902
+female,Frances,R,Thompson,"3660 Armory Road","Castle Hayne",NC,28429,FrancesRThompson@rhyta.com,910-675-7850,8/5/1972,34.388046,-77.861764
+female,Ma,G,Jones,"3041 Wayback Lane","East Hampton",NY,11937,MaGJones@dayrep.com,631-329-4488,7/1/1964,41.03396,-72.187994
+male,John,E,Ballard,"1036 Elk Creek Road",Stockbridge,GA,30281,JohnEBallard@superrito.com,770-507-2308,1/22/1982,33.600734,-84.282829
+male,Thomas,N,Devore,"4104 Charack Road",Evansville,IN,47711,ThomasNDevore@rhyta.com,812-215-3702,10/20/1951,38.061194,-87.473633
+male,Keith,A,Newton,"1630 Walkers Ridge Way",Gardena,CA,90248,KeithANewton@fleckens.hu,626-991-5844,6/7/1980,33.884651,-118.268943
+female,Melinda,C,Anthony,"2305 Havanna Street",Greensboro,NC,27401,MelindaCAnthony@teleworm.us,336-389-8458,11/6/1958,36.047631,-79.732347
+male,Kenneth,L,Slover,"1526 Hayhurst Lane","Farmington Hills",MI,48331,KennethLSlover@jourrapide.com,248-788-2514,11/28/1936,42.418253,-83.388612
+female,Laura,R,Kim,"2904 Pallet Street",Elmsford,NY,10523,LauraRKim@rhyta.com,914-438-0243,7/18/1966,40.970848,-73.880501
+male,Alan,R,Johnson,"4980 Kenwood Place","Fort Lauderdale",FL,33301,AlanRJohnson@gustr.com,954-523-0120,9/7/1941,26.062805,-80.133278
+male,Bernard,B,Davidson,"306 Brown Street",Scottsdale,AZ,85256,BernardBDavidson@superrito.com,928-233-0139,9/19/1943,33.555815,-111.745443
+male,Byron,B,Shell,"2975 Pin Oak Drive",Whittier,CA,90603,ByronBShell@superrito.com,562-947-3291,11/6/1991,34.016173,-118.024857
+male,Leandro,D,Morales,"3099 Dola Mine Road",Durham,NC,27705,LeandroDMorales@rhyta.com,919-383-0576,6/29/1972,36.121306,-78.988123
+male,Charles,S,Hinton,"4017 Woodstock Drive",Pasadena,CA,91101,CharlesSHinton@fleckens.hu,626-440-2526,8/25/1984,34.212828,-118.222079
+female,Crystal,O,Hardy,"1561 Douglas Dairy Road",Axton,VA,24054,CrystalOHardy@teleworm.us,276-650-5320,1/13/1972,36.571073,-79.772327
+female,Mae,S,Courson,"1253 Adams Avenue",Washington,MD,20005,MaeSCourson@gustr.com,301-677-5383,4/3/1934,38.916543,-76.965554
+male,Darryl,A,Hudson,"1589 Douglas Dairy Road","Gate City",VA,24251,DarrylAHudson@cuvox.de,276-690-8317,3/25/1955,36.653238,-82.582229
+male,James,D,Hollenbeck,"1654 Cambridge Court","Fort Smith",AR,72901,JamesDHollenbeck@armyspy.com,479-763-3968,12/10/1966,35.444467,-94.361092
+male,Timothy,T,Miller,"3763 Camel Back Road",Bartlesville,OK,74003,TimothyTMiller@teleworm.us,918-559-6790,7/28/1946,36.77191,-96.153164
+female,Amelia,J,Mincy,"4710 Post Avenue",Mahnomen,MN,56557,AmeliaJMincy@gustr.com,218-935-4163,6/7/1998,47.413384,-95.849526
+male,William,B,Keltner,"862 Geneva Street","New York",NY,10011,WilliamBKeltner@rhyta.com,917-482-5785,12/9/1946,40.757618,-74.08197
+female,Adrian,O,Killingsworth,"1702 Westwood Avenue","New York",NY,10001,AdrianOKillingsworth@gustr.com,516-740-6448,1/27/1933,40.843936,-73.995485
+male,Morris,E,Perry,"3605 Red Dog Road",Charlotte,NC,28209,MorrisEPerry@fleckens.hu,704-363-2836,12/3/1967,35.268965,-80.875206
+female,Candace,R,Means,"4225 Meadow Lane","Santa Rosa",CA,95401,CandaceRMeans@superrito.com,707-270-2813,2/21/1970,38.439779,-122.824177
+female,Mary,T,Miller,"473 Preston Street",Tempe,AZ,85282,MaryTMiller@fleckens.hu,623-332-9473,4/3/1984,33.360651,-111.92009
+male,Brandon,L,Gray,"4484 Godfrey Street",Portland,OR,97205,BrandonLGray@einrot.com,503-604-7683,12/7/1935,45.511589,-122.725268
+female,Faye,G,Estrada,"4125 Wright Court",Birmingham,AL,35209,FayeGEstrada@fleckens.hu,205-994-9856,6/18/1989,33.429819,-86.872653
+male,Lester,N,Hawkins,"2447 Quincy Street",Eagleville,PA,19403,LesterNHawkins@armyspy.com,267-474-8952,5/21/1987,40.256259,-75.407996
+female,Randy,W,Wheeler,"2973 Elkview Drive",Riverdale,GA,30236,RandyWWheeler@cuvox.de,770-994-4272,9/20/1953,33.587707,-84.477001
+male,Christopher,D,Cannon,"3654 Capitol Avenue",Delphi,IN,46923,ChristopherDCannon@cuvox.de,765-564-8522,2/1/1980,40.657556,-86.608901
+female,Abigail,R,Clayton,"1650 Bluff Street",Waldorf,MD,20601,AbigailRClayton@superrito.com,301-818-0336,6/19/1966,38.675621,-76.929095
+male,Frederick,I,Rutherford,"3047 Lindale Avenue",Concord,CA,94520,FrederickIRutherford@gustr.com,510-565-0454,4/13/1970,37.977238,-122.00588
+male,Chester,L,Peirce,"1702 College View",Metropolis,IL,62960,ChesterLPeirce@einrot.com,618-617-3439,8/13/1960,37.292933,-88.67008
+male,Thomas,M,Franks,"1612 Radio Park Drive",Athens,GA,30601,ThomasMFranks@einrot.com,706-688-9449,10/8/1966,33.914679,-83.307506
+male,Steven,F,Malloy,"4366 Ridge Road",Wichita,KS,67202,StevenFMalloy@rhyta.com,620-750-6144,5/10/1984,37.70732,-97.422786
+male,Timothy,T,Smith,"276 Delaware Avenue",Concord,CA,94520,TimothyTSmith@cuvox.de,415-299-2806,11/18/1991,37.954053,-122.009131
+male,Steven,K,Duran,"559 Beech Street",Antioch,CA,94509,StevenKDuran@armyspy.com,925-753-3064,3/8/1947,38.08124,-121.787859
+female,Sharon,J,Deboer,"586 Sycamore Road","The Dalles",OR,97058,SharonJDeboer@armyspy.com,541-436-3716,10/6/1970,45.637262,-121.22683
+female,Benita,D,Steere,"3839 Mount Olive Road",Atlanta,GA,30303,BenitaDSteere@jourrapide.com,678-884-5521,9/29/1969,33.850427,-84.39848
+female,Michelle,N,Ellis,"2910 Fairfield Road",Racine,WI,53403,MichelleNEllis@fleckens.hu,262-635-4926,4/28/1948,42.669673,-87.827782
+female,Rhonda,T,Funkhouser,"1524 Cardinal Lane",Hammond,IL,61929,RhondaTFunkhouser@einrot.com,217-262-3465,6/28/1946,39.757778,-88.679666
+female,Bonnie,W,Holliday,"4058 Pinnickinnick Street",Newark,NJ,07102,BonnieWHolliday@gustr.com,732-784-5537,10/31/1980,40.765248,-74.11806
+male,Adam,M,Strickland,"4991 Seth Street","San Angelo",TX,76903,AdamMStrickland@superrito.com,325-657-5202,10/6/1991,31.558818,-100.385907
+male,Clinton,J,Ward,"1160 Carter Street",Stlouis,IL,63101,ClintonJWard@cuvox.de,618-784-2555,4/24/1992,38.987318,-89.972914
+male,Joe,P,Adams,"4790 Ryder Avenue",Everett,WA,98204,JoePAdams@superrito.com,425-355-9449,2/4/1968,47.880064,-122.266421
+male,Michael,T,Newborn,"3794 Robinson Lane",Mansfield,OH,44902,MichaelTNewborn@jourrapide.com,740-358-5227,6/18/1956,40.816205,-82.417034
+female,Donna,B,Yeates,"1906 Michigan Avenue",Bridgeville,PA,15017,DonnaBYeates@superrito.com,724-601-3925,3/24/1991,40.261291,-80.1226
+male,Francis,J,Pike,"38 College Street",Atlanta,GA,30303,FrancisJPike@rhyta.com,404-382-6943,9/1/1942,33.810288,-84.476148
+male,Jacob,R,Gann,"4192 Tuna Street",Flint,MI,48502,JacobRGann@teleworm.us,810-760-5253,8/30/1950,43.050628,-83.756077
+male,Gary,V,Shook,"3291 Rowes Lane",Louisville,KY,40202,GaryVShook@gustr.com,270-572-9722,3/2/1970,38.219611,-85.72048
+female,Sarah,R,Salas,"426 Summit Park Avenue",Southfield,MI,48075,SarahRSalas@gustr.com,248-936-3564,11/24/1989,42.562914,-83.202248
+male,Luis,B,Whitley,"2531 Confederate Drive",Utica,NY,13502,LuisBWhitley@armyspy.com,315-721-1753,5/28/1964,43.243399,-75.210571
+male,Glen,A,Warner,"4171 Better Street",Lansing,KS,66043,GlenAWarner@armyspy.com,913-351-4367,10/28/1953,39.300661,-94.818451
+male,Robert,K,Maher,"690 Amethyst Drive","East Lansing",MI,48823,RobertKMaher@armyspy.com,517-337-6396,2/18/1956,42.703541,-84.396292
+female,Dawn,M,Downey,"4649 Clair Street",Killeen,TX,76543,DawnMDowney@cuvox.de,254-699-3899,4/2/1960,31.119952,-97.649991
+male,William,A,Fletcher,"513 Callison Lane",Milford,DE,19963,WilliamAFletcher@rhyta.com,302-424-0215,12/24/1954,39.00573,-75.309978
+female,Linda,J,Parker,"856 Lang Avenue",Manti,UT,84642,LindaJParker@rhyta.com,435-813-6348,10/13/1963,39.181505,-111.444996
+female,Della,J,Green,"3529 Whispering Pines Circle",Wilmer,TX,75172,DellaJGreen@rhyta.com,972-441-1853,3/1/1971,32.535639,-96.758957
+female,Cathy,D,Bailey,"3123 Emily Drive",Columbia,SC,29201,CathyDBailey@cuvox.de,803-997-3293,10/18/1978,34.064351,-81.024422
+female,Dora,A,Foust,"1503 Barrington Court","Pine Bluff",AR,71601,DoraAFoust@teleworm.us,870-556-2469,5/3/1973,34.216425,-91.985216
+female,Dolores,M,Schreiner,"1761 Pursglove Court",Dayton,OH,45402,DoloresMSchreiner@superrito.com,937-315-0706,9/26/1953,39.784626,-84.208074
+female,Lucille,D,Hovis,"2979 Star Route","Hickory Hills",IL,60457,LucilleDHovis@einrot.com,708-567-2064,7/1/1975,41.658475,-87.769662
+male,Charles,K,Allen,"4887 Fairfax Drive",Belleville,NJ,07109,CharlesKAllen@dayrep.com,908-929-4455,8/14/1934,40.83341,-74.077333
+female,Lola,T,Berger,"3448 Ridge Road","Great Bend",KS,67530,LolaTBerger@armyspy.com,620-793-3090,1/31/1963,38.424489,-98.714313
+female,Grace,W,Hoffman,"4525 Stanton Hollow Road",Boston,MA,02199,GraceWHoffman@gustr.com,781-515-2244,6/19/1957,42.299583,-71.16764
+female,Olive,H,Combs,"4227 Meadow Lane",Eureka,CA,95501,OliveHCombs@jourrapide.com,707-269-9197,11/19/1992,40.789056,-124.236186
+male,James,J,Peck,"1864 Clearview Drive",Centennial,CO,80112,JamesJPeck@fleckens.hu,303-725-1949,6/29/1946,39.587221,-104.823794
+male,Robert,B,Hutchcraft,"3482 Prospect Street",Camden,NJ,08104,RobertBHutchcraft@einrot.com,856-613-6910,8/24/1982,39.954902,-75.037236
+female,Kathleen,J,Marr,"4352 Broadcast Drive",Arlington,VA,22201,KathleenJMarr@cuvox.de,703-974-7741,7/1/1986,38.957983,-77.070445
+female,Jessie,D,Blair,"2066 Twin Oaks Drive","Traverse City",MI,49686,JessieDBlair@jourrapide.com,231-564-9640,11/24/1949,44.817188,-85.653387
+female,Mabel,F,Pelletier,"4109 Green Hill Road","Fort Smith",AR,72908,MabelFPelletier@teleworm.us,479-236-0386,12/11/1995,35.357801,-94.43802
+female,Lisa,J,Fahey,"1587 Timbercrest Road","Cape Lisburne",AK,99766,LisaJFahey@dayrep.com,907-725-0127,11/18/1996,68.891677,-166.135173
+male,John,T,Page,"4207 Oak Avenue","Arlington Heights",IL,60004,JohnTPage@fleckens.hu,847-971-6790,1/14/1965,42.144769,-87.96199
+female,Pamela,R,Martinez,"709 Huntz Lane",Quincy,MA,02169,PamelaRMartinez@rhyta.com,978-529-1486,9/15/1946,42.189697,-70.970747
