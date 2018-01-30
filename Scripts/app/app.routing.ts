@@ -4,6 +4,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { PageNotFoundComponent } from "./misc/page-not-found.component";
+import { FamilyDetailComponent } from "./family/family-detail.component";
 
 const appRoutes: Routes = [
     {
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
     {
         path: "login",
         component: LoginComponent
+    },
+    {
+        path: "family/add/:id",
+        component: FamilyDetailComponent
     },
     {
         path: '**',

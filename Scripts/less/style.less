@@ -17,6 +17,12 @@ h2 {
     color: #666666;
 }
 
+//Global styling
+start {
+    .dates{
+        font-size: 12px;
+    }
+}
 //home component styling
 home {
     border: 0;
@@ -46,14 +52,31 @@ members-list, family-list{
     div.left-div{
         float: left;
         width: 75px;
-        height: 63px;
+        height: 85px;
         margin-right: 10px;
         background-color: yellowgreen;
     }
     div.right-div{
         margin-left: 85px;
         margin-left: 10px;
+        height: 85px;
         background-color: #efefef;
         color: #4e4e4e;
+    }
+}
+
+family-detail{
+    .family-details{
+        margin: 5px;
+        padding: 5px 10px;
+        border: 1px solid black;
+        background-color: #dddddd;
+        width: 600px;
+    }
+    .family-details * {
+        vertical-align: middle;
+    }
+    .family-details ul li {
+        padding: 5px 0;
     }
 }
