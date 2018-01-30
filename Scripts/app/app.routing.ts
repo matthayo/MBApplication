@@ -4,7 +4,8 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { PageNotFoundComponent } from "./misc/page-not-found.component";
-import { FamilyDetailComponent } from "./family/family-detail.component";
+import { FamilyDetailEditComponent } from "./family/family-detail-edit.component";
+import { FamilyDetailViewComponent } from "./family/family-detail-view.component";
 
 const appRoutes: Routes = [
     {
@@ -20,8 +21,12 @@ const appRoutes: Routes = [
         component: LoginComponent
     },
     {
-        path: "family/add/:id",
-        component: FamilyDetailComponent
+        path: "family/edit/:id",
+        component: FamilyDetailEditComponent
+    },
+    {
+        path: "family/view/:id",
+        component: FamilyDetailViewComponent
     },
     {
         path: '**',

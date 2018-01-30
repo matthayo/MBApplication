@@ -1,0 +1,60 @@
+<div *ngIf="family" class="family-container">
+    <div class="family-tab-menu">
+        <span class="selected">Edit</span>
+        <span *ngIf="family.Id != 0" (click)="onFamilyDetailView(family)" >View</span>
+    </div>
+    <div class="family-details">
+        <h2>{{family.FamilyName}} - Family Unit</h2>
+        <ul>
+            <li>
+                <label>Family Name:</label>
+                <input [(ngModel)] = "this.family.FamilyName" 
+                placeholder="Family Name" />
+            </li>
+
+            <h4>Address:</h4>
+            
+            <li>
+                <label>Apt #: </label>
+                <input [(ngModel)] = "this.family.AptNumber"
+                placeholder="Apt. Number" />
+            </li>
+            <li>
+                <label>House #: </label>
+                <input [(ngModel)] = "this.family.House"
+                placeholder="House #" />
+            </li>
+            <li>
+                <label>Street</label>
+                <input [(ngModel)] = "this.family.Street"
+                placeholder="Street eg. Nowthen Blvd." />
+            </li>
+            <li>
+                <label>City</label>
+                <input [(ngModel)] ="this.family.City" 
+                placeholder="City eg. Minneapolis" />
+            </li>
+            <li>
+                <label>State</label>
+                <input [(ngModel)]="this.family.State" 
+                placeholder="State eg. Minnesota" />
+            </li>
+            <li>
+                <label>Zip</label>
+                <input [(ngModel)]="this.family.Zip" 
+                placeholder="Zip eg. 55303" />
+            </li>
+        </ul>
+
+        <div *ngIf="family.Id == 0" class="commands insert">
+            <input type="button" value="Save" (click)="onInsert(family)" />
+            <input type="button" value="Cancel" (click)="onBack()" />
+        </div>
+
+        <div *ngIf="family.Id != 0" class="commands update">
+            <input type="button" value="Update" (click)="onUpdate(family)" />
+            <input type="button" value="Delete" (click)="onDelete(family)" />
+            <input type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
+        </div>
+    </div>
+</div>

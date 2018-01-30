@@ -7,12 +7,12 @@ import { FamilyService } from "./family.service";
 
 //Decorators
 @Component({
-    selector: "family-detail",
-    templateUrl: `app/family/family-detail.component.html`
+    selector: "family-detail-edit",
+    templateUrl: `app/family/family-detail-edit.component.html`
 })
 
 //Export
-export class FamilyDetailComponent {
+export class FamilyDetailEditComponent {
     family: Family;
 
     constructor(private familyService: FamilyService, 
@@ -30,15 +30,15 @@ export class FamilyDetailComponent {
         else if (id === 0) {
             console.log("Id is 0: adding a new family unit...");
             this.family = new Family(0, 
-                                    "Add New",
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null);
+                                    "Add New",  //FamilyName
+                                    null,       //AptNumber
+                                    null,       //House
+                                    null,       //Street
+                                    null,       //City
+                                    null,       //State
+                                    null,       //Zip
+                                    null,       //CreatedDate
+                                    null);      //LastModifiedDate
         }
         else{
             console.log("Invalid id: routing back to home");
@@ -51,7 +51,7 @@ export class FamilyDetailComponent {
             (data) => {
                 this.family = data;
                 console.log("Family " +  family.Id + " has been added.");
-                this.router.navigate([""]);
+                this.router.navigate(["family/view", family.Id]);
             },
             (error) => console.log(error)
         );
@@ -62,7 +62,7 @@ export class FamilyDetailComponent {
             (data) => {
                 this.family = data;
                 console.log("Family " + family.Id + " has been updated.");
-                this.router.navigate([""]);
+                this.router.navigate(["family/view", family.Id]);
             },
             (error) => console.log(error)
         );
@@ -80,7 +80,7 @@ export class FamilyDetailComponent {
         );
     }
 
-    onBack(){
-        this.router.navigate([""]);
+    onFamilyDetailView(family: Family){
+        this.router.navigate(["family/view", family.Id]);
     }
 }

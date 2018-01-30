@@ -12,7 +12,8 @@ import { AppComponent } from "./app.component";
 import { MemberService } from "../app/member/member.service";
 import { FamilyService } from "../app/family/family.service";
 
-import { FamilyDetailComponent } from "../app/family/family-detail.component";
+import { FamilyDetailEditComponent } from "../app/family/family-detail-edit.component";
+import { FamilyDetailViewComponent } from "./family/family-detail-view.component";
 import { FamilyListComponent } from "../app/family/family-list.component";
 import { HomeComponent } from "../app/home/home.component";
 import { LoginComponent } from "../app/login/login.component";
@@ -20,11 +21,13 @@ import { MemberListComponent } from "../app/member/member-list.component";
 import { NavBarComponent } from "../app/nav/navbar.component";
 import { PageNotFoundComponent } from "../app/misc/page-not-found.component";
 
+
 @NgModule({
     // directives, components and pipes
     declarations: [
         AppComponent,
-        FamilyDetailComponent,
+        FamilyDetailEditComponent,
+        FamilyDetailViewComponent,
         FamilyListComponent,
         HomeComponent,
         LoginComponent,

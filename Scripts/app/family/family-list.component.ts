@@ -2,6 +2,7 @@
 import { Component } from "@angular/core";
 import { Family } from "./Family";
 import { FamilyService } from "./family.service";
+import { Router } from "@angular/router";
 
 //Decorator
 @Component({
@@ -15,7 +16,8 @@ export class FamilyListComponent{
     families: Family[];
     errorMessage: string;
      
-    constructor(private familyService: FamilyService){ }
+    constructor(private familyService: FamilyService,
+                private router: Router){ }
 
     ngOnInit(){
         this.getFamilies();
@@ -31,7 +33,9 @@ export class FamilyListComponent{
 
     onSelect(family: Family){
         this.selectedFamily = family;
-        console.log("Family with Id " + this.selectedFamily.Id + " has been selected.")
+        console.log("Family with Id " + this.selectedFamily.Id + " has been selected.\n" +
+                    "Loading item view....");
+        this.router.navigate(["family/view", this.selectedFamily.Id]);
     }
 
 }

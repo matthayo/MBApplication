@@ -7,9 +7,8 @@ import { Router } from "@angular/router";
 })
 export class AppComponent { 
     title = "Angular App";
-    constructor(){ }
     
- /*   constructor(public router: Router){
+    constructor(public router: Router){
         }
 
     isActive(data: any[]): boolean{
@@ -17,5 +16,5 @@ export class AppComponent {
             this.router.createUrlTree(data), 
             true);
    }
-   */
+   
 }
