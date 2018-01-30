@@ -10,9 +10,10 @@ using System;
 namespace MBApplication.Migrations
 {
     [DbContext(typeof(MBAppDBContext))]
-    partial class MBAppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20180130165254_AddedDatesInFamily")]
+    partial class AddedDatesInFamily
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
