@@ -3,6 +3,7 @@
         <span class="selected">Edit</span>
         <span *ngIf="family.Id != 0" (click)="onFamilyDetailView(family)" >View</span>
     </div>
+    <div><a [routerLink] = "['']"><h4>&#60;&#60;&#60;Back to home</h4></a></div>
     <div class="family-details">
         <h2>{{family.FamilyName}} - Family Unit</h2>
         <ul>
@@ -15,22 +16,22 @@
             <h4>Address:</h4>
             
             <li>
-                <label>Apt #: </label>
+                <label>Apt #:&#09; </label>
                 <input [(ngModel)] = "this.family.AptNumber"
                 placeholder="Apt. Number" />
             </li>
             <li>
-                <label>House #: </label>
+                <label>House #:&#09; </label>
                 <input [(ngModel)] = "this.family.House"
                 placeholder="House #" />
             </li>
             <li>
-                <label>Street</label>
+                <label>Street&#09;</label>
                 <input [(ngModel)] = "this.family.Street"
                 placeholder="Street eg. Nowthen Blvd." />
             </li>
             <li>
-                <label>City</label>
+                <label>City&#09;</label>
                 <input [(ngModel)] ="this.family.City" 
                 placeholder="City eg. Minneapolis" />
             </li>

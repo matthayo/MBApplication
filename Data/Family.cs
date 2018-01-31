@@ -24,13 +24,13 @@ namespace MBApplication.Data
         [Required]
         public int Zip { get; set; }
 
-        // [Required]
+        [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:MM:ss}", ApplyFormatInEditMode = true)]
         public DateTime CreatedDate { get; set; }
-        // [Required]
+        [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:MM:ss}", ApplyFormatInEditMode = true)]
         public DateTime LastModifiedDate { get; set; }
 
         public virtual List<Member> Members { get; set; }

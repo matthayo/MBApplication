@@ -1,6 +1,7 @@
 //Imports
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
+import { Observable } from "rxjs/Observable";
 
 import { Family } from "./family";
 import { FamilyService } from "./family.service";
@@ -82,5 +83,9 @@ export class FamilyDetailEditComponent {
 
     onFamilyDetailView(family: Family){
         this.router.navigate(["family/view", family.Id]);
+    }
+
+    onBack(){
+        this.router.navigate([""]);
     }
 }

@@ -83,6 +83,9 @@ namespace MBApplication.Controllers
                 family.CreatedDate = DateTime.Now;
                 family.LastModifiedDate = DateTime.Now;
 
+                if(family.AptNumber == "") 
+                    family.AptNumber = null;
+
                 //Add the new Family
                 _dbContext.Families.Add(family);
 
@@ -122,6 +125,10 @@ namespace MBApplication.Controllers
 
                     //Override system-based variable
                     family.LastModifiedDate = DateTime.Now;
+
+                    //If field is empty convert to a Null value.
+                    if(family.AptNumber == "") 
+                        family.AptNumber = null;
 
                     //persist changes to Database
                     _dbContext.SaveChanges();
