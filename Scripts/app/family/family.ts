@@ -8,7 +8,5 @@ export class Family{
         public City: string,
         public State: string,
         public Zip: number,
-        public CreatedDate: string,
-        public LastModifiedDate: string
     ){ }
 }

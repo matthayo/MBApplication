@@ -37,9 +37,8 @@ export class FamilyDetailEditComponent {
                                     null,       //Street
                                     null,       //City
                                     null,       //State
-                                    null,       //Zip
-                                    null,       //CreatedDate
-                                    null);      //LastModifiedDate
+                                    null       //Zip
+                                );      
         }
         else{
             console.log("Invalid id: routing back to home");
@@ -51,8 +50,8 @@ export class FamilyDetailEditComponent {
         this.familyService.add(family).subscribe(
             (data) => {
                 this.family = data;
-                console.log("Family " +  family.Id + " has been added.");
-                this.router.navigate(["family/view", family.Id]);
+                console.log("Family " + this.family.Id + " has been added")
+                this.router.navigate(["family/view", this.family.Id]);
             },
             (error) => console.log(error)
         );
@@ -62,8 +61,8 @@ export class FamilyDetailEditComponent {
         this.familyService.update(family).subscribe(
             (data) => {
                 this.family = data;
-                console.log("Family " + family.Id + " has been updated.");
-                this.router.navigate(["family/view", family.Id]);
+                console.log("Family " + this.family.Id + " has been updated.");
+                this.router.navigate(["family/view", this.family.Id]);
             },
             (error) => console.log(error)
         );
