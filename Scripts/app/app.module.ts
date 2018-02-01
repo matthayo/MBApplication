@@ -4,8 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
 
-import { Observable } from "rxjs/Rx";
-import "rxjs/Rx";
+import "rxjs/Rx"
 
 import { AppRouting } from "./app.routing";
 import { AppComponent } from "./app.component";
