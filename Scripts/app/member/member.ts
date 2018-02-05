@@ -9,8 +9,6 @@ export class Member {
       public Telephone: string,
       public Gender: string,
       public MaritalStatus: string,
-      public DateOfBirth: Date,
-      public DateCreated: Date,
-      public LastDateModified: Date,  
+      public DateOfBirth: Date
     ){}
 }
