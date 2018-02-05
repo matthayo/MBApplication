@@ -1,5 +1,5 @@
 <div>
-    <h2>Family List</h2>
+    <h2>{{title}}</h2>
     <ul class="list">
         <hr/>
         <li *ngFor="let family of families" [class.selected]="family === selectedFamily" (click)="onSelect(family)">

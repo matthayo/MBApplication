@@ -13,6 +13,7 @@ import { FamilyService } from "./family.service";
 
 //Export
 export class FamilyDetailViewComponent {
+    title = "Detailed Family View";
     family: Family;
 
     constructor(private familyService: FamilyService,

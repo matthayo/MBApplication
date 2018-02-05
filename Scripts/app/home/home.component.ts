@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { expand } from "rxjs/operator/expand";
 
 @Component({
     selector: "home",
@@ -6,5 +7,5 @@ import { Component } from "@angular/core";
 })
 
 export class HomeComponent{
-    title = "Welcome View";
+    title = "Welcome to the Member Management System";
 }

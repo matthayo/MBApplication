@@ -12,6 +12,7 @@ import { Router } from "@angular/router";
 
 //Exports
 export class FamilyListComponent{  
+    title = "Family List"
     selectedFamily: Family;
     families: Family[];
     errorMessage: string;

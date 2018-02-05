@@ -1,10 +1,11 @@
 <div *ngIf="family" class="family-container">
-<div>
-    <a [routerLink]="['']">
-        <h4>&#60;&#60;&#60;Back to home</h4>
-    </a>
-</div>
-    <div class="family-tab-menu">
+    <div>
+        <a [routerLink]="['']">
+            <h4>&#60;&#60;&#60;Back to home</h4>
+        </a>
+    </div>
+    <h2>{{title}}</h2>
+    <div class="tab-menu">
         <span class="selected">Edit</span>
         <span *ngIf="family.Id != 0" (click)="onFamilyDetailView(family)" >View</span>
     </div>

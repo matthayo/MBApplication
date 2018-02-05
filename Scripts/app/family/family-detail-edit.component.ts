@@ -14,6 +14,7 @@ import { FamilyService } from "./family.service";
 
 //Export
 export class FamilyDetailEditComponent {
+    title = "Editing family details"
     family: Family;
 
     constructor(private familyService: FamilyService, 
