@@ -20,6 +20,8 @@ import { LoginComponent } from "../app/login/login.component";
 import { MemberListComponent } from "../app/member/member-list.component";
 import { NavBarComponent } from "../app/nav/navbar.component";
 import { PageNotFoundComponent } from "../app/misc/page-not-found.component";
+import { MemberDetailEditComponent } from "./member/member-detail-edit.component";
+import { MemberDetailViewComponent } from "./member/member-detail-view.component";
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { PageNotFoundComponent } from "../app/misc/page-not-found.component";
         HomeComponent,
         LoginComponent,
         MemberListComponent,
+        MemberDetailEditComponent,
+        MemberDetailViewComponent,
         NavBarComponent,
         PageNotFoundComponent
     ],
