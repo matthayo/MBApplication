@@ -8,10 +8,23 @@ import { Member } from "./member";
 
 //Export
 export class MemberService {
-    constructor(private http: Http) { }
+    constructor(private http: Http) {
+        
+    }
 
     //Web API URL
     private baseUrl = "api/members/"
+
+    // GET call for api/members/get/{id}
+    get(num?: number){
+        var url = this.baseUrl + "Get/"
+
+        if(num != null) url += num;
+
+        return this.http.get(url)
+                    .map(respose => respose.json())
+                    .catch(this.handleError);
+    }
 
     //API call to GetAllMembers "api/members/getallmembers"
     getAllMembers(){
@@ -19,10 +32,10 @@ export class MemberService {
 
         return this.http.get(url)
                 .map(response => response.json())
-                .catch(this.handleErrors);
+                .catch(this.handleError);
     }
 
-    private handleErrors(error: Response) {
+    private handleError(error: Response) {
         console.error(error);
         return Observable.throw(error.json().error || "Server error");
     }

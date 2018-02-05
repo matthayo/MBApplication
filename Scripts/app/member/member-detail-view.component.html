@@ -1,0 +1,24 @@
+<div>
+    <div>
+        <a (click) = "backToMembersList()" >
+            <h4>&#60;&#60;&#60;Back to Members List</h4>
+        </a>
+    </div>
+    <h2>{{title}}</h2>
+    <div *ngIf="member" class="member-container">
+        <div class="tab-menu">
+            <span (click) = "onMemberDetailEdit(member)">Edit</span>
+            <span class="selected">View</span>
+        </div>
+        <div class="member-details">
+            <b>Family Unit: </b>{{member.LastName}}<br/>
+            <b>Full Name: </b>{{member.LastName}}, {{member.FirstName}}<br/>
+            <b>Date of Birth: </b> {{member.DateOfBirth | date: 'MM/dd/yyyy'}}<br/>
+            <b>Gender: </b> {{member.Gender}} &#12; <b>Marital Status: </b> {{member.MaritalStatus}}
+        </div>
+        <div class="dates">
+            <b>Date Modified:</b> {{member.LastModifiedDate | date:'MM/dd/yyyy'}} &#12;
+            <b>Date Created:</b> {{member.CreatedDate | date:'MM/dd/yyyy'}}
+        </div>
+    </div>
+</div>
