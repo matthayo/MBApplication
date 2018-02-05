@@ -1,6 +1,23 @@
 <nav-bar></nav-bar>
 <h1 class="header">{{title}}</h1>
 <div class="main-container">
+    <div class="navbar">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="members" [routerLink]="['members']">Members</a>
+                    </li>
+                    <li>
+                        <a class="families" [routerLink]="['families']">Families</a>
+                    </li>
+                    <li>
+                        <a class="organization" [routerLink]="['organization']">Organization</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <hr>
     <router-outlet></router-outlet>
 </div>

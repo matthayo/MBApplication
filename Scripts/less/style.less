@@ -22,7 +22,15 @@ start {
     .dates{
         font-size: 12px;
     }
+    .nav {
+    order: 0;
+    margin: 2px;
+    padding: 2px;
+    font-size: 14px;
+    } 
 }
+
+
 //home component styling
 home {
     border: 0;
@@ -32,7 +40,7 @@ home {
     display: block;
 }
 
-//navbar.component styling
+//nav-bar.component styling
 nav-bar {
     order: 0;
     margin: 2px;
@@ -95,10 +103,45 @@ family-detail-edit, family-detail-view{
         display: block;
         width: 90%;
     }
-    .family-tab-menu{
-        margin-right: 30px;
+    .commands {
+        text-align: right;
+        margin: 10px 20px 10px 10px;
     }
-    .family-tab-menu span{
+}
+
+member-detail-edit, member-detail-view{
+    .member-container{
+        width: 600px;
+    }  
+    .member-details{
+        margin: 0;
+        padding: 5px 10px;
+        border: 1px solid black;
+        background-color: #eeeeee;
+        width: 600px;
+        clear: both;
+    }
+    .member-details * {
+        vertical-align: middle;
+    }
+    .member-details .mode{
+        color: #777777;
+    }
+    .member-details ul li {
+        padding: 5px 0;
+    } 
+    .member-details input[type="text"]{
+        display: block;
+        width: 90%;
+    }
+}
+
+family-detail-edit, family-detail-view, member-detail-edit, member-detail-view
+{
+    .tab-menu{
+    margin-right: 30px;
+    }
+    .tab-menu span{
         background: #dddddd;
         border: #666666;
         border-bottom: 0;
@@ -110,7 +153,7 @@ family-detail-edit, family-detail-view{
         text-align: center;
         width: 60px;
     }
-    .family-tab-menu span.selected{
+    .tab-menu span.selected{
         background: #eeeeee;
         cursor: auto;
         font-weight: bold;
