@@ -1,7 +1,7 @@
 <div>
     <div>
         <a (click) = "backToMembersList()" >
-            <h4>&#60;&#60;&#60;Back to Members List</h4>
+            <h4>&#60;&#60;&#60; Back to Members List</h4>
         </a>
     </div>
     <h2>{{title}}</h2>
@@ -11,14 +11,24 @@
             <span class="selected">View</span>
         </div>
         <div class="member-details">
-            <b>Family Unit: </b>{{member.LastName}}<br/>
-            <b>Full Name: </b>{{member.LastName}}, {{member.FirstName}}<br/>
-            <b>Date of Birth: </b> {{member.DateOfBirth | date: 'MM/dd/yyyy'}}<br/>
-            <b>Gender: </b> {{member.Gender}} &#12; <b>Marital Status: </b> {{member.MaritalStatus}}
-        </div>
-        <div class="dates">
-            <b>Date Modified:</b> {{member.LastModifiedDate | date:'MM/dd/yyyy'}} &#12;
-            <b>Date Created:</b> {{member.CreatedDate | date:'MM/dd/yyyy'}}
+            <div class="labels-div">
+                Family Unit:<br/> 
+                Full Name:<br/>
+                Date of Birth:<br/>
+                Gender:<br/>
+                Marital Status:<br/>
+            </div>
+            <div class="details-div">
+                {{member.LastName}}<br/>
+                {{member.LastName}}, {{member.FirstName}}<br/>
+                {{member.DateOfBirth | date: 'MM/dd/yyyy'}}<br/>
+                {{member.Gender}} <br/>
+                {{member.MaritalStatus}} <br/>
+            </div>
+            <div class="dates">
+                <b>Date Modified:</b> {{member.LastModifiedDate | date:'MM/dd/yyyy'}} &#12;
+                <b>Date Created:</b> {{member.CreatedDate | date:'MM/dd/yyyy'}}
+            </div>
         </div>
     </div>
 </div>

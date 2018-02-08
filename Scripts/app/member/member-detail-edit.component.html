@@ -1,9 +1,69 @@
 <div>
     <div>
-        <a [routerLink]="['']">
-            <h4>&#60;&#60;&#60;Back to home</h4>
+        <a [routerLink]="['members']">
+            <h4>&#60;&#60; Back to members list</h4>
         </a>
     </div>
-    <h2>{{title}} </h2>
+    <h2>{{title}}</h2>
+    <div class="tab-menu">
+        <span class="selected">Edit</span>
+        <span *ngIf="family.Id != 0" (click)="onFamilyDetailView(family)">View</span>
+    </div>
+    <div class="member-details-edit">
+        <div>Member: {{member.LastName}}, {{member.FirstName}}, {{member.MiddleName}}</div>
+        <div class="labels-div">
+            <ul>
+                <li>
+                    <label>First Name: </label>
+                </li>
+                <li>
+                    <label>Middle Name: </label>
+                </li>
+                <li>
+                    <label>Last Name: </label>
+                </li>
+                <li>
+                    <label>Date of Birth: </label>
+                </li>
+                <li>
+                    <label>Gender</label>
+                </li>
+                <li>
+                    <label>Marital Status: </label>
+                </li>
+            </ul>
+        </div>
+        <div class="details-div">
+            <li>
+                <input [(ngModel)] = "this.member.FirstName"
+                placeholder="First Name"/>
+            </li>
+            <li>
+                <input [(ngModel)]="this.member.MiddleName"
+                placeholder="Middle Name"/>
+            </li>
+            <li>
+                <input [(ngModel)]="this.member.LastName" placeholder="Last Name" />
+            </li>
+            <li>
+                <input [(ngModel)]="this.member.DateOfBirth" placeholder="MM/DD/YYYY" />
+            </li>
+            <li>
+                <input [(ngModel)]="this.member.Gender" placeholder="Male/Female" />
+            </li>
+            <li>
+                <input [(ngModel)]="this.member.MaritalStatus" placeholder="Marital Status" />
+            </li>
+        </div>
+        <div *ngIf="member.Id == 0" class="commands insert">
+            <input type="button" value="Save" (click)="onInsert(member)" />
+            <input type="button" value="Cancel" (click)="onBack()" />
+        </div>
 
+        <div *ngIf="member.Id != 0" class="commands update">
+            <input type="button" value="Update" (click)="onUpdate(member)" />
+            <input type="button" value="Delete" (click)="onDelete(member)" />
+            <!-- <input type="button" value="Cancel" (click)="onMemberDetailView(member)" /> -->
+        </div>
+    </div>
 </div>

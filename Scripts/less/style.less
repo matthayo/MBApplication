@@ -21,6 +21,7 @@ h2 {
 start {
     .dates{
         font-size: 12px;
+        text-align: right;
     }
     .nav {
     order: 0;
@@ -48,23 +49,7 @@ nav-bar {
     font-size: 10px;
 } 
 
-.address-left-div{
-    float: left;
-    width: 75px;
-    height: 100px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
-    background-color: yellowgreen;
-}
-.address-right-div{
-    margin-left: 75px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    height: 100px;
-    background-color: #93e2fa;
-    color: #4e4e4e;
-}
+
 
 //member-list component styling
 members-list, family-list{
@@ -78,6 +63,25 @@ members-list, family-list{
 
 }
 
+family-detail-view, family-list{
+    .address-left-div{
+        float: left;
+        width: 75px;
+        height: 100px;
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-top: 5px;
+        background-color: yellowgreen;
+    }
+    .address-right-div{
+        margin-left: 75px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: 100px;
+        background-color: #93e2fa;
+        color: #4e4e4e;
+    }
+}
 family-detail-edit, family-detail-view{
     .family-container{
         width: 600px;
@@ -134,6 +138,55 @@ member-detail-edit, member-detail-view{
         display: block;
         width: 90%;
     }
+    
+
+}
+
+member-detail-view{
+    .labels-div{
+        float: left;
+        width: 150px;
+        height: 120px;
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 5px;
+        padding-top: 5px;
+        background-color: yellowgreen;
+        text-align: right;
+        font-weight: bolder;
+    }
+    .details-div{
+        margin-left: 155px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: 120px;
+        background-color: #93e2fa;
+        color: #4e4e4e;
+    }
+}
+
+member-detail-edit{
+    .labels-div{
+        float: left;
+        width: 150px;
+        height: 250px;
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 5px;
+        padding-top: 5px;
+        background-color: yellowgreen;
+        text-align: right;
+        font-weight: bolder;
+        font-size: 10px;
+    }
+    .details-div{
+        margin-left: 155px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: 250px;
+        background-color: #93e2fa;
+        color: #4e4e4e;
+    }
 }
 
 family-detail-edit, family-detail-view, member-detail-edit, member-detail-view
@@ -162,5 +215,8 @@ family-detail-edit, family-detail-view, member-detail-edit, member-detail-view
     .commands {
         text-align: right;
         margin: 10px 20px 10px 10px;
+    }
+    ul{
+        list-style-type: none;
     }
 }
