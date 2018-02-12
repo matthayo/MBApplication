@@ -54,13 +54,27 @@ namespace MBApplication.Controllers
             return new JsonResult(ToMemberViewModelList(members), DefaultJsonSettings);
         }
 
+        //Get api/members/GetByLastName/{name}
+        [HttpGet("GetByLastName/{name}")]
+        public IActionResult GetByLastName(string name){
+            var member = _dbContext.Members.Where(i => i.LastName.Equals(name, StringComparison.OrdinalIgnoreCase));
+            
+            if(member != null){ 
+                return new JsonResult(ToMemberViewModelList(member), DefaultJsonSettings);
+            }
+            else
+            {
+                return NotFound(new {Error = String.Format("Member {0} has not been found", name)});
+            }
+        }
+
         //GET api/members/GetFamilyMembers/Anderson
 
         [HttpGet("GetFamilyMembersByName/{familyName}")]
         public IActionResult GetFamilyMembersByName(string familyName)
         {
             var members = _dbContext.Members.Where(i => i.LastName.Equals(familyName, StringComparison.OrdinalIgnoreCase));
-            if (familyName != null)
+            if (members != null)
             {
                 return new JsonResult(ToMemberViewModelList(members), DefaultJsonSettings);
             }
