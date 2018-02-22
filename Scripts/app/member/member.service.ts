@@ -44,7 +44,7 @@ export class MemberService {
                 .catch(this.handleError);
     }
 
-    // POST
+    // POST call for /api/members
     add(member: Member){
         var url = this.baseUrl;
 

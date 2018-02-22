@@ -41,6 +41,7 @@ export class MemberDetailViewComponent {
 
     onMemberDetailEdit(member: Member){
         this.router.navigate(["member/edit", member.Id]);
+        return false;
     }
 
     backToMembersList(){

@@ -41,12 +41,12 @@ const appRoutes: Routes = [
         component: MemberListComponent
     },
     {
-        path: "member/view/:id",
-        component: MemberDetailViewComponent
-    },
-    {
         path: "member/edit/:id",
         component: MemberDetailEditComponent
+    },
+    {
+        path: "member/view/:id",
+        component: MemberDetailViewComponent
     },
     {
         path: '**',

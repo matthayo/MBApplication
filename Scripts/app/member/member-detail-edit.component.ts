@@ -1,4 +1,4 @@
-// Imports
+//Imports
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs/Observable";
@@ -6,78 +6,88 @@ import { Observable } from "rxjs/Observable";
 import { Member } from "./member";
 import { MemberService } from "./member.service";
 
-// Decorators
-@Component ({
+//Decorators
+@Component({
     selector: "member-detail-edit",
-    templateUrl: "app/member/member-detail-edit.component.html"
+    templateUrl: `app/member/member-detail-edit.component.html`
 })
 
-// Export
+//Export
 export class MemberDetailEditComponent {
-    title = "Member Detail Edit"
+    title = "Editing member details"
     member: Member;
 
     constructor(private memberService: MemberService,
-                private router: Router,
-                private activatedRoute: ActivatedRoute){}
+        private router: Router,
+        private activatedRoute: ActivatedRoute) {
+    }
 
-    onInit(){
+    ngOnInit() {
         var id = +this.activatedRoute.snapshot.params["id"];
-
-        if(id){
+        if (id) {
             this.memberService.get(id).subscribe(
                 member => this.member = member
             );
         }
-        else if (id === 0){
-            console.log("Id is 0: adding a new member ...");
+        else if (id === 0) {
+            console.log("Id is 0: adding a new member unit...");
             this.member = new Member(0,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
                                     null,  
-                                    null, 
-                                    null,   
-                                    null
-                                );
+                                    "Add New",       
+                                    null,       
+                                    null,       
+                                    null,       
+                                    null,      
+                                    null,
+                                    null,
+                                    null       
+            );
         }
-        else{
+        else {
             console.log("Invalid id: routing back to home");
             this.router.navigate([""]);
         }
     }
 
-    onInsert(member: Member){
+    onInsert(member: Member) {
         this.memberService.add(member).subscribe(
             (data) => {
                 this.member = data;
-                console.log("Member " + this.member.Id + " has been added");
-                this.router.navigate(["member/view", this.member.Id]);       
+                console.log("member " + this.member.Id + " has been added")
+                this.router.navigate(["member/view", this.member.Id]);
             },
             (error) => console.log(error)
         );
     }
 
-    onUpdate(member: Member){
+    onUpdate(member: Member) {
         this.memberService.update(member).subscribe(
             (data) => {
                 this.member = data;
-                console.log("Member " + this.member.Id + " has been added.");
-                this.router.navigate(["member/view", this.member.Id])
-                },
-                (error) => console.log(error)
-            );
+                console.log("member " + this.member.Id + " has been updated.");
+                this.router.navigate(["member/view", this.member.Id]);
+            },
+            (error) => console.log(error)
+        );
     }
 
-    onMemberDetailView(member: Member) {
+    onDelete(id: number) {
+        var id = this.member.Id;
+
+        this.memberService.delete(id).subscribe(
+            (data) => {
+                console.log("member " + id + " has been deleted.");
+                this.router.navigate([""]);
+            },
+            (error) => console.log(error)
+        );
+    }
+
+    onmemberDetailView(member: Member) {
         this.router.navigate(["member/view", member.Id]);
     }
 
-    backToMembersList() {
-        this.router.navigate(["members"]);
+    onBack() {
+        this.router.navigate([""]);
     }
-
-
 }
