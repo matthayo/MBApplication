@@ -8,12 +8,13 @@ import { Member } from "./member";
 
 //Export
 export class MemberService {
+    
+    //Web API URL
+    baseUrl = "api/members/"; 
+   
     constructor(private http: Http) {
         
     }
-
-    //Web API URL
-    private baseUrl = "api/members/"
 
     // GET call for api/members/get/{id}
     get(num?: number){

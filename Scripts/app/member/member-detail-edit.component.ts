@@ -18,8 +18,8 @@ export class MemberDetailEditComponent {
     member: Member;
 
     constructor(private memberService: MemberService,
-        private router: Router,
-        private activatedRoute: ActivatedRoute) {
+                private router: Router,
+                private activatedRoute: ActivatedRoute) {
     }
 
     ngOnInit() {
@@ -31,21 +31,21 @@ export class MemberDetailEditComponent {
         }
         else if (id === 0) {
             console.log("Id is 0: adding a new member unit...");
-            this.member = new Member(0,
-                                    null,  
-                                    "Add New",       
-                                    null,       
-                                    null,       
-                                    null,       
-                                    null,      
-                                    null,
-                                    null,
-                                    null       
+            this.member = new Member(0, //Id
+                                    null, // FamilyId
+                                    "Add New Member", // FirstName
+                                    null, // MiddleName
+                                    null, // LastName
+                                    null, // Email
+                                    null, // Telephone
+                                    null, // Gender
+                                    null, // MaritalStatus
+                                    null  // DateOfBirth     
             );
         }
         else {
             console.log("Invalid id: routing back to home");
-            this.router.navigate([""]);
+            this.router.navigate(["members"]);
         }
     }
 
@@ -53,7 +53,7 @@ export class MemberDetailEditComponent {
         this.memberService.add(member).subscribe(
             (data) => {
                 this.member = data;
-                console.log("member " + this.member.Id + " has been added")
+                console.log("member " + member.Id + " has been added")
                 this.router.navigate(["member/view", this.member.Id]);
             },
             (error) => console.log(error)
@@ -64,8 +64,8 @@ export class MemberDetailEditComponent {
         this.memberService.update(member).subscribe(
             (data) => {
                 this.member = data;
-                console.log("member " + this.member.Id + " has been updated.");
-                this.router.navigate(["member/view", this.member.Id]);
+                console.log("member " + member.Id + " has been updated.");
+                this.router.navigate(["member/view", member.Id]);
             },
             (error) => console.log(error)
         );
@@ -73,18 +73,22 @@ export class MemberDetailEditComponent {
 
     onDelete(id: number) {
         var id = this.member.Id;
-
         this.memberService.delete(id).subscribe(
             (data) => {
                 console.log("member " + id + " has been deleted.");
-                this.router.navigate([""]);
+                this.router.navigate(["members"]);
             },
             (error) => console.log(error)
         );
     }
 
-    onmemberDetailView(member: Member) {
+    onMemberDetailView(member: Member) {
         this.router.navigate(["member/view", member.Id]);
+        return false;
+    }
+    
+    backToMembersList() {
+        this.router.navigate(["members"]);
     }
 
     onBack() {

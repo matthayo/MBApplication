@@ -43,7 +43,7 @@ export class FamilyDetailEditComponent {
         }
         else{
             console.log("Invalid id: routing back to home");
-            this.router.navigate([""]);
+            this.router.navigate(["families"]);
         }
     }
 

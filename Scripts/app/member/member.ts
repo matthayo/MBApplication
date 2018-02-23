@@ -10,5 +10,5 @@ export class Member {
       public Gender: string,
       public MaritalStatus: string,
       public DateOfBirth: Date
-    ){}
+    ){ }
 }

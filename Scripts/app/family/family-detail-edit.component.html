@@ -11,53 +11,51 @@
     </div>
     <div class="family-details">
         <h2>{{family.FamilyName}} - Family Unit</h2>
-        <!-- <form class="family-detail-edit"> -->
+        <form class="family-detail-edit">
             <div>
-        <ul>
-            <li>
-                <label>Family Name:</label>
-                <input [(ngModel)] = "this.family.FamilyName" placeholder="Family Name" />
-            </li>
+                <ul>
+                    <li>
+                        <label>Family Name:</label>
+                        <input type="text" [(ngModel)] = "this.family.FamilyName" placeholder="Family Name" name="familyName"/>
+                    </li>
 
-            <h4>Address:</h4>
-            
-            <li>
-                <label>Apt #:&#09; </label>
-                <input [(ngModel)] = "this.family.AptNumber" placeholder="Apt. Number" />
-            </li>
-            <li>
-                <label>House #:&#09; </label>
-                <input [(ngModel)] = "this.family.House" placeholder="House #" />
-            </li>
-            <li>
-                <label>Street&#09;</label>
-                <input [(ngModel)] = "this.family.Street" placeholder="Street eg. Nowthen Blvd." />
-            </li>
-            <li>
-                <label>City&#09;</label>
-                <input [(ngModel)] ="this.family.City" placeholder="City eg. Minneapolis" />
-            </li>
-            <li>
-                <label>State</label>
-                <input [(ngModel)]="this.family.State" placeholder="State eg. Minnesota" />
-            </li>
-            <li>
-                <label>Zip</label>
-                <input [(ngModel)]="this.family.Zip" placeholder="Zip eg. 55303" />
-            </li>
-        </ul>
-    <!-- </form> -->
-    </div>
+                    <h4>Address:</h4>
+                    
+                    <li>
+                        <label>Apt #:&#09; </label>
+                        <input type="text" [(ngModel)] = "this.family.AptNumber" placeholder="Apt. Number" name="aptNumber"/>
+                    </li>
+                    <li>
+                        <label>House #:&#09; </label>
+                        <input type="text" [(ngModel)] = "this.family.House" placeholder="House #" name="houseNumber"/>
+                    </li>
+                    <li>
+                        <label>Street&#09;</label>
+                        <input type="text" [(ngModel)] = "this.family.Street" placeholder="Street eg. Nowthen Blvd." name="street" />
+                    </li>
+                    <li>
+                        <label>City&#09;</label>
+                        <input type="text" [(ngModel)] ="this.family.City" placeholder="City eg. Minneapolis" name="city" />
+                    </li>
+                    <li>
+                        <label>State</label>
+                        <input type="text" [(ngModel)]="this.family.State" placeholder="State eg. Minnesota" name="state"/>
+                    </li>
+                    <li>
+                        <label>Zip</label>
+                        <input type="text" [(ngModel)]="this.family.Zip" placeholder="Zip eg. 55303" name="zip" />
+                    </li>
+                </ul>
+        </div>
+    </form>
         <div *ngIf="family.Id == 0" class="commands insert">
             <input type="button" value="Save" (click)="onInsert(family)" />
-            <input type="button" value="Cancel" (click)="onBack()" />
+            <input type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
         </div>
-
         <div *ngIf="family.Id != 0" class="commands update">
             <input type="button" value="Update" (click)="onUpdate(family)" />
             <input type="button" value="Delete" (click)="onDelete(family)" />
             <input type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
         </div>
-        
     </div>
 </div>

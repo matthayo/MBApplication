@@ -6,15 +6,15 @@
     </div>
     <div class="member-container">
         <h2>{{title}}</h2>
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs tab">
             <li role="presentation">
-                <a href="#" (click) = "onMemberDetailEdit(member)">Edit</a>
+                <a (click) = "onMemberDetailEdit(member)">Edit</a>
             </li>
-            <li role="presentation" class="selected">
-                <a href="#">View</a>
+            <li role="presentation" class="selected active">
+                <a>View</a>
             </li>
         </ul>
-        <div class="panel panel-default">
+        <div class="panel panel-default member-details">
             <div class="panel-body">
                 <div class="member-image-panel">
                     <img src="" alt="{{member.LastName}}">

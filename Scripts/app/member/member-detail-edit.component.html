@@ -1,60 +1,72 @@
-<div *ngIf="member" class="member-container">
+<div *ngIf="member">
     <div>
-        <a [routerLink]="['']">
-            <h4>&#60;&#60;&#60;Back to home</h4>
+        <a (click) = "backToMembersList()">
+            <h4>&#60;&#60;&#60; Back to Members List</h4>
         </a>
     </div>
-    <h2>{{title}}</h2>
-    <div class="tab-menu">
-        <span class="selected">Edit</span>
-        <span *ngIf="member.Id != 0" (click)="onMemberDetailView(member)">View</span>
-    </div>
-    <div class="member-details">
-        <h2>{{member.LastName}}, {{member.FirstName}}</h2>
-        <!-- <form class="member-detail-edit"> -->
-        <div>
-            <ul>
-                <li>
-                    <label>Family ID:</label>
-                    <input [(ngModel)]="this.member.FamilyId" placeholder="Family ID" />
-                </li>
-                <li>
-                    <label>First Name: &#09; </label>
-                    <input [(ngModel)]="this.member.FirstName" placeholder="eg. John" />
-                </li>
-                <li>
-                    <label>Middle Name:&#09; </label>
-                    <input [(ngModel)]="this.member.MiddleName" placeholder="eg. J. or Johnson" />
-                </li>
-                <li>
-                    <label>Last Name&#09;</label>
-                    <input [(ngModel)]="this.member.LastName" placeholder="eg. Smith" />
-                </li>
-                <li>
-                    <label>City&#09;</label>
-                    <input [(ngModel)]="this.member.City" placeholder="City eg. Minneapolis" />
-                </li>
-                <li>
-                    <label>State</label>
-                    <input [(ngModel)]="this.member.State" placeholder="State eg. Minnesota" />
-                </li>
-                <li>
-                    <label>Zip</label>
-                    <input [(ngModel)]="this.member.Zip" placeholder="Zip eg. 55303" />
-                </li>
-            </ul>
-            <!-- </form> -->
+    <div  class="member-container">
+        <h2>{{title}}</h2>
+        <ul class="nav nav-tabs tab">
+            <li role="presentation" class="selected active">
+                <a>Edit</a>
+            </li>
+            <li role="presentation">
+                <a *ngIf="member.Id != 0" (click)="onMemberDetailView(member)">View</a>
+            </li>
+        </ul>
+        <div class="panel panel-default member-details">
+            <h3>{{member.LastName}}, {{member.FirstName}}</h3>
+            <form class="member-detail-edit">
+                <div class="panel-body">
+                    <ul>
+                        <li>
+                            <label>Family ID:</label>
+                            <input type="text" [(ngModel)]="this.member.FamilyId" placeholder="Family ID" name="familyId"/>
+                        </li>
+                        <li>
+                            <label>First Name: &#09; </label>
+                            <input type="text" [(ngModel)]="this.member.FirstName" placeholder="eg. John" name="firstName" />
+                        </li>
+                        <li>
+                            <label>Middle Name:&#09; </label>
+                            <input type="text" [(ngModel)]="this.member.MiddleName" placeholder="eg. J. or Johnson" name="middleName" />
+                        </li>
+                        <li>
+                            <label>Last Name&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.LastName" placeholder="eg. Smith" name="lastName" />
+                        </li>
+                        <li>
+                            <label>Email&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.Email" placeholder="name@mail.com" name="email" />
+                        </li>
+                        <li>
+                            <label>Telephone&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.Telephone" placeholder="xxx xxx xxxx" name="telephone" />
+                        </li>
+                        <li>
+                            <label>Gender&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.Gender" placeholder="Male/Female" name="gender" />
+                        </li>
+                        <li>
+                            <label>Marital Status&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.MaritalStatus" placeholder="Married/Single/Divorced..." name="maritalStatus" />
+                        </li>
+                        <li>
+                            <label>Date of Birth&#09;</label>
+                            <input type="text" date="MM/dd/yyyy" [(ngModel)]="this.member.DateOfBirth" placeholder="MM/DD/YYYY" name="dateOfBirth" />
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <div *ngIf="member.Id == 0" class="commands insert">
+                <input type="button" value="Save" (click)="onInsert(member)" />
+                <input type="button" value="Cancel" (click)="onMemberDetailView(member)" />
+            </div>
+            <div *ngIf="member.Id != 0" class="commands update">
+                <input type="button" value="Update" (click)="onUpdate(member)" />
+                <input type="button" value="Delete" (click)="onDelete(member)" />
+                <input type="button" value="Cancel" (click)="onMemberDetailView(member)" />
+            </div>
         </div>
-        <div *ngIf="member.Id == 0" class="commands insert">
-            <input type="button" value="Save" (click)="onInsert(member)" />
-            <input type="button" value="Cancel" (click)="onBack()" />
-        </div>
-
-        <div *ngIf="member.Id != 0" class="commands update">
-            <input type="button" value="Update" (click)="onUpdate(member)" />
-            <input type="button" value="Delete" (click)="onDelete(member)" />
-            <input type="button" value="Cancel" (click)="onMemberDetailView(member)" />
-        </div>
-
     </div>
 </div>
