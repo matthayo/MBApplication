@@ -3,7 +3,7 @@
 h1.header {
     font-size: 40px;
     margin: 5px 0 0 0;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 120px;
     background-color: #efefef;
     text-align: left;
 }
@@ -41,8 +41,8 @@ home {
     display: block;
 }
 
-//nav-bar.component styling
-nav-bar {
+//navbar.component styling
+navbar {
     order: 0;
     margin: 2px;
     padding: 2px;
@@ -50,17 +50,68 @@ nav-bar {
 } 
 
 
+.member-container, .family-container{
+    margin: 0 20px;
+
+    .nav.nav-tabs{
+        padding-right: 20px;
+        li{
+            &.active a{
+                font-weight: bold;
+                background-color: @color-panel;
+            }
+            float: right;
+        }
+    }
+    .panel.panel-default{
+        background-color: @color-panel;
+        border-top-width: 0;
+        .member-image-panel{
+            width: 170px;
+            min-height: 170px;
+            float: right;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #cccccc;
+            img{
+                width: 150px;
+                height: 150px;
+                border: 1px solid #e6e6e6;
+            }
+            .caption{
+                margin-top: 5px;
+                text-align: center;
+                font-size: 0.8em;
+            }
+        }
+        h3{
+            margin: 10px 0 20px 0;
+            font-weight: bold;
+        }
+    }
+}
 
 //member-list component styling
 members-list, family-list{
-    ul.list li{
-        cursor: pointer;
+    ul{
+        list-style-type: none;
+        padding: 15px;
+        li{
+            cursor: pointer;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #c7c7c7;
+            &:first-child {
+                margin-top: 0;
+                padding-top: 0;
+                border-top-width: 0;
+            }
+        }
     }
     ul.list li.selected {
-        background-color: #4e4e4e;
-        color: #efefef;
+            background-color: #4e4e4e;
+            color: #efefef;
     }
-
 }
 
 family-detail-view, family-list{
@@ -89,7 +140,6 @@ family-detail-edit, family-detail-view{
     .family-details{
         margin: 0;
         padding: 5px 10px;
-        border: 1px solid black;
         background-color: #eeeeee;
         width: 600px;
         clear: both;
@@ -111,6 +161,17 @@ family-detail-edit, family-detail-view{
         text-align: right;
         margin: 10px 20px 10px 10px;
     }
+    ul{
+        list-style-type: none;
+        padding: 15px;
+    }
+    ul.tab{
+        cursor: pointer;
+    }
+    ul.tab li.selected {
+        background-color: #4e4e4e;
+        color: #efefef;
+    }
 }
 
 member-detail-edit, member-detail-view{
@@ -120,7 +181,6 @@ member-detail-edit, member-detail-view{
     .member-details{
         margin: 0;
         padding: 5px 10px;
-        border: 1px solid black;
         background-color: #eeeeee;
         width: 600px;
         clear: both;
@@ -138,58 +198,20 @@ member-detail-edit, member-detail-view{
         display: block;
         width: 90%;
     }
-    
-
-}
-
-member-detail-view{
-    .labels-div{
-        float: left;
-        width: 150px;
-        height: 120px;
-        margin-right: 10px;
-        padding-left: 10px;
-        padding-right: 5px;
-        padding-top: 5px;
-        background-color: yellowgreen;
-        text-align: right;
-        font-weight: bolder;
+    ul{
+        list-style-type: none;
+        padding: 15px;
     }
-    .details-div{
-        margin-left: 155px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        height: 120px;
-        background-color: #93e2fa;
-        color: #4e4e4e;
+    ul.tab{
+        cursor: pointer;
+    }
+    ul.tab li.selected {
+        background-color: #4e4e4e;
+        color: #efefef;
     }
 }
 
-member-detail-edit{
-    .labels-div{
-        float: left;
-        width: 150px;
-        height: 250px;
-        margin-right: 10px;
-        padding-left: 10px;
-        padding-right: 5px;
-        padding-top: 5px;
-        background-color: yellowgreen;
-        text-align: right;
-        font-weight: bolder;
-        font-size: 10px;
-    }
-    .details-div{
-        margin-left: 155px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        height: 250px;
-        background-color: #93e2fa;
-        color: #4e4e4e;
-    }
-}
-
-family-detail-edit, family-detail-view, member-detail-edit, member-detail-view
+family-detail-edit, family-detail-view, 
 {
     .tab-menu{
     margin-right: 30px;

@@ -8,12 +8,13 @@ import { Member } from "./member";
 
 //Export
 export class MemberService {
+    
+    //Web API URL
+    baseUrl = "api/members/"; 
+   
     constructor(private http: Http) {
         
     }
-
-    //Web API URL
-    private baseUrl = "api/members/"
 
     // GET call for api/members/get/{id}
     get(num?: number){
@@ -44,7 +45,7 @@ export class MemberService {
                 .catch(this.handleError);
     }
 
-    // POST
+    // POST call for /api/members
     add(member: Member){
         var url = this.baseUrl;
 

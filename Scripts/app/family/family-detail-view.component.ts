@@ -42,4 +42,8 @@ export class FamilyDetailViewComponent {
         this.router.navigate(["family/edit", family.Id]);
     }
 
+    backToFamilyList(){
+        this.router.navigate(["families"]);
+    }
+
 }

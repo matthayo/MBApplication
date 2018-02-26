@@ -1,29 +1,32 @@
-<div>
+<div *ngIf="member">
     <div>
         <a (click) = "backToMembersList()" >
             <h4>&#60;&#60;&#60; Back to Members List</h4>
         </a>
     </div>
-    <h2>{{title}}</h2>
-    <div *ngIf="member" class="member-container">
-        <div class="tab-menu">
-            <span (click) = "onMemberDetailEdit(member)">Edit</span>
-            <span class="selected">View</span>
-        </div>
-        <div class="member-details">
-            <div class="labels-div">
-                Family Unit:<br/> 
-                Full Name:<br/>
-                Date of Birth:<br/>
-                Gender:<br/>
-                Marital Status:<br/>
-            </div>
-            <div class="details-div">
-                {{member.LastName}}<br/>
-                {{member.LastName}}, {{member.FirstName}}<br/>
-                {{member.DateOfBirth | date: 'MM/dd/yyyy'}}<br/>
-                {{member.Gender}} <br/>
-                {{member.MaritalStatus}} <br/>
+    <div class="member-container">
+        <h2>{{title}}</h2>
+        <ul class="nav nav-tabs tab">
+            <li role="presentation">
+                <a (click) = "onMemberDetailEdit(member)">Edit</a>
+            </li>
+            <li role="presentation" class="selected active">
+                <a>View</a>
+            </li>
+        </ul>
+        <div class="panel panel-default member-details">
+            <div class="panel-body">
+                <div class="member-image-panel">
+                    <img src="" alt="{{member.LastName}}">
+                    <div class="caption">{{member.LastName}}'s image</div>
+                </div>
+                <h3>Family Unit ID: {{member.FamilyId}}</h3>
+                <p>Full Name: {{member.LastName}}, {{member.FirstName}} {{member.MiddleName}}</p>
+                <p>Email: {{member.Email}}</p>
+                <p>Telepone: {{member.Telephone}} </p>
+                <p>Date of Birth: {{member.DateOfBirth | date: 'MM/dd/yyyy'}}</p>
+                <p>Gender: {{member.Gender}}</p>
+                <p>Marital Status: {{member.MaritalStatus}}</p>
             </div>
             <div class="dates">
                 <b>Date Modified:</b> {{member.LastModifiedDate | date:'MM/dd/yyyy'}} &#12;

@@ -101,7 +101,7 @@ namespace MBApplication.Controllers
 
         //POST /api/members
         [HttpPost()]
-        public IActionResult Add([FromBody]OrganizationViewModel memberToAdd)
+        public IActionResult Add([FromBody]MemberViewModel memberToAdd)
         {
             if(memberToAdd != null)
             {   
@@ -151,8 +151,11 @@ namespace MBApplication.Controllers
                     //Overriding System-based variables
                     member.LastModifiedDate = DateTime.Now;
 
+                    //persist changes to Database
+                    _dbContext.SaveChanges();
+
                     //Return the newly update results
-                    return new JsonResult(_mapper.Map<MemberViewModel>(member));
+                    return new JsonResult(_mapper.Map<MemberViewModel>(member), DefaultJsonSettings);
                 }
                 else
                 {

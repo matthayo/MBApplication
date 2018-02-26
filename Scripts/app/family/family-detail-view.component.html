@@ -1,30 +1,36 @@
-<div>
+<div *ngIf="family">
     <div>
-        <a [routerLink]="['']">
-            <h4>&#60;&#60;&#60;Back to home</h4>
+        <a (click)="backToMemberList()">
+            <h4>&#60;&#60;&#60; Back to Family List</h4>
         </a>
     </div>
-    <h2>{{title}}</h2>
-    <div *ngIf="family" class="family-container">
-        <div class="tab-menu">
-            <span (click) = "onFamilyDetailEdit(family)">Edit</span>
-            <span class="selected">View</span>
-        </div>
-        <div class="family-details">
-            <div>
-                <b>Family Name:</b>{{family.FamilyName}}
-                <br/><b>Family Id:</b>{{family.Id}}
-            </div>
-            <div class="address-left-div">Address: </div>
-            <div class="address-right-div">
-                {{family.House}}, {{family.Street}}
-                <br/>{{family.City}}, {{family.State}}
-                <br/>{{family.Zip}}.
-                <div *ngIf="family.AptNumber != null" >Apt #: {{family.AptNumber}}</div>
-            </div>
-            <div class="dates">
-                <b>Date Modified:</b> {{family.LastModifiedDate | date:'MM/dd/yyyy'}} &#12;
-                <b>Date Created:</b> {{family.CreatedDate | date:'MM/dd/yyyy'}}
+    <div class="family-container">
+        <h2>{{title}}</h2>
+        <ul class="nav nav-tabs tab">
+            <li role="presentation">
+                <a (click) = "onFamilyDetailEdit(family)">Edit</a>
+            </li>
+            <li role="presentation" class="selected active">
+                <a>View</a>
+            </li>
+        </ul>
+        <div class="panel panel-default family-details">
+            <div class="panel-body">
+                <div>
+                    <b>Family Name:</b>{{family.FamilyName}}
+                    <br/><b>Family Id:</b>{{family.Id}}
+                </div>
+                <div class="address-left-div">Address: </div>
+                <div class="address-right-div">
+                    {{family.House}}, {{family.Street}}
+                    <br/>{{family.City}}, {{family.State}}
+                    <br/>{{family.Zip}}.
+                    <div *ngIf="family.AptNumber != null" >Apt #: {{family.AptNumber}}</div>
+                </div>
+                <div class="dates">
+                    <b>Date Modified:</b> {{family.LastModifiedDate | date:'MM/dd/yyyy'}} &#12;
+                    <b>Date Created:</b> {{family.CreatedDate | date:'MM/dd/yyyy'}}
+                </div>
             </div>
         </div>
     </div>
