@@ -54,13 +54,13 @@
             </div>
         </form>
             <div *ngIf="family.Id == 0" class="commands insert">
-                <input type="button" value="Save" (click)="onInsert(family)" />
-                <input type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
+                <input class="btn btn-primary" type="button" value="Save" (click)="onInsert(family)" />
+                <input class="btn btn-info"  type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
             </div>
             <div *ngIf="family.Id != 0" class="commands update">
-                <input type="button" value="Update" (click)="onUpdate(family)" />
-                <input type="button" value="Delete" (click)="onDelete(family)" />
-                <input type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
+                <input class="btn btn-primary" type="button" value="Update" (click)="onUpdate(family)" />
+                <input class="btn btn-danger" type="button" value="Delete" (click)="onDelete(family)" />
+                <input class="btn btn-info"  type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
             </div>
         </div>
     </div>
