@@ -1,6 +1,15 @@
-
-<div class="col-md-6">
-    <h2>{{title}}</h2>
-    <family-list></family-list>
-    <!-- <member-list></member-list> -->
+<div class="jumbotron">
+    <h1 class="display-3">{{title}}</h1>
+    <p class="lead">Welcome to the Membership App.</p>
+    <hr class="my-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-info" (click)="goToFamilyList()" >Families List</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-info" (click)="goToMembersList()">Members List</a>
+            </div>
+        </div>
+    </div>
 </div>

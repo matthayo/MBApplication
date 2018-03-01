@@ -37,4 +37,8 @@ export class MemberListComponent{
         console.log("Member with Id " + this.selectedMember.Id + " has been selected.")
         this.router.navigate(["member/view", this.selectedMember.Id]);
     }
+
+    backToHome(){
+        this.router.navigate([""]);
+    }
 }
