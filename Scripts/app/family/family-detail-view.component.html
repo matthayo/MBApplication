@@ -1,6 +1,6 @@
 <div *ngIf="family">
     <div>
-        <a (click)="backToMemberList()">
+        <a (click)="backToFamiliesList()">
             <h4>&#60;&#60;&#60; Back to Family List</h4>
         </a>
     </div>
@@ -17,8 +17,8 @@
         <div class="panel panel-default family-details">
             <div class="panel-body">
                 <div>
-                    <b>Family Name:</b>{{family.FamilyName}}
-                    <br/><b>Family Id:</b>{{family.Id}}
+                    <h4><b>Family Name:</b> {{family.FamilyName}}</h4>
+                    <h4><b>Family Id:</b> {{family.Id}}</h4>
                 </div>
                 <div class="address-left-div">Address: </div>
                 <div class="address-right-div">

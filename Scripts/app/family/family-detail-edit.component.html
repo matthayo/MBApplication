@@ -1,61 +1,67 @@
-<div *ngIf="family" class="family-container">
+<div *ngIf="family">
     <div>
-        <a [routerLink]="['']">
-            <h4>&#60;&#60;&#60;Back to home</h4>
+        <a (click) = "backToFamiliesList()">
+            <h4>&#60;&#60;&#60; Back to Families List</h4>
         </a>
     </div>
-    <h2>{{title}}</h2>
-    <div class="tab-menu">
-        <span class="selected">Edit</span>
-        <span *ngIf="family.Id != 0" (click)="onFamilyDetailView(family)" >View</span>
-    </div>
-    <div class="family-details">
-        <h2>{{family.FamilyName}} - Family Unit</h2>
-        <form class="family-detail-edit">
-            <div>
-                <ul>
-                    <li>
-                        <label>Family Name:</label>
-                        <input type="text" [(ngModel)] = "this.family.FamilyName" placeholder="Family Name" name="familyName"/>
-                    </li>
+    <div  class="family-container">
+        <h2>{{title}}</h2>
+        <ul class="nav nav-tabs tab">
+            <li role="presentation" class="selected active">
+                <a>Edit</a>
+            </li>
+            <li role="presentation">
+                <a *ngIf="family.Id != 0" (click)="onFamilyDetailView(family)" >View</a>
+            </li>
+        </ul>
+        <div class="panel panel-default family-details">
+            <h4>{{family.FamilyName}}'s - Family Unit</h4>
+            <form class="family-detail-edit">
+                <div class="panel-body">
+                    <ul>
+                        <li>
+                            <label>Family Name:</label>
+                            <input type="text" [(ngModel)] = "this.family.FamilyName" placeholder="Family Name" name="familyName"/>
+                        </li>
 
-                    <h4>Address:</h4>
-                    
-                    <li>
-                        <label>Apt #:&#09; </label>
-                        <input type="text" [(ngModel)] = "this.family.AptNumber" placeholder="Apt. Number" name="aptNumber"/>
-                    </li>
-                    <li>
-                        <label>House #:&#09; </label>
-                        <input type="text" [(ngModel)] = "this.family.House" placeholder="House #" name="houseNumber"/>
-                    </li>
-                    <li>
-                        <label>Street&#09;</label>
-                        <input type="text" [(ngModel)] = "this.family.Street" placeholder="Street eg. Nowthen Blvd." name="street" />
-                    </li>
-                    <li>
-                        <label>City&#09;</label>
-                        <input type="text" [(ngModel)] ="this.family.City" placeholder="City eg. Minneapolis" name="city" />
-                    </li>
-                    <li>
-                        <label>State</label>
-                        <input type="text" [(ngModel)]="this.family.State" placeholder="State eg. Minnesota" name="state"/>
-                    </li>
-                    <li>
-                        <label>Zip</label>
-                        <input type="text" [(ngModel)]="this.family.Zip" placeholder="Zip eg. 55303" name="zip" />
-                    </li>
-                </ul>
-        </div>
-    </form>
-        <div *ngIf="family.Id == 0" class="commands insert">
-            <input type="button" value="Save" (click)="onInsert(family)" />
-            <input type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
-        </div>
-        <div *ngIf="family.Id != 0" class="commands update">
-            <input type="button" value="Update" (click)="onUpdate(family)" />
-            <input type="button" value="Delete" (click)="onDelete(family)" />
-            <input type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
+                        <h4>Address:</h4>
+                        
+                        <li>
+                            <label>Apt #:&#09; </label>
+                            <input type="text" [(ngModel)] = "this.family.AptNumber" placeholder="Apt. Number" name="aptNumber"/>
+                        </li>
+                        <li>
+                            <label>House #:&#09; </label>
+                            <input type="text" [(ngModel)] = "this.family.House" placeholder="House #" name="houseNumber"/>
+                        </li>
+                        <li>
+                            <label>Street&#09;</label>
+                            <input type="text" [(ngModel)] = "this.family.Street" placeholder="Street eg. Nowthen Blvd." name="street" />
+                        </li>
+                        <li>
+                            <label>City&#09;</label>
+                            <input type="text" [(ngModel)] ="this.family.City" placeholder="City eg. Minneapolis" name="city" />
+                        </li>
+                        <li>
+                            <label>State</label>
+                            <input type="text" [(ngModel)]="this.family.State" placeholder="State eg. Minnesota" name="state"/>
+                        </li>
+                        <li>
+                            <label>Zip</label>
+                            <input type="text" [(ngModel)]="this.family.Zip" placeholder="Zip eg. 55303" name="zip" />
+                        </li>
+                    </ul>
+            </div>
+        </form>
+            <div *ngIf="family.Id == 0" class="commands insert">
+                <input class="btn btn-primary" type="button" value="Save" (click)="onInsert(family)" />
+                <input class="btn btn-info"  type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
+            </div>
+            <div *ngIf="family.Id != 0" class="commands update">
+                <input class="btn btn-primary" type="button" value="Update" (click)="onUpdate(family)" />
+                <input class="btn btn-danger" type="button" value="Delete" (click)="onDelete(family)" />
+                <input class="btn btn-info"  type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
+            </div>
         </div>
     </div>
 </div>
