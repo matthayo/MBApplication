@@ -18,7 +18,7 @@ import { FamilyListComponent } from "../app/family/family-list.component";
 import { HomeComponent } from "../app/home/home.component";
 import { LoginComponent } from "../app/login/login.component";
 import { MemberListComponent } from "../app/member/member-list.component";
-import { NavBarComponent } from "../app/nav/navbar.component";
+import { NavBarComponent } from "../app/nav/nav-bar.component";
 import { PageNotFoundComponent } from "../app/misc/page-not-found.component";
 import { MemberDetailEditComponent } from "./member/member-detail-edit.component";
 import { MemberDetailViewComponent } from "./member/member-detail-view.component";

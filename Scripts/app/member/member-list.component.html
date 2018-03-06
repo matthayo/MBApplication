@@ -1,12 +1,12 @@
-<div>
+<div class="member-container">
     <div>
         <a (click)="backToHome()">
             <h4>&#60;&#60;&#60; Back to Homepage</h4>
         </a>
     </div>
-    <div class="panel member-container">
+    <div class="panel">
         <h2>{{title}}</h2>
-        <div class="panel-body">
+        <div class="panel-default">
             <ul class="list">
                 <hr/>
                 <li *ngFor="let member of members" [class.selected]="member === selectedMember" (click)="onSelect(member)">

@@ -1,12 +1,12 @@
-<div>
+<div class="family-container">
     <div>
         <a (click)="backToHome()">
             <h4>&#60;&#60;&#60; Back to Homepage</h4>
         </a>
     </div>
-    <div class="panel family-container">
+    <div class="panel">
         <h2>{{title}}</h2>
-        <div class="panel-body">
+        <div class="panel-default">
             <ul class="list">
                 <li *ngFor="let family of families" [class.selected]="family === selectedFamily" (click)="onSelect(family)">
                     <div *ngIf="family.AptNumber != null; else displayWithoutAptNumber">
