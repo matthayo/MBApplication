@@ -12,7 +12,7 @@ import { Router } from "@angular/router";
 
 //Exports
 export class FamilyListComponent{  
-    title = "Family List"
+    title = "List of Families";
     selectedFamily: Family;
     families: Family[];
     errorMessage: string;
@@ -37,6 +37,10 @@ export class FamilyListComponent{
         console.log("Family with Id " + this.selectedFamily.Id + " has been selected.\n" +
                     "Loading item view....");
         this.router.navigate(["family/view", this.selectedFamily.Id]);
+    }
+
+    backToHome(){
+        this.router.navigate([""]);
     }
 
 }

@@ -1,10 +1,19 @@
 <div>
-    <h2>{{title}}</h2>
-    <ol class="lists">
-        <hr/>
-        <li *ngFor="let member of members" [class.selected]="member === selectedMember" (click)="onSelect(member)">
-            <span>{{member.LastName}}, {{member.FirstName}}</span>
-            <hr/>
-        </li>
-    </ol>
+    <div>
+        <a (click)="backToHome()">
+            <h4>&#60;&#60;&#60; Back to Homepage</h4>
+        </a>
+    </div>
+    <div class="panel member-container">
+        <h2>{{title}}</h2>
+        <div class="panel-body">
+            <ul class="list">
+                <hr/>
+                <li *ngFor="let member of members" [class.selected]="member === selectedMember" (click)="onSelect(member)">
+                    <span>{{member.LastName}}, {{member.FirstName}}</span>
+                    <hr/>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>

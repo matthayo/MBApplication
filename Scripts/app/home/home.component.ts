@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { expand } from "rxjs/operator/expand";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
     selector: "home",
@@ -7,5 +8,17 @@ import { expand } from "rxjs/operator/expand";
 })
 
 export class HomeComponent{
-    title = "Welcome to the Member Management System";
+    title = "Member Management System";
+
+    constructor(private router: Router,
+                private activatedRoute: ActivatedRoute){ }
+    
+    goToFamilyList(){
+        this.router.navigate(["families"]);
+    }
+
+    goToMembersList(){
+        this.router.navigate(["members"]);
+    }
+
 }
