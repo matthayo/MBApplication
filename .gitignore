@@ -292,4 +292,5 @@ __pycache__/
 *.xsd.cs
 
 #Misc files
-#other_files/
+other_files/
+Migrations/
