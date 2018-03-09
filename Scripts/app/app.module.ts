@@ -15,6 +15,7 @@ import { FamilyService } from "../app/family/family.service";
 import { FamilyDetailEditComponent } from "../app/family/family-detail-edit.component";
 import { FamilyDetailViewComponent } from "./family/family-detail-view.component";
 import { FamilyListComponent } from "../app/family/family-list.component";
+import { FooterSectionComponent } from "../app/footer/footer-section.component";
 import { HomeComponent } from "../app/home/home.component";
 import { LoginComponent } from "../app/login/login.component";
 import { MemberListComponent } from "../app/member/member-list.component";
@@ -31,6 +32,7 @@ import { MemberDetailViewComponent } from "./member/member-detail-view.component
         FamilyDetailEditComponent,
         FamilyDetailViewComponent,
         FamilyListComponent,
+        FooterSectionComponent,
         HomeComponent,
         LoginComponent,
         MemberListComponent,
