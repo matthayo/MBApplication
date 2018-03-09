@@ -6,12 +6,12 @@
     </div>
     <div  class="family-container">
         <h2>{{title}}</h2>
-        <ul class="nav nav-tabs tab">
-            <li role="presentation" class="selected active">
-                <a>Edit</a>
+        <ul class="nav nav-pills justify-content-end">
+            <li role="presentation" class="nav-item">
+                <a *ngIf="family.Id != 0" class="nav-link" (click)="onFamilyDetailView(family)">View</a>
             </li>
-            <li role="presentation">
-                <a *ngIf="family.Id != 0" (click)="onFamilyDetailView(family)" >View</a>
+            <li role="presentation" class="nav-item">
+                <a class="nav-link active">Edit</a>
             </li>
         </ul>
         <div class="panel panel-default family-details">

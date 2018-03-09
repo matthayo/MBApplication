@@ -6,12 +6,12 @@
     </div>
     <div class="member-container">
         <h2>{{title}}</h2>
-        <ul class="nav nav-tabs tab">
-            <li role="presentation">
-                <a (click) = "onMemberDetailEdit(member)">Edit</a>
+        <ul class="nav nav-pills justify-content-end">
+            <li role="presentation" class="nav-item selected">
+                <a class="nav-link active">View</a>
             </li>
-            <li role="presentation" class="selected active">
-                <a>View</a>
+            <li role="presentation" class="nav-item">
+                <a class="nav-link" (click) = "onMemberDetailEdit(member)">Edit</a>
             </li>
         </ul>
         <div class="panel panel-default member-details">

@@ -1,14 +1,16 @@
-<div class="jumbotron">
-    <h1 class="display-4">{{title}}</h1>
-    <p class="lead">Welcome to the Membership App.</p>
-    <hr class="my-4">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <a class="btn btn-lg btn-info" (click)="goToFamilyList()" >Families List</a>
-            </div>
-            <div class="col-md-4">
-                <a class="btn btn-lg btn-info" (click)="goToMembersList()">Members List</a>
+<div class="hero-image">
+    <div class="jumbotron" style="opacity: 50%;">
+        <h1 class="display-6">{{title}}</h1>
+        <p class="lead">Welcome to the Membership App.</p>
+        <hr class="my-4">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-6">
+                    <a class="btn btn-lg btn-info btn-block" (click)="goToFamilyList()" >Families List</a>
+                </div>
+                <div class="col-6">
+                    <a class="btn btn-lg btn-info btn-block" (click)="goToMembersList()">Members List</a>
+                </div>
             </div>
         </div>
     </div>

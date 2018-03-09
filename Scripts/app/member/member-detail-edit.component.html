@@ -6,12 +6,12 @@
     </div>
     <div  class="member-container">
         <h2>{{title}}</h2>
-        <ul class="nav nav-tabs tab">
-            <li role="presentation" class="selected active">
-                <a>Edit</a>
+        <ul class="nav nav-pills justify-content-end">
+            <li role="presentation" class="nav-item">
+                <a *ngIf="member.Id != 0" class="nav-link" (click)="onMemberDetailView(member)">View</a>
             </li>
-            <li role="presentation">
-                <a *ngIf="member.Id != 0" (click)="onMemberDetailView(member)">View</a>
+            <li role="presentation" class="nav-item selected">
+                <a class="nav-link active">Edit</a>
             </li>
         </ul>
         <div class="panel panel-default member-details">

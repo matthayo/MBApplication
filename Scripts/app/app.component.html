@@ -1,23 +1,13 @@
-<nav-bar></nav-bar>
-<h1 class="header">{{title}}</h1>
-<div class="main-container">
-    <div class="navbar">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="members" [routerLink]="['members']">Members</a>
-                    </li>
-                    <li>
-                        <a class="families" [routerLink]="['families']">Families</a>
-                    </li>
-                    <li>
-                        <a class="organization" [routerLink]="['organization']">Organization</a>
-                    </li>
-                </ul>
+<div class="topDiv fixed-top">
+    <nav-bar></nav-bar>
+</div>
+<div class="container-fluid">
+    <div class="container" id="appContainer">
+        <div class="row jusify-content-md-center">
+            <div class="col">
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>
-    <hr>
-    <router-outlet></router-outlet>
+    <footer-section></footer-section>
 </div>

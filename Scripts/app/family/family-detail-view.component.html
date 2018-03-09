@@ -1,24 +1,24 @@
 <div *ngIf="family">
     <div>
         <a (click)="backToFamiliesList()">
-            <h4>&#60;&#60;&#60; Back to Family List</h4>
+            <h4>&#60;&#60;&#60; Back to Families List</h4>
         </a>
     </div>
     <div class="family-container">
         <h2>{{title}}</h2>
-        <ul class="nav nav-tabs tab">
-            <li role="presentation">
-                <a (click) = "onFamilyDetailEdit(family)">Edit</a>
+        <ul class="nav nav-pills justify-content-end">
+            <li role="presentation" class="nav-item selected">
+                <a class="nav-link active">View</a>
             </li>
-            <li role="presentation" class="selected active">
-                <a>View</a>
+            <li role="presentation" class="nav-item">
+                <a class="nav-link" (click) = "onFamilyDetailEdit(family)">Edit</a>
             </li>
         </ul>
         <div class="panel panel-default family-details">
             <div class="panel-body">
                 <div>
-                    <h4><b>Family Name:</b> {{family.FamilyName}}</h4>
-                    <h4><b>Family Id:</b> {{family.Id}}</h4>
+                    <h4>Family Name: {{family.FamilyName}}</h4>
+                    <h4>Family Id: {{family.Id}}</h4>
                 </div>
                 <div class="address-left-div">Address: </div>
                 <div class="address-right-div">
