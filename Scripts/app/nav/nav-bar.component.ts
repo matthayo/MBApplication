@@ -7,11 +7,11 @@ import { expand } from "rxjs/operator/expand";
 })
 
 export class NavBarComponent{
-    logo: string;
+    // logo: string;
 
     constructor(){
-        this.logo = "assets/img/logo.png";
+        // this.logo = "assets/img/logo.png";
     }
 
-    OnInit(){}
+    // OnInit(){}
 }
