@@ -1,10 +1,12 @@
 @color-panel: #f9f9f9;
-@master-theme-color-dark: #3366cc;
-@master-theme-color-light: #0099ff;
+@master-bg-color: #e6f3ff;
+@master-theme-color-dark: #003d66;
+@master-theme-color-light: #007acc;
 
 html body{
     height: 100%;
-    min-width: 450px;
+    background-color: @master-bg-color;
+    // min-width: 450px;
 }
 
 // h2 {
@@ -15,39 +17,56 @@ html body{
 //     font-style: italic;
 //     color: #666666;
 // }
-
-#mainNav{
-    background-color: @master-theme-color-dark;
-    color: #c7c7c7 !important;
-    a{
-        &.active{
-            font-weight: bolder;
+start{
+    header{
+        &#mbapp-mainNav{
+            background-color: @master-theme-color-dark;
+            color: #c7c7c7 !important;
+            a{
+                &.active{
+                    font-weight: bolder;
+                }
+            }
+            &.mbapp-navbar{
+                opacity: 20%;
+            }
+            h1{
+                font-size: 20px;
+                text-align: left;
+            }
         }
     }
-    &.mb-navbar{
-        opacity: 20%;
+        .mbapp-dates{
+        font-size: 12px;
+        text-align: right;
     }
-    h1{
-        font-size: 20px;
-        text-align: left;
+    .mbapp-navBreadcrumb{
+        position: fixed;
+        margin-top: 85px;
+    }
+    .masterContainer{
+        margin-top: 120px;
+    }
+    #appContainer {
+        padding: .5rem .5rem !important;
+        margin-top: 50px;
+        margin-bottom: .5rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
-#navBreadcrumbs{
-    max-height: 30px;
-    margin-top: 15px;
+navbreadcrumb{
+        #mbapp-breadcrumb{
+            max-height: 30px;
+            margin-top: -15px;
+        }
+    .breadcrumb{
+        padding: .2rem .2rem !important;
+        margin-bottom: .2rem !important;
+    }
 }
 
-.breadcrumb{
-    padding: .2rem .2rem !important;
-    margin-bottom: .2rem !important;
-}
 
-#appContainer {
-    padding: .5rem .5rem !important;
-    margin-top: 50px;
-    margin-bottom: .5rem;
-}
 
 
 
@@ -91,16 +110,7 @@ html body{
 
 
 //Global styling
-start {
-    .dates{
-        font-size: 12px;
-        text-align: right;
-    }
-    .mbapp-breadcrumb{
-        position: fixed;
-        margin-top: 0;
-    }
-}
+
 
 
 //home component styling
