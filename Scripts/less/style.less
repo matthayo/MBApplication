@@ -1,42 +1,94 @@
 @color-panel: #f9f9f9;
+@master-theme-color-dark: #3366cc;
+@master-theme-color-light: #0099ff;
 
 html body{
     height: 100%;
-    min-width: 400px;
+    min-width: 450px;
 }
 
-h1.header {
-    font-size: 40px;
-    margin: 5px 0 0 0;
-    padding: 20px 20px 20px 120px;
-    // background-color: #efefef;
-    text-align: left;
-}
-
-h2 {
-    margin: 5px;
-    padding: 0;
-    font-size: 1.4em;
-    line-height: 1.4em;
-    font-style: italic;
-    color: #666666;
-}
-
-#appContainer {
-    padding: 10px;
-    opacity: 50%;
-    margin-top: 50px;
-}
+// h2 {
+//     margin: 5px;
+//     padding: 0;
+//     font-size: 1.4em;
+//     line-height: 1.4em;
+//     font-style: italic;
+//     color: #666666;
+// }
 
 #mainNav{
-    background-color: #4e4e4e;
+    background-color: @master-theme-color-dark;
     color: #c7c7c7 !important;
     a{
         &.active{
             font-weight: bolder;
         }
     }
+    &.mb-navbar{
+        opacity: 20%;
+    }
+    h1{
+        font-size: 20px;
+        text-align: left;
+    }
 }
+
+#navBreadcrumbs{
+    max-height: 30px;
+    margin-top: 15px;
+}
+
+.breadcrumb{
+    padding: .2rem .2rem !important;
+    margin-bottom: .2rem !important;
+}
+
+#appContainer {
+    padding: .5rem .5rem !important;
+    margin-top: 50px;
+    margin-bottom: .5rem;
+}
+
+
+
+
+.hero-image{
+    background-image: url("../assets/img/building.jpg");
+    height: 450px;
+    margin: 10 10 10 10;
+    position: center;
+}
+
+.vertical-center{
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: block;
+    align-items: center;
+}
+
+.mb-card{
+    max-height: 210px;
+    min-height: 210px;
+    &.mb-card-opacity{
+        opacity: 0.9;
+    }
+    .mb-card-header{
+        background-color: @master-theme-color-dark;
+        color: #e6e6e6;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    .mb-button{
+        position: absolute;
+        align-items: center;
+        bottom: 5px;
+        margin: 5px 5px 5px -50px;
+        padding: 5px;
+        opacity: 1;
+    }
+}
+
+
 
 //Global styling
 start {
@@ -44,17 +96,20 @@ start {
         font-size: 12px;
         text-align: right;
     }
+    .mbapp-breadcrumb{
+        position: fixed;
+        margin-top: 0;
+    }
 }
 
 
 //home component styling
 home {
     border: 0;
-    margin: 0;
+    margin-top: 30px;
     padding: 0 20px;
-    .hero-image{
-        height: 50%;
-        background-image: url("assets/img/building.jpg")
+    .main-home-div{
+        margin-top: 30px;
     }
 }
 
@@ -138,15 +193,16 @@ family-detail-view, family-list{
         margin-right: 10px;
         padding-left: 10px;
         padding-top: 5px;
-        background-color: yellowgreen;
+        background-color: @master-theme-color-dark;
+        color: #efefef;
     }
     .address-right-div{
         margin-left: 75px;
         padding-top: 5px;
         padding-bottom: 5px;
         height: 110px;
-        background-color: #93e2fa;
-        color: #4e4e4e;
+        background-color: @master-theme-color-light;
+        color: #efefef;
     }
 }
 family-detail-edit, family-detail-view{
@@ -246,6 +302,25 @@ form.member-detail-edit, form.family-detail-edit{
         text-align: right;
         input[type="button"] {
             margin-left: 5px;
+        }
+    }
+}
+
+.mb-footer{
+    color: #eaeaea;
+    .mb-position{
+        padding: 50px;
+    }
+    .mb-upper-footer{
+        background-color: @master-theme-color-light;
+        a{
+            color: #eaeaea;
+        }
+    }
+    .mb-lower-footer{
+        background-color: @master-theme-color-dark;
+        a{
+            color: #eaeaea;
         }
     }
 }
