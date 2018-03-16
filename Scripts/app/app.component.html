@@ -1,6 +1,6 @@
-<header id="mainNav" class="navbar navbar-expand navbar-dark flex-column flex-md-row">
-    <a class="navbar-brand mb-0 h1" [routerLink]="['']">
-        <img [src]="logo" width="50" height="40" class="d-inline-block align-top" alt="logo"> Membership App |
+<header id="mbapp-mainNav" class="mb-navbar navbar navbar-expand navbar-dark flex-column flex-md-row fixed-top">
+   <a class="navbar-brand mb-0 h1" [routerLink]="['']">
+        <img [src]="logo" width="50" height="40" class="d-inline-block align-top" alt="logo"> Membership App | 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -30,7 +30,10 @@
         </div>
     </form>
 </header>
-<div class="container-fluid">
+<div class="container-fluid mb-2 fixed-top mbapp-navBreadcrumb">
+    <navbreadcrumb></navbreadcrumb>
+</div>
+<div class="container-fluid masterContainer">
     <div class="container" id="appContainer">
         <div class="row jusify-content-md-center">
             <div class="col">
@@ -38,5 +41,38 @@
             </div>
         </div>
     </div>
-    <footer-section></footer-section>
 </div>
+<footer class="mb-footer page-footer font-small pt-4 mt-4">
+    <div class="container-fluid text-center text-md-left">
+        <div class="row mb-upper-footer">
+            <div class="col-md-6 mb-position">
+                <h4 class="text-uppercase">
+                    MB App
+                </h4>
+                <p>
+                    Membership Management System.
+                </p>
+            </div>
+            <div class="col-md-6 mb-position">
+                <h6 class="text-uppercase">
+                    Base Links
+                </h6>
+                <ul class="list-unstyled">
+                    <li>
+                        <a [routerLink]="['']">Home</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['login']">Login</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['aboutUs']">About Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-fluid footer-copyright py-3 text-center mb-lower-footer">
+                &copy; 2018 Copyright:
+                <a href="http://localhost:5000">MBApplication.com</a>
+            </div>
+        </div>
+    </div>
+</footer>
