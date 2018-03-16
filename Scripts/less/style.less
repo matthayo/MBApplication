@@ -2,22 +2,34 @@
 @master-bg-color: #e6f3ff;
 @master-theme-color-dark: #003d66;
 @master-theme-color-light: #007acc;
+@text-color-theme: #eaeaea;
 
 html body{
-    height: 100%;
+    margin: 0;
+    padding: 0;
     background-color: @master-bg-color;
-    // min-width: 450px;
+}
+body{
+    position: relative;
+    min-height: 100%;
 }
 
-// h2 {
-//     margin: 5px;
-//     padding: 0;
-//     font-size: 1.4em;
-//     line-height: 1.4em;
-//     font-style: italic;
-//     color: #666666;
-// }
 start{
+    #masterContainer{
+        position: relative;
+        min-height: 100%;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    #mainContainer{
+        margin-top: 120px;
+    }
+    #appContainer {
+        padding: .5rem .5rem !important;
+        margin-top: 50px;
+        margin-bottom: .5rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
     header{
         &#mbapp-mainNav{
             background-color: @master-theme-color-dark;
@@ -44,15 +56,35 @@ start{
         position: fixed;
         margin-top: 85px;
     }
-    .masterContainer{
-        margin-top: 120px;
+
+    //FOOTER
+    .mbapp-footer{
+    color: @text-color-theme;
+    height: 250px;
+    bottom: 0;
+    width: 100%;
+    // position: absolute;
+    p{
+        margin: 0;
+        padding: 5px;
     }
-    #appContainer {
-        padding: .5rem .5rem !important;
-        margin-top: 50px;
-        margin-bottom: .5rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .mbapp-position{
+        padding: 50px;
     }
+    .mbapp-upper-footer{
+        background-color: @master-theme-color-light;
+        a{
+            color: @text-color-theme;
+        }
+    }
+    .mbapp-lower-footer{
+        background-color: @master-theme-color-dark;
+        text-align: center !important;
+        a{
+            color: @text-color-theme;
+        }
+    }
+}
 }
 
 navbreadcrumb{
@@ -316,21 +348,3 @@ form.member-detail-edit, form.family-detail-edit{
     }
 }
 
-.mb-footer{
-    color: #eaeaea;
-    .mb-position{
-        padding: 50px;
-    }
-    .mb-upper-footer{
-        background-color: @master-theme-color-light;
-        a{
-            color: #eaeaea;
-        }
-    }
-    .mb-lower-footer{
-        background-color: @master-theme-color-dark;
-        a{
-            color: #eaeaea;
-        }
-    }
-}
