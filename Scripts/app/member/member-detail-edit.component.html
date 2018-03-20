@@ -1,10 +1,10 @@
 <div *ngIf="member">
-    <div>
+    <div class="mbapp-nav-back">
         <a (click) = "backToMembersList()">
-            <h4>&#60;&#60;&#60; Back to Members List</h4>
+            &#60;&#60;&#60; Back to Members List
         </a>
     </div>
-    <div  class="member-container">
+    <div class="member-container">
         <h2>{{title}}</h2>
         <ul class="nav nav-pills justify-content-end">
             <li role="presentation" class="nav-item">
@@ -14,10 +14,10 @@
                 <a class="nav-link active">Edit</a>
             </li>
         </ul>
-        <div class="panel panel-default member-details">
+        <div class="mbapp-panel mbapp-panel-default member-details">
             <h3>{{member.LastName}}, {{member.FirstName}}</h3>
             <form class="member-detail-edit">
-                <div class="panel-body">
+                <div class="mbapp-panel-body">
                     <ul>
                         <li>
                             <label>Family ID:</label>

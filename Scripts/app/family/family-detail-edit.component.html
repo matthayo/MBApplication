@@ -1,7 +1,7 @@
 <div *ngIf="family">
-    <div>
+    <div class="mbapp-nav-back">
         <a (click) = "backToFamiliesList()">
-            <h4>&#60;&#60;&#60; Back to Families List</h4>
+            &#60;&#60;&#60; Back to Families List
         </a>
     </div>
     <div  class="family-container">
@@ -14,10 +14,10 @@
                 <a class="nav-link active">Edit</a>
             </li>
         </ul>
-        <div class="panel panel-default family-details">
+        <div class="mbapp-panel mbapp-panel-default family-details">
             <h4>{{family.FamilyName}}'s - Family Unit</h4>
             <form class="family-detail-edit">
-                <div class="panel-body">
+                <div class="mbapp-panel-body">
                     <ul>
                         <li>
                             <label>Family Name:</label>

@@ -1,7 +1,7 @@
 <div *ngIf="family">
-    <div>
+    <div class="mbapp-nav-back">
         <a (click)="backToFamiliesList()">
-            <h4>&#60;&#60;&#60; Back to Families List</h4>
+            &#60;&#60;&#60; Back to Families List
         </a>
     </div>
     <div class="family-container">
@@ -14,8 +14,8 @@
                 <a class="nav-link" (click) = "onFamilyDetailEdit(family)">Edit</a>
             </li>
         </ul>
-        <div class="panel panel-default family-details">
-            <div class="panel-body">
+        <div class="mbapp-panel mbapp-panel-default family-details">
+            <div class="mbapp-panel-body">
                 <div>
                     <h4>Family Name: {{family.FamilyName}}</h4>
                     <h4>Family Id: {{family.Id}}</h4>
@@ -27,7 +27,7 @@
                     <br/>{{family.Zip}}.
                     <div *ngIf="family.AptNumber != null" >Apt #: {{family.AptNumber}}</div>
                 </div>
-                <div class="dates">
+                <div class="mbapp-dates">
                     <b>Date Modified:</b> {{family.LastModifiedDate | date:'MM/dd/yyyy'}} &#12;
                     <b>Date Created:</b> {{family.CreatedDate | date:'MM/dd/yyyy'}}
                 </div>

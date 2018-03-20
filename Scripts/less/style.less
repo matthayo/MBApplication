@@ -48,9 +48,20 @@ start{
             }
         }
     }
-        .mbapp-dates{
-        font-size: 12px;
-        text-align: right;
+    .mbapp-nav-back{
+        background-color: @master-theme-color-dark;
+        text-align: left;
+        font-size: 18px;
+        font-size: lighter;
+        margin: 2px 0 2px 0;
+        height: auto;
+        width: 250px;
+        color: @text-color-theme;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .mbapp-dates{
+    font-size: 12px;
+    text-align: right;
     }
     .mbapp-navBreadcrumb{
         position: fixed;
@@ -63,7 +74,6 @@ start{
     height: 250px;
     bottom: 0;
     width: 100%;
-    // position: absolute;
     p{
         margin: 0;
         padding: 5px;
@@ -80,6 +90,12 @@ start{
     .mbapp-lower-footer{
         background-color: @master-theme-color-dark;
         text-align: center !important;
+        .mbapp-lower-footer-content{
+            width: 50%;
+            height: auto;
+            margin: 0 auto;
+            position: relative;
+        }
         a{
             color: @text-color-theme;
         }
@@ -99,37 +115,33 @@ navbreadcrumb{
 }
 
 
-
-
-
-
-.hero-image{
+.mbapp-hero-image{
     background-image: url("../assets/img/building.jpg");
-    height: 450px;
+    height: 100%;
     margin: 10 10 10 10;
     position: center;
 }
 
-.vertical-center{
+.mbapp-vertical-center{
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
     display: block;
     align-items: center;
 }
 
-.mb-card{
+.mbapp-card{
     max-height: 210px;
     min-height: 210px;
-    &.mb-card-opacity{
+    &.mbapp-card-opacity{
         opacity: 0.9;
     }
-    .mb-card-header{
+    .mbapp-card-header{
         background-color: @master-theme-color-dark;
         color: #e6e6e6;
         font-weight: bolder;
         font-size: 18px;
     }
-    .mb-button{
+    .mbapp-button{
         position: absolute;
         align-items: center;
         bottom: 5px;
@@ -138,12 +150,6 @@ navbreadcrumb{
         opacity: 1;
     }
 }
-
-
-
-//Global styling
-
-
 
 //home component styling
 home {
@@ -163,8 +169,10 @@ nav-bar {
 } 
 
 .member-container, .family-container{
-    margin: 0 20px;
+    margin: 0 auto;
+    width: 600px;
     min-width: 300px;
+    position: relative;
 
     .nav.nav-tabs{
         padding-right: 20px;
@@ -176,7 +184,7 @@ nav-bar {
             float: right;
         }
     }
-    .mb-panel.mb-panel-default{
+    .mbapp-panel.mbapp-panel-default{
         background-color: @color-panel;
         border-top-width: 0;
         .member-image-panel{
@@ -187,8 +195,8 @@ nav-bar {
             background-color: #f2f2f2;
             border: 1px solid #cccccc;
             img{
-                width: 150px;
-                height: 150px;
+                max-width: 150px;
+                max-height: 150px;
                 border: 1px solid #e6e6e6;
             }
             .caption{
@@ -247,10 +255,7 @@ family-detail-view, family-list{
         color: #efefef;
     }
 }
-family-detail-edit, family-detail-view{
-    .family-container{
-        width: 600px;
-    }  
+family-detail-edit, family-detail-view{ 
     .family-details{
         margin: 0;
         padding: 5px 10px;
@@ -278,10 +283,7 @@ family-detail-edit, family-detail-view{
 
 }
 
-member-detail-edit, member-detail-view{
-    .member-container{
-        width: 600px;
-    }  
+member-detail-edit, member-detail-view{ 
     .member-details{
         margin: 0;
         padding: 5px 10px;
@@ -301,10 +303,6 @@ member-detail-edit, member-detail-view{
     .member-details input[type="text"]{
         display: block;
         width: 90%;
-    }
-    ul{
-        list-style-type: none;
-        padding: 15px;
     }
     .commands {
         text-align: right;
