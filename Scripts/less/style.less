@@ -12,14 +12,13 @@ html body{
 body{
     position: relative;
     height: 100vh;
-    min-height: 100%;
+    min-height: 65vh;
 }
 
 start{
     #masterContainer{
-        position: relative;
-        min-height: 100%;
-        margin-bottom: 50px;
+        position: inherit;
+        min-height: 65vh;
         width: 100%;
     }
     #mainContainer{
@@ -61,8 +60,8 @@ start{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .mbapp-dates{
-    font-size: 12px;
-    text-align: right;
+        font-size: 12px;
+        text-align: right;
     }
     .mbapp-navBreadcrumb{
         position: fixed;
@@ -71,39 +70,40 @@ start{
 
     //FOOTER
     .mbapp-footer{
-    color: @text-color-theme;
-    height: 250px;
-    bottom: 0;
-    width: 100%;
-    p{
-        margin: 0;
-        padding: 5px;
-    }
-    .mbapp-position{
-        padding: 50px;
-    }
-    .mbapp-upper-footer{
-        background-color: @master-theme-color-light;
-        a{
-            color: @text-color-theme;
+        color: @text-color-theme;
+        height: 250px;
+        bottom: 0;
+        width: 100%;
+        p{
+            margin: 0;
+            padding: 5px;
+        }
+        .mbapp-position{
+            padding: 50px;
+        }
+        .mbapp-upper-footer{
+            background-color: @master-theme-color-light;
+            a{
+                color: @text-color-theme;
+            }
+        }
+        .mbapp-lower-footer{
+            background-color: @master-theme-color-dark;
+            text-align: center !important;
+            .mbapp-lower-footer-content{
+                width: 50%;
+                height: auto;
+                margin: 0 auto;
+                position: relative;
+            }
+            a{
+                color: @text-color-theme;
+            }
         }
     }
-    .mbapp-lower-footer{
-        background-color: @master-theme-color-dark;
-        text-align: center !important;
-        .mbapp-lower-footer-content{
-            width: 50%;
-            height: auto;
-            margin: 0 auto;
-            position: relative;
-        }
-        a{
-            color: @text-color-theme;
-        }
-    }
-}
 }
 
+//Main Nav Breadcrumb
 navbreadcrumb{
         #mbapp-breadcrumb{
             max-height: 30px;
@@ -115,7 +115,7 @@ navbreadcrumb{
     }
 }
 
-//home component styling
+//home component 
 home {
     border: 0;
     margin-top: 30px;
@@ -160,7 +160,7 @@ home {
     }
 }
 
-//nav-bar.component styling
+//nav-bar component
 nav-bar {
     order: 0;
     margin: 2px;
@@ -211,7 +211,7 @@ nav-bar {
     }
 }
 
-//member-list component styling
+//member-list component
 members-list, family-list{
     ul{
         list-style-type: none;
