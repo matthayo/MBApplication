@@ -16,6 +16,8 @@ import { AboutUsComponent } from "../app/aboutUs/about-us.component";
 import { FamilyDetailEditComponent } from "../app/family/family-detail-edit.component";
 import { FamilyDetailViewComponent } from "./family/family-detail-view.component";
 import { FamilyListComponent } from "../app/family/family-list.component";
+import { FooterComponent } from "../app/footer/footer.component";
+import { HeaderComponent } from "../app/header/header.component";
 import { HomeComponent } from "../app/home/home.component";
 import { LoginComponent } from "../app/login/login.component";
 import { LogOutComponent } from "./login/logout.component";
@@ -36,6 +38,8 @@ import { MemberDetailViewComponent } from "./member/member-detail-view.component
         FamilyDetailEditComponent,
         FamilyDetailViewComponent,
         FamilyListComponent,
+        FooterComponent,
+        HeaderComponent,
         HomeComponent,
         LoginComponent,
         LogOutComponent,
