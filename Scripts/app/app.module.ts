@@ -22,8 +22,9 @@ import { HomeComponent } from "../app/home/home.component";
 import { LoginComponent } from "../app/login/login.component";
 import { LogOutComponent } from "./login/logout.component";
 import { MemberListComponent } from "../app/member/member-list.component";
-import { NavBarComponent } from "../app/nav/nav-bar.component";
 import { NavBreadcrumbComponent } from "../app/nav/nav-breadcrumb.component";
+import { NavFamilyComponent } from "../app/nav/nav-family.component";
+import { NavPaginationComponent } from "../app/nav/nav-pagination.component";
 import { PageNotFoundComponent } from "../app/misc/page-not-found.component";
 import { MemberDetailEditComponent } from "./member/member-detail-edit.component";
 import { MemberDetailViewComponent } from "./member/member-detail-view.component";
@@ -46,8 +47,9 @@ import { MemberDetailViewComponent } from "./member/member-detail-view.component
         MemberListComponent,
         MemberDetailEditComponent,
         MemberDetailViewComponent,
-        NavBarComponent,
         NavBreadcrumbComponent,
+        NavFamilyComponent,
+        NavPaginationComponent,
         PageNotFoundComponent
     ],
 

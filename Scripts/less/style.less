@@ -52,7 +52,6 @@ start{
             }
         }
     }
-    
 
     .mbapp-nav-back{
         background-color: @master-theme-color-dark;
@@ -60,9 +59,12 @@ start{
         font-size: 18px;
         font-size: lighter;
         margin: 2px 0 2px 0;
-        height: auto;
-        width: 250px;
+        height: 30px;
+        width: auto;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
         color: @text-color-theme;
+        cursor: pointer;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .mbapp-dates{
@@ -166,8 +168,8 @@ home {
     }
 }
 
-//nav-bar component
-nav-bar {
+//nav-pagination component
+nav-pagination {
     order: 0;
     margin: 2px;
     padding: 2px;
@@ -191,7 +193,7 @@ nav-bar {
     }
     .mbapp-panel.mbapp-panel-default{
         background-color: @color-panel;
-        border-top-width: 0;
+        border: .5px solid @master-theme-color-light;
         .member-image-panel{
             width: 170px;
             min-height: 170px;
@@ -210,6 +212,7 @@ nav-bar {
                 font-size: 0.8em;
             }
         }
+
         h3{
             margin: 10px 0 20px 0;
             font-weight: bold;
@@ -220,7 +223,7 @@ nav-bar {
 //member-list component
 members-list, family-list{
     ul{
-        list-style-type: none;
+        list-style-type: none !important;
         padding: 15px;
         li{
             cursor: pointer;
@@ -237,6 +240,7 @@ members-list, family-list{
     ul.list li.selected {
             background-color: #4e4e4e;
             color: #efefef;
+            list-style-type: none;
     }
 }
 
