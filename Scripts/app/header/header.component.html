@@ -1,14 +1,14 @@
 
 <header id="mbapp-mainNav" class="mb-navbar navbar navbar-expand navbar-dark flex-column flex-md-row fixed-top">
     <a class="navbar-brand mb-0 h1" [routerLink]="['']">
-        <img [src]="logo" width="50" height="40" class="d-inline-block align-top" alt="logo"> Membership App |
+        <img [src]="logo" width="50" height="40" class="d-inline-block align-top" alt="logo"> {{title}} |
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="container navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
+        <ul class="navbar-nav bd-navbar-nav flex-row  mbapp-list">
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['']">Home</a>
             </li>

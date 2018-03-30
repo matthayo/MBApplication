@@ -10,6 +10,7 @@ import { Route } from "@angular/router";
 
 //Export
 export class HeaderComponent {
+    title = "Inventory App";
     logo: string;
 
     constructor() {

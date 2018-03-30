@@ -10,5 +10,7 @@ import { Component } from "@angular/core";
 
 //Emport
 export class FooterComponent{
+    title = "MBApp"
+    primary_text = "Membership Management System"
 
 }

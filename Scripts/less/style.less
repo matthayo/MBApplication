@@ -7,6 +7,7 @@
 html body{
     margin: 0;
     padding: 0;
+    min-width: 800px !important;
     background-color: @master-bg-color;
 }
 body{
@@ -21,13 +22,17 @@ start{
         &#mbapp-mainNav{
             background-color: @master-theme-color-dark;
             color: #c7c7c7 !important;
+            min-width: 800px !important;
             a{
                 &.active{
                     font-weight: bolder;
                 }
             }
             &.mbapp-navbar{
-                opacity: 20%;
+                opacity: 0.2;
+            }
+            .mbapp-list{
+                align-items: center;
             }
             h1{
                 font-size: 20px;
@@ -38,15 +43,15 @@ start{
 
     //MASTER-CONTAINER
     #masterContainer{
-        position: inherit;
+        position: relative;
         min-height: 65vh;
         width: 100%;
         #mainContainer{
-            margin-top: 120px;
+            margin-top: 20px;
             width: 90%;
             #appContainer {
                 padding: .5rem .5rem;
-                margin-top: 50px;
+                margin-top: .5rem;
                 margin-bottom: .5rem;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             }
@@ -72,7 +77,6 @@ start{
         text-align: right;
     }
     .mbapp-navBreadcrumb{
-        position: fixed;
         margin-top: 85px;
     }
 
@@ -113,10 +117,10 @@ start{
 
 //Main Nav Breadcrumb
 navbreadcrumb{
-        #mbapp-breadcrumb{
-            max-height: 30px;
-            margin-top: -15px;
-        }
+    #mbapp-breadcrumb{
+        max-height: 30px;
+        margin-top: -15px;
+    }
     .breadcrumb{
         padding: .2rem .2rem !important;
         margin-bottom: .2rem !important;
@@ -128,36 +132,44 @@ home {
     border: 0;
     margin-top: 30px;
     padding: 0 20px;
-    .main-home-div{
+    .mbapp-main-home-div{
             margin-top: 30px;
+    }
+    .mbapp-jumbotron-title{
+        background-color: @master-bg-color;
+        opacity: 0.9;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .mbapp-jumbotron-text{
+            opacity: 1 !important;
         }
-        .mbapp-hero-image{
-        background-image: url("../assets/img/building.jpg");
+    }
+    .mbapp-home-hero-image{
+        background-image: url("../assets/img/home.jpg");
         height: 100%;
         margin: 10 10 10 10;
         position: center;
     }
-
-    .mbapp-vertical-center{
+    .mbapp-home-vertical-center{
         min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
         min-height: 100vh; /* These two lines are counted as one :-)       */
         display: block;
         align-items: center;
     }
 
-    .mbapp-card{
+    .mbapp-home-card{
         max-height: 210px;
         min-height: 210px;
-        &.mbapp-card-opacity{
+        &.mbapp-home-card-opacity{
             opacity: 0.9;
         }
-        .mbapp-card-header{
+        .mbapp-home-card-header{
             background-color: @master-theme-color-dark;
             color: #e6e6e6;
             font-weight: bolder;
             font-size: 18px;
         }
-        .mbapp-button{
+        .mbapp-home-card-button{
             position: absolute;
             align-items: center;
             bottom: 5px;
@@ -193,7 +205,8 @@ nav-pagination {
     }
     .mbapp-panel.mbapp-panel-default{
         background-color: @color-panel;
-        border: .5px solid @master-theme-color-light;
+        border: .5px solid #007bff;
+        margin-bottom: 20px;
         .member-image-panel{
             width: 170px;
             min-height: 170px;
