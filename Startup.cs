@@ -29,8 +29,11 @@ namespace MBApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MBAppDBContext>(options => 
-                        options.UseMySQL(Configuration["Data:DefaultConnection:ConnectionString"]));
+             //Add Application DbContext
+            services.AddDbContext<MBAppDBContext>(options =>
+                    // options.UseMySQL(Configuration["Data:DefaultConnection:ConnectionString"]));
+                    // options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
+                    options.UseSqlite("Data Source=MBApplication.db"));
 
             var config = new AutoMapper.MapperConfiguration(cfg =>
             {
