@@ -7,10 +7,7 @@ namespace MBApplication.Data
 
     public class MBAppDBContext : DbContext
     {
-        public MBAppDBContext(DbContextOptions<MBAppDBContext> options) : base(options)
-        {
-
-        }
+        public MBAppDBContext(DbContextOptions<MBAppDBContext> options) : base(options) { }
 
         //DataSets
         public DbSet<Family> Families { get; set; }
