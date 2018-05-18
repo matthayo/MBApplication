@@ -1,0 +1,72 @@
+<div *ngIf="member">
+    <div class="mbapp-nav-back">
+        <a (click) = "backToMembersList()">
+            &#60;&#60;&#60; Back to Members List
+        </a>
+    </div>
+    <div class="member-container">
+        <h2>{{title}}</h2>
+        <ul class="nav nav-pills justify-content-end">
+            <li role="presentation" class="nav-item">
+                <a *ngIf="member.Id != 0" class="nav-link" (click)="onMemberDetailView(member)">View</a>
+            </li>
+            <li role="presentation" class="nav-item selected">
+                <a class="nav-link active">Edit</a>
+            </li>
+        </ul>
+        <div class="mbapp-panel mbapp-panel-default member-details">
+            <h3>{{member.LastName}}, {{member.FirstName}}</h3>
+            <form class="member-detail-edit">
+                <div class="mbapp-panel-body">
+                    <ul>
+                        <li>
+                            <label>Family ID:</label>
+                            <input type="text" [(ngModel)]="this.member.FamilyId" placeholder="Family ID" name="familyId"/>
+                        </li>
+                        <li>
+                            <label>First Name: &#09; </label>
+                            <input type="text" [(ngModel)]="this.member.FirstName" placeholder="eg. John" name="firstName" />
+                        </li>
+                        <li>
+                            <label>Middle Name:&#09; </label>
+                            <input type="text" [(ngModel)]="this.member.MiddleName" placeholder="eg. J. or Johnson" name="middleName" />
+                        </li>
+                        <li>
+                            <label>Last Name&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.LastName" placeholder="eg. Smith" name="lastName" />
+                        </li>
+                        <li>
+                            <label>Email&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.Email" placeholder="name@mail.com" name="email" />
+                        </li>
+                        <li>
+                            <label>Telephone&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.Telephone" placeholder="xxx xxx xxxx" name="telephone" />
+                        </li>
+                        <li>
+                            <label>Gender&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.Gender" placeholder="Male/Female" name="gender" />
+                        </li>
+                        <li>
+                            <label>Marital Status&#09;</label>
+                            <input type="text" [(ngModel)]="this.member.MaritalStatus" placeholder="Married/Single/Divorced..." name="maritalStatus" />
+                        </li>
+                        <li>
+                            <label>Date of Birth&#09;</label>
+                            <input type="text" date="MM/dd/yyyy" [(ngModel)]="this.member.DateOfBirth" placeholder="MM/DD/YYYY" name="dateOfBirth" />
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <div *ngIf="member.Id == 0" class="commands insert">
+                <input class="btn btn-primary" type="button" value="Save" (click)="onInsert(member)" />
+                <input class="btn btn-info" type="button" value="Cancel" (click)="onMemberDetailView(member)" />
+            </div>
+            <div *ngIf="member.Id != 0" class="commands update">
+                <input class="btn btn-primary" type="button" value="Update" (click)="onUpdate(member)" />
+                <input class="btn btn-danger" type="button" value="Delete" (click)="onDelete(member)" />
+                <input class="btn btn-info" type="button" value="Cancel" (click)="onMemberDetailView(member)" />
+            </div>
+        </div>
+    </div>
+</div>

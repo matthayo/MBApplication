@@ -1,0 +1,44 @@
+<div>
+    <div class="mbapp-nav-back" >
+        <a (click)="backToHome()">
+            &#60;&#60;&#60; Back to Homepage
+        </a>
+    </div>
+    <div class="family-container">
+        <h2>{{title}}</h2>
+        <div class="mbapp-panel mbapp-panel-default">
+            <ul class="list">
+                <li *ngFor="let family of families" [class.selected]="family === selectedFamily" (click)="onSelect(family)">
+                    <div *ngIf="family.AptNumber != null; else displayWithoutAptNumber">
+                        <div>
+                            Family Name: {{family.FamilyName}}
+                            <br/>Family Id: {{family.Id}}
+                        </div>
+                        <div class="address-left-div">Address: </div>
+                        <div class="address-right-div">
+                            {{family.House}}, {{family.Street}}
+                            <br/>{{family.City}}, {{family.State}}
+                            <br/>{{family.Zip}}.
+                            <br/>Apt #: {{family.AptNumber}}
+                        </div>
+                    </div>
+                    <ng-template #displayWithoutAptNumber>
+                        <div>
+                            Family Name: {{family.FamilyName}}
+                            <br/>Family Id: {{family.Id}}
+                        </div>
+                        <div class="address-left-div">Address: </div>
+                        <div class="address-right-div"> 
+                            {{family.House}}, {{family.Street}}
+                        <br/>{{family.City}}, {{family.State}}
+                        <br/>{{family.Zip}}.
+                        </div>
+                    </ng-template>
+                    <div class="mbapp-dates">
+                        <b>Date Modified:</b> {{family.LastModifiedDate | date:'MM/dd/yyyy'}} &#12; <b>Date Created:</b> {{family.CreatedDate | date:'MM/dd/yyyy'}} 
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

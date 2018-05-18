@@ -1,0 +1,22 @@
+<div class="login-container">
+   <h2 class="form-login-heading">Login</h2>
+   <form class="form-login" [formGroup]="loginForm" (submit)="performLogin($event)">
+       <input ngControl="username" type="text" class="form-control"
+            placeholder="Your username or email address" required autofocus />
+       <input ngCo="password" type="password" class="form-control"
+            placeholder="Your password" required />
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me">
+                Remember me
+            </label>
+        </div>
+        <div class="register-link">
+            Don't have an account yet?
+            <a (click)="onRegister()">Click here to register!</a>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+            Sign in
+        </button>
+   </form>
+</div>

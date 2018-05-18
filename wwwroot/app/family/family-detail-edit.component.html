@@ -1,0 +1,67 @@
+<div *ngIf="family">
+    <div class="mbapp-nav-back">
+        <a (click) = "backToFamiliesList()">
+            &#60;&#60;&#60; Back to Families List
+        </a>
+    </div>
+    <div  class="family-container">
+        <h2>{{title}}</h2>
+        <ul class="nav nav-pills justify-content-end">
+            <li role="presentation" class="nav-item">
+                <a *ngIf="family.Id != 0" class="nav-link" (click)="onFamilyDetailView(family)">View</a>
+            </li>
+            <li role="presentation" class="nav-item">
+                <a class="nav-link active">Edit</a>
+            </li>
+        </ul>
+        <div class="mbapp-panel mbapp-panel-default family-details">
+            <h4>{{family.FamilyName}}'s - Family Unit</h4>
+            <form class="family-detail-edit">
+                <div class="mbapp-panel-body">
+                    <ul>
+                        <li>
+                            <label>Family Name:</label>
+                            <input type="text" [(ngModel)] = "this.family.FamilyName" placeholder="Family Name" name="familyName"/>
+                        </li>
+
+                        <h4>Address:</h4>
+                        
+                        <li>
+                            <label>Apt #:&#09; </label>
+                            <input type="text" [(ngModel)] = "this.family.AptNumber" placeholder="Apt. Number" name="aptNumber"/>
+                        </li>
+                        <li>
+                            <label>House #:&#09; </label>
+                            <input type="text" [(ngModel)] = "this.family.House" placeholder="House #" name="houseNumber"/>
+                        </li>
+                        <li>
+                            <label>Street&#09;</label>
+                            <input type="text" [(ngModel)] = "this.family.Street" placeholder="Street eg. Nowthen Blvd." name="street" />
+                        </li>
+                        <li>
+                            <label>City&#09;</label>
+                            <input type="text" [(ngModel)] ="this.family.City" placeholder="City eg. Minneapolis" name="city" />
+                        </li>
+                        <li>
+                            <label>State</label>
+                            <input type="text" [(ngModel)]="this.family.State" placeholder="State eg. Minnesota" name="state"/>
+                        </li>
+                        <li>
+                            <label>Zip</label>
+                            <input type="text" [(ngModel)]="this.family.Zip" placeholder="Zip eg. 55303" name="zip" />
+                        </li>
+                    </ul>
+            </div>
+        </form>
+            <div *ngIf="family.Id == 0" class="commands insert">
+                <input class="btn btn-primary" type="button" value="Save" (click)="onInsert(family)" />
+                <input class="btn btn-info"  type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
+            </div>
+            <div *ngIf="family.Id != 0" class="commands update">
+                <input class="btn btn-primary" type="button" value="Update" (click)="onUpdate(family)" />
+                <input class="btn btn-danger" type="button" value="Delete" (click)="onDelete(family)" />
+                <input class="btn btn-info"  type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
+            </div>
+        </div>
+    </div>
+</div>

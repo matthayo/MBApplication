@@ -1,0 +1,31 @@
+<div class="container-fluid mbapp-main-home-div">
+    <div class="jumbotron mbapp-home-hero-image">
+        <div class="mbapp-jumbotron-title container text-center">
+            <h1 class="display-6 .mbapp-jumbotron-text">{{title}}</h1>
+            <p class="lead .mbapp-jumbotron-text">Welcome to the Inventory App.</p>
+            <hr class="my-4">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-6">
+                    <div class="card text-center mbapp-home-card mbapp-home-card-opacity">
+                        <div class="card-header mbapp-home-card-header">{{card_1_title}}</div>
+                        <div class="card-body">
+                            <p class="card-text">A list of families in this organization. Ordered by last modified.</p>
+                            <a class="mbapp-home-card-button btn btn-md btn-primary text-light" (click)="goToFamilyList()" >{{card_1_button}} </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card text-center mbapp-home-card mbapp-home-card-opacity">
+                        <div class="card-header mbapp-home-card-header">{{card_2_title}} </div>
+                        <div class="card-body">
+                            <p class="card-text">A list of members in the organization. Listed by alphabetical order.</p>
+                            <a class="mbapp-home-card-button btn btn-md btn-primary text-light" (click)="goToMembersList()">{{card_2_button}} </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
