@@ -3,16 +3,16 @@
   "name": "mbwebapplication",
   "private": true,
   "dependencies": {
-    "@angular/common": "^6.0.0",
-    "@angular/compiler": "^6.0.0",
-    "@angular/compiler-cli": "^6.0.0",
-    "@angular/core": "^6.0.0",
-    "@angular/forms": "^6.0.0",
-    "@angular/http": "^6.0.0",
-    "@angular/platform-browser": "^6.0.0",
-    "@angular/platform-browser-dynamic": "^6.0.0",
-    "@angular/router": "^6.0.0",
-    "@angular/upgrade": "^6.0.0",
+    "@angular/common": "^6.0.5",
+    "@angular/compiler": "^6.0.5",
+    "@angular/compiler-cli": "^6.0.5",
+    "@angular/core": "^6.0.5",
+    "@angular/forms": "^6.0.5",
+    "@angular/http": "^6.0.5",
+    "@angular/platform-browser": "^6.0.5",
+    "@angular/platform-browser-dynamic": "^6.0.5",
+    "@angular/router": "^6.0.5",
+    "@angular/upgrade": "^6.0.5",
     "angularfire2": "^5.0.0-rc.9",
     "automapper-ts": "^1.9.0",
     "bootstrap": "^4.0.0",
@@ -33,6 +33,7 @@
     "rxjs": "^6.0.0",
     "systemjs": "^0.20.19",
     "typings": "^2.1.1",
+    "typescript": "^2.7.2",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -48,7 +49,7 @@
     "gulp-sourcemaps": "latest",
     "gulp-typescript": "latest",
     "gulp-uglify": "^3.0.0",
-    "typescript": "^2.8.0"
+    "typescript": "^2.7.2"
   },
   "scripts": {
     "postinstall": "typings install dt~core-js --global"
