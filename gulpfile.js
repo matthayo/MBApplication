@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     gp_clean = require('gulp-clean'),
-    gp_concat = require('gulp-concat'),
+    // gp_concat = require('gulp-concat'),
     gp_less = require('gulp-less'),
     gp_sourcemaps = require('gulp-sourcemaps'),
     gp_typescript = require('gulp-typescript'),
