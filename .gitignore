@@ -294,3 +294,5 @@ __pycache__/
 #Misc files
 other_files/
 Migrations/
+#SQLite Database file
+*.db
