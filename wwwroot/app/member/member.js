@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var Member;context_1&&context_1.id;return{setters:[],execute:function(){Member=function(){return function(Id,FamilyId,FirstName,MiddleName,LastName,Email,Telephone,Gender,MaritalStatus,DateOfBirth){this.Id=Id,this.FamilyId=FamilyId,this.FirstName=FirstName,this.MiddleName=MiddleName,this.LastName=LastName,this.Email=Email,this.Telephone=Telephone,this.Gender=Gender,this.MaritalStatus=MaritalStatus,this.DateOfBirth=DateOfBirth}}(),exports_1("Member",Member)}}});
+//# sourceMappingURL=member.js.map

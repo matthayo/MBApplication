@@ -1,0 +1,86 @@
+Id,AptNumber,City,CreatedDate,FamilyName,House,LastModifiedDate,State,Street,Zip
+1,,Seattle,1/2/2018 0:00,Anderson,4130,1/2/2018 0:00,WA,Owagner Lane,98119
+2,,Albany,1/2/2018 0:00,Anthony,331,1/2/2018 0:00,NY,Golden Ridge Road,12207
+3,,Boston,1/2/2018 0:00,Armstrong,1043,1/2/2018 0:00,MA,Levy Court,2110
+4,,Lisbon,1/2/2018 0:00,Ash,1791,1/2/2018 0:00,OH,Derek Drive,44432
+5,,Denver,1/2/2018 0:00,Bailey,4831,1/2/2018 0:00,CO,Snider Street,80216
+6,,Weirton,1/2/2018 0:00,Baird,4655,1/2/2018 0:00,WV,Fulton Street,26062
+7,,Redmond,1/2/2018 0:00,Baker,2409,1/2/2018 0:00,WA,Stockert Hollow Road,98052
+8,,Tacoma,1/2/2018 0:00,Caldwell,4751,1/2/2018 0:00,WA,Dale Avenue,98407
+9,,Eau Claire,1/2/2018 0:00,Cannon,4857,1/2/2018 0:00,WI,Benson Street,54701
+10,,Concord,1/2/2018 0:00,Carvalho,1457,1/2/2018 0:00,CA,Thunder Road,94520
+11,,Elizabethtown,1/2/2018 0:00,Davidson,4356,1/2/2018 0:00,KY,Shady Pines Drive,42701
+12,,Rolling Meadows,1/2/2018 0:00,Davis,3819,1/2/2018 0:00,IL,Oak Avenue,60008
+13,,Upper Arlington,1/2/2018 0:00,Deboer,4440,1/2/2018 0:00,OH,Quilly Lane,43221
+14,,New Brunswick,1/2/2018 0:00,Edwards,357,1/2/2018 0:00,NJ,Pooz Street,8901
+15,,Stockton,1/2/2018 0:00,Ellis,771,1/2/2018 0:00,CA,Maple Avenue,95204
+16,,Albany,1/2/2018 0:00,Elston,2415,1/2/2018 0:00,NY,Oak Drive,12207
+17,,Dallas,1/2/2018 0:00,Estrada,1723,1/2/2018 0:00,TX,Whitetail Lane,75207
+18,,Phoenix,1/2/2018 0:00,Fahey,2453,1/2/2018 0:00,AZ,Hillside Street,85012
+19,,Lima,1/2/2018 0:00,Fallon,4873,1/2/2018 0:00,OH,Carriage Lane,45806
+20,,Orlando,1/2/2018 0:00,Fishman,77,1/2/2018 0:00,FL,Hide A Way Road,32810
+21,,Lakeview,1/2/2018 0:00,Gann,3028,1/2/2018 0:00,MI,Hart Ridge Road,48850
+22,,El Paso,1/2/2018 0:00,Garcia,3464,1/2/2018 0:00,TX,Ward Road,79906
+23,,Montpelier,1/2/2018 0:00,Gates,4747,1/2/2018 0:00,VT,Essex Court,5602
+24,,New Berlin,1/2/2018 0:00,Green,2240,1/2/2018 0:00,WI,Woodlawn Drive,53151
+25,,Oakland,1/2/2018 0:00,Hardy,1964,1/2/2018 0:00,CA,Meadow Lane,94612
+26,,Lake Geneva,1/2/2018 0:00,Harris,2491,1/2/2018 0:00,WI,Oakridge Farm Lane,53147
+27,,Brattleboro,1/2/2018 0:00,Horn,193,1/2/2018 0:00,VT,Selah Way,5301
+28,,Anaheim,1/2/2018 0:00,Jackson,961,1/2/2018 0:00,CA,Locust Court,92805
+29,,Hickory Hills,1/2/2018 0:00,Jaramillo,2956,1/2/2018 0:00,IL,Vesta Drive,60457
+30,,Tribune,1/2/2018 0:00,Johnson,587,1/2/2018 0:00,KS,Breezewood Court,67879
+31,,Albuquerque,1/2/2018 0:00,Jones,379,1/2/2018 0:00,NM,Cooks Mine Road,87102
+32,,Elizabethtown,1/2/2018 0:00,Killingsworth,1686,1/2/2018 0:00,KY,Harper Street,42701
+33,,Billings,1/2/2018 0:00,Kim,1797,1/2/2018 0:00,MT,Coolidge Street,59102
+34,,Franklin,1/2/2018 0:00,King,3289,1/2/2018 0:00,KY,Rowes Lane,42134
+35,,Madison,1/2/2018 0:00,Kruse,4152,1/2/2018 0:00,WI,Browning Lane,53718
+36,,Healy Lake,1/2/2018 0:00,Lewis,3083,1/2/2018 0:00,AK,Kidd Avenue,99737
+37,,Waterloo,1/2/2018 0:00,McCaughey,3826,1/2/2018 0:00,IA,Bailey Drive,50703
+38,,Bridgeville,1/2/2018 0:00,McClellan,3679,1/2/2018 0:00,PA,Michigan Avenue,15017
+39,,Hagerstown,1/2/2018 0:00,McClure,3896,1/2/2018 0:00,MD,Lake Floyd Circle,21740
+40,,Garfield Heights,1/2/2018 0:00,Miller,3783,1/2/2018 0:00,OH,Flynn Street,44128
+41,,San Jose,1/2/2018 0:00,Nelson,3550,1/2/2018 0:00,CA,Sycamore Street,95120
+42,,Gardiner,1/2/2018 0:00,Newborn,3141,1/2/2018 0:00,MT,Coolidge Street,59030
+43,,Onondaga,1/2/2018 0:00,Newcomer,1275,1/2/2018 0:00,MI,Haven Lane,49264
+44,,Fort Wainwright,1/2/2018 0:00,Oakes,2178,1/2/2018 0:00,AK,Blackwell Street,99703
+45,,Pine Hill,1/2/2018 0:00,Phillips,509,1/2/2018 0:00,TX,Grant Street,75652
+46,,Champaign,1/2/2018 0:00,Pierson,2899,1/2/2018 0:00,IL,Scenic Way,61820
+47,,Indianapolis,1/2/2018 0:00,Pike,1437,1/2/2018 0:00,IN,Capitol Avenue,46204
+48,,Lexington,1/2/2018 0:00,Ruiz,3607,1/2/2018 0:00,MA,Stanton Hollow Road,2421
+49,,Laie,1/2/2018 0:00,Schreiner,1946,1/2/2018 0:00,HI,Emma Street,96762
+50,,State College,1/2/2018 0:00,Smith,178,1/2/2018 0:00,PA,Harley Brook Lane,16803
+51,,Boise,1/2/2018 0:00,Terrell,4971,1/2/2018 0:00,ID,Maple Avenue,83702
+52,,Tukwila,1/2/2018 0:00,Thomas,3552,1/2/2018 0:00,WA,Conifer Drive,98188
+53,,New York,1/2/2018 0:00,Thompson,547,1/2/2018 0:00,NY,Cantebury Drive,10013
+54,,Denver,1/2/2018 0:00,Valentin,3393,1/2/2018 0:00,CO,Clay Lick Road,80211
+55,,Boys Ranch,1/2/2018 0:00,Valles,3581,1/2/2018 0:00,FL,Spirit Drive,32060
+56,,Sutton,1/2/2018 0:00,Wheeler,940,1/2/2018 0:00,NE,North Avenue,68979
+57,,Roswell,1/2/2018 0:00,White,3703,1/2/2018 0:00,GA,Clement Street,30076
+58,,Fort Lauderdale,1/2/2018 0:00,Whitley,1053,1/2/2018 0:00,FL,Foley Street,33304
+59,,Buffalo,1/2/2018 0:00,Yeates,3255,1/2/2018 0:00,NY,Jarvis Street,14202
+60,,Bluffton,1/2/2018 0:00,Young,260,1/2/2018 0:00,SC,Broadway Street,29910
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,
+,,,1/2/2018 0:00,,,1/2/2018 0:00,,,

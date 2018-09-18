@@ -1,0 +1,11 @@
+D:\dev\TestSite\MBApplication\bin\Debug\netcoreapp2.1\MBApplication.deps.json
+D:\dev\TestSite\MBApplication\bin\Debug\netcoreapp2.1\MBApplication.runtimeconfig.json
+D:\dev\TestSite\MBApplication\bin\Debug\netcoreapp2.1\MBApplication.runtimeconfig.dev.json
+D:\dev\TestSite\MBApplication\bin\Debug\netcoreapp2.1\MBApplication.dll
+D:\dev\TestSite\MBApplication\bin\Debug\netcoreapp2.1\MBApplication.pdb
+D:\dev\TestSite\MBApplication\obj\Debug\netcoreapp2.1\MBApplication.csprojAssemblyReference.cache
+D:\dev\TestSite\MBApplication\obj\Debug\netcoreapp2.1\MBApplication.csproj.CoreCompileInputs.cache
+D:\dev\TestSite\MBApplication\obj\Debug\netcoreapp2.1\MBApplication.AssemblyInfoInputs.cache
+D:\dev\TestSite\MBApplication\obj\Debug\netcoreapp2.1\MBApplication.AssemblyInfo.cs
+D:\dev\TestSite\MBApplication\obj\Debug\netcoreapp2.1\MBApplication.dll
+D:\dev\TestSite\MBApplication\obj\Debug\netcoreapp2.1\MBApplication.pdb

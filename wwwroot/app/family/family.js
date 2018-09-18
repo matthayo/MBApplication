@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var Family;context_1&&context_1.id;return{setters:[],execute:function(){Family=function(){return function(Id,FamilyName,AptNumber,House,Street,City,State,Zip){this.Id=Id,this.FamilyName=FamilyName,this.AptNumber=AptNumber,this.House=House,this.Street=Street,this.City=City,this.State=State,this.Zip=Zip}}(),exports_1("Family",Family)}}});
+//# sourceMappingURL=family.js.map
