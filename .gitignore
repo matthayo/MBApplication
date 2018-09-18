@@ -292,7 +292,7 @@ __pycache__/
 *.xsd.cs
 
 #Misc files
-other_files/
-Migrations/
+#other_files/
+#Migrations/
 #SQLite Database file
-*.db
+#*.db
