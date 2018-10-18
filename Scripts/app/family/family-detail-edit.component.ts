@@ -1,8 +1,6 @@
 //Imports
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { Observable } from "rxjs/Observable";
-
 import { Family } from "./family";
 import { FamilyService } from "./family.service";
 

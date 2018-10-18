@@ -1,8 +1,10 @@
 //imports
 import { Injectable } from "@angular/core";
 import { Http, Response, Headers, RequestOptions } from "@angular/http";
-import { Observable } from "rxjs/Observable";
+import "rxjs";
+import { map } from "rxjs/operators";
 import { Family } from "./family";
+import { throwError } from "rxjs";
 
 //Decorator
 @Injectable()
@@ -23,7 +25,7 @@ export class FamilyService {
         if(num != null) url += num;
 
         return this.http.get(url)
-            .map(response => response.json())
+            .pipe(map(response => response.json()))
             .catch(this.handleError);
     }
 
@@ -34,7 +36,7 @@ export class FamilyService {
         if(name != null){
             url + name;
             return this.http.get(url)
-                .map(response => response.json())
+                .pipe(map(response => response.json()))
                 .catch(this.handleError);
         }
         else
@@ -48,7 +50,7 @@ export class FamilyService {
         if(num != null) url += num;
 
         return this.http.get(url)
-                .map(response => response.json())
+                .pipe(map(response => response.json()))
                 .catch(this.handleError);
     }
 
@@ -57,7 +59,7 @@ export class FamilyService {
         var url = this.baseUrl;
 
         return this.http.post(url, JSON.stringify(family), this.getRequestOptions())
-            .map(response => response.json())
+            .pipe(map(response => response.json()))
             .catch(this.handleError);
     }
 
@@ -66,8 +68,7 @@ export class FamilyService {
         var url = this.baseUrl + family.Id;
 
         return this.http.put(url, JSON.stringify(family), this.getRequestOptions())
-            .map(response => response.json())
-            .catch(this.handleError);
+            .pipe(map(response => response.json())).catch(this.handleError);
     }
 
     //DELETE call for /api/families/{id}
@@ -92,6 +93,6 @@ export class FamilyService {
     //handle errors.
     private handleError(error: Response) {
         console.error(error);
-        return Observable.throw(error.json().error || "Server error");
+        return throwError(error.json().error || "Server error");
     }
 }

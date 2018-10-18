@@ -1,5 +1,5 @@
 import { Component, OnInit} from "@angular/core";
-import { expand } from "rxjs/operator/expand";
+// import { expand } from "rxjs/operator/expand";
 
 @Component({
     selector: "nav-pagination",

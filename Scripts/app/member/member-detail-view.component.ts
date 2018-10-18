@@ -1,7 +1,6 @@
 //Imports
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-
 import { Member } from "./member";
 import { MemberService } from "./member.service";
 // import { MemberDetailEditComponent } from "./member-detail-edit.component";

@@ -1,7 +1,6 @@
 //imports
 import { Component, OnInit} from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-
 import { Family } from "./family";
 import { FamilyService } from "./family.service";
 

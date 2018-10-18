@@ -1,7 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Http, Response, RequestOptions, Headers } from "@angular/http";
-import { Observable } from "rxjs/Observable";
+import "rxjs";
+import { map } from "rxjs/operators";
 import { Member } from "./member";
+import { throwError } from "rxjs";
 
 //Decorator
 @Injectable()
@@ -41,7 +43,7 @@ export class MemberService {
         var url = this.baseUrl + "GetByLastName/" + name;
 
         return this.http.get(url)
-                .map(response => response.json())
+                .pipe(map(response => response.json()))
                 .catch(this.handleError);
     }
 
@@ -50,7 +52,7 @@ export class MemberService {
         var url = this.baseUrl;
 
         return this.http.post(url, JSON.stringify(member), this.getRequestOptions())
-            .map(response => response.json())
+            .pipe(map(response => response.json()))
             .catch(this.handleError);
     }
 
@@ -60,7 +62,7 @@ export class MemberService {
         var url = this.baseUrl + member.Id;
 
         return this.http.put(url, JSON.stringify(member), this.getRequestOptions())
-            .map(response => response.json())
+            .pipe(map(response => response.json()))
             .catch(this.handleError);
     }
 
@@ -86,6 +88,6 @@ export class MemberService {
 
     private handleError(error: Response) {
         console.error(error);
-        return Observable.throw(error.json().error || "Server error");
+        return throwError(error.json().error || "Server error");
     }
 }

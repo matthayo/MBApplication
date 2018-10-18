@@ -37,7 +37,7 @@ var destPaths = {
 
 ///Compile, minify and create sourcemaps all TypeScript files and place them to wwwroot/app, 
 ///together with their js.map files.
-gulp.task('app', ['app_clean'], function () {
+gulp.task('app', function () {
     return gulp.src(srcPaths.app)
         .pipe(gp_sourcemaps.init())
         .pipe(gp_typescript(require('./tsconfig.json').compilerOptions))
@@ -53,7 +53,7 @@ gulp.task('app_clean', function(){
 });
 
 // Copy all HTML files from external libraries to wwwroot/app/**/*.html
-gulp.task('html', ['html_clean'], function () {
+gulp.task('html', function () {
     return gulp.src(srcPaths.html)
         .pipe(gulp.dest(destPaths.html));
 });
@@ -65,7 +65,7 @@ gulp.task('html_clean', function () {
 });
 
 // Copy all JS files from external libraries to wwwroot/js
-gulp.task('js', ['js_clean'], function () {
+gulp.task('js', function () {
     gulp.src(srcPaths.js_angular)
         .pipe(gulp.dest(destPaths.js_angular));
     gulp.src(srcPaths.js_rxjs)
@@ -83,7 +83,7 @@ gulp.task('js_clean', function () {
 });
 
 //Process all LESS files and output the resulting CSS to wwwroot/css/
-gulp.task('less', ['less_clean'], function () {
+gulp.task('less', function () {
     return gulp.src(srcPaths.less)
             .pipe(gp_less())
             .pipe(gulp.dest(destPaths.css));
@@ -97,12 +97,13 @@ gulp.task('less_clean', function () {
 
 //Watch specified files and define what to do upon file changes 
 gulp.task('watch', function () {
-    gulp.watch([srcPaths.app, srcPaths.html, srcPaths.js, srcPaths.less ],['app', 'html', 'js', 'less']);
+    gulp.watch([srcPaths.app, srcPaths.html, srcPaths.js, srcPaths.less ], gulp.parallel('app', 'html', 'js', 'less'));
 });
 
 // Global cleanup task
-gulp.task('cleanup', ['app_clean', 'html_clean', 'js_clean', 'less_clean']);
+gulp.task('cleanup', gulp.parallel('app_clean', 'html_clean', 'js_clean', 'less_clean'));
 
 //Define the default task so it will launch all other tasks
-gulp.task('default', ['app', 'html', 'js', 'less', 'watch']);
+gulp.task('default', 
+    gulp.series('cleanup', gulp.parallel('app', 'html', 'js', 'less', 'watch')));
 
