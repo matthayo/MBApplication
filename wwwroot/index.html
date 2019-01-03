@@ -21,7 +21,7 @@
         <script src="js/zone.js"></script>
         <script src="js/Reflect.js"></script> 
         <script src="js/system.src.js"></script>
-
+        <script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
         <!-- Angular Native Directives -->
       <!--  <script src="/js/moment.js"></script>
         <script src="/js/ngx-bootstrap.umd.js"></script> -->
@@ -29,9 +29,19 @@
         <!-- Step 2: Configure SystemJS -->
         <script src="systemjs.config.js"></script>
         <script>
-            System.import ('app').catch(function (err) {
-                console.error(err);
-            });
+            // System.import ('app').catch(function (err) {
+            //     console.error(err);
+            // });
+            System.config({
+                    map: {
+                        rxjs: 'node_modules/rxjs' // added this map section
+                    },
+                    packages: {
+                        'app': { defaultExtension: 'js' },
+                        'rxjs': { defaultExtension: 'js' } // and added this to packages
+                    }
+                });
+                System.import('app/app');
         </script>
     </head>
     <body>
