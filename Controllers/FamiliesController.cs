@@ -103,15 +103,15 @@ namespace MBApplication.Controllers
            );
         }
 
-        //POST api/families
-        [HttpPost]
+        //PUT api/families
+        [HttpPut]
         // [Authorize]
-        public IActionResult Post([FromBody]FamilyViewModel familyToAdd)
+        public IActionResult Put([FromBody]FamilyViewModel familyToAdd)
         {
             if(familyToAdd != null)
             {
                 //Create a new Family with the client-sent json data
-                var family = _mapper.Map<Family>(familyToAdd);
+                var family = familyToAdd.Adapt<Family>();
 
                 //Override system-based variable
                 family.CreatedDate = DateTime.Now;
@@ -141,10 +141,10 @@ namespace MBApplication.Controllers
 
         }
 
-        //PUT api/families/
-        [HttpPut]
+        //POST api/families/
+        [HttpPost]
         // [Authorize]
-        public IActionResult Put([FromBody]FamilyViewModel familyToUpdate)
+        public IActionResult Post([FromBody]FamilyViewModel familyToUpdate)
         {
             if(familyToUpdate == null)
                 return new StatusCodeResult(500);
@@ -157,6 +157,7 @@ namespace MBApplication.Controllers
                 });
                  
             //handle the update on property-basis
+            family.Id = familyToUpdate.Id;
             family.FamilyName = familyToUpdate.FamilyName;
             family.AptNumber = familyToUpdate.AptNumber;
             family.City = familyToUpdate.City;
@@ -188,24 +189,22 @@ namespace MBApplication.Controllers
         // [Authorize]
         public IActionResult Delete(int id)
         {
-            var item = _dbContext.Families.Where(i => i.Id == id).FirstOrDefault();
 
-            if(item != null)
-            {
-                //remove the item to delete from the DbContext.
-                _dbContext.Families.Remove(item);
+            var family = _dbContext.Families.Where(i => i.Id == id).FirstOrDefault();
 
-                //Persist the changes to Database
-                _dbContext.SaveChanges();
-
-                //Return HTTP Status 200 (OK)
-                return new OkResult();
-            }
-            else
+            if(family == null)
             {
                 return NotFound(new { Error = String.Format("Family ID {0} has not been found.", id) });
             }
-            
+
+            //remove the item to delete from the DbContext.
+            _dbContext.Families.Remove(family);
+
+            //Persist the changes to Database
+            _dbContext.SaveChanges();
+
+            //Return HTTP Status 200 (OK)
+            return new OkResult();
         }
 
         //Return the total number of Families

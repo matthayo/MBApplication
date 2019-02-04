@@ -25,21 +25,23 @@ export class FamilyDetailEditComponent {
                 @Inject('BASE_URL') private baseUrl: string) {
       this.http = http;
 
-      this.id = this.activatedRoute.snapshot.params["id"];
+      this.family = <IFamily>{};
 
-      if (this.id) {
+      this.id = +this.activatedRoute.snapshot.params["id"];
 
-        this.editMode = true;
+      this.editMode = (this.activatedRoute.snapshot.url[1].path === "edit");
+
+      if (this.editMode) {
 
         var url = this.baseUrl + "api/families/GetFamilyById/" + this.id;
 
         this.http.get<IFamily>(url).subscribe(
-          family => this.family = family
-        );
+          family => this.family = family,
+          error => console.log(error));
       }
       else {
-        this.editMode = false;
-        this.router.navigate(["families"]);
+        this.family.Id = this.id;
+        this.title = "Create a new Family Entry";
       }
     }
 
@@ -83,14 +85,14 @@ export class FamilyDetailEditComponent {
     }
 
     onUpdate(family: IFamily){
-      var url = this.baseUrl + "api/families/" + family.Id;
+      var url = this.baseUrl + "api/families/";
 
       if(this.editMode){
       this.http.post<IFamily>(url, family).subscribe(
         data => {
-            this.family = data;
-            console.log("Family " + this.family.Id + " has been updated.");
-            this.router.navigate(["family/view", this.family.Id]);
+          var updateFamily = data;
+            console.log("Family " + updateFamily.Id + " has been updated.");
+            this.router.navigate(["family/view", updateFamily.Id]);
         },
         (error) => console.log(error));
       }

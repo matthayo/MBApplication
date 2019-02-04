@@ -8,7 +8,7 @@
         <h2>{{title}}</h2>
         <ul class="nav nav-pills justify-content-end">
             <li role="presentation" class="nav-item">
-                <a *ngIf="family.Id != 0" class="nav-link" (click)="onFamilyDetailView(family)">View</a>
+                <a *ngIf="this.editMode" class="nav-link" (click)="onFamilyDetailView(family)">View</a>
             </li>
             <li role="presentation" class="nav-item">
                 <a class="nav-link active">Edit</a>
@@ -25,7 +25,7 @@
                         </li>
 
                         <h4>Address:</h4>
-                        
+
                         <li>
                             <label>Apt #:&#09; </label>
                             <input type="text" [(ngModel)] = "this.family.AptNumber" placeholder="Apt. Number" name="aptNumber"/>
@@ -53,11 +53,11 @@
                     </ul>
             </div>
         </form>
-            <div *ngIf="family.Id == 0" class="commands insert">
+            <div *ngIf="!this.editMode" class="commands insert">
                 <input class="btn btn-primary" type="button" value="Save" (click)="onInsert(family)" />
                 <input class="btn btn-info"  type="button" value="Cancel" (click)="onFamilyDetailView(family)" />
             </div>
-            <div *ngIf="family.Id != 0" class="commands update">
+            <div *ngIf="this.editMode" class="commands update">
                 <input class="btn btn-primary" type="button" value="Update" (click)="onUpdate(family)" />
                 <input class="btn btn-danger" type="button" value="Delete" (click)="onDelete(family)" />
                 <input class="btn btn-info"  type="button" value="Cancel" (click)="onFamilyDetailView(family)" />

@@ -1,5 +1,5 @@
 //Imports
-import { Component, Inject } from "@angular/core";
+import { Component, Inject, Input, SimpleChange, SimpleChanges } from "@angular/core";
 // import { IFamily } from "./Family";
 // import { FamilyService } from "./family.service";
 import { Router } from "@angular/router";
@@ -14,7 +14,7 @@ import { HttpClient } from "@angular/common/http";
 //Exports
 export class FamilyListComponent{
     title = "List of Families";
-    selectedFamily: IFamily;
+    @Input() selectedFamily: IFamily;
     families: IFamily[];
     errorMessage: string;
 
@@ -22,17 +22,36 @@ export class FamilyListComponent{
     constructor(//private familyService: FamilyService,
                 private http: HttpClient,
                 private router: Router,
-                @Inject('BASE_URL') baseUrl: string) {
+                @Inject('BASE_URL') private baseUrl: string) {
+
       this.http = http;
-      var url = baseUrl + "api/Families/getfamilies";
+      this.families = [];
+
+      this.loadData();
+    }
+
+    ngOnChanges(changes: SimpleChanges){
+      if(typeof changes['family'] !== "undefined"){
+        //retrieve family variable change info
+        var change = changes['family'];
+
+        //only perform the task if the value changes
+        if(change.isFirstChange()){
+          //execute the Http request and retrieve the results
+          this.loadData();
+        }
+      }
+    }
+
+    loadData(){
+      var url = this.baseUrl + "api/Families/getfamilies";
 
       this.http.get<IFamily[]>(url).subscribe(list => {
         this.families = list;
       },
         error => this.errorMessage = <any>error
       );
-     }
-
+    }
 
     onSelect(family: IFamily){
         this.selectedFamily = family;
