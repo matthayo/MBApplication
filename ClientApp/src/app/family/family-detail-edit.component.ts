@@ -1,8 +1,6 @@
 //Imports
 import { Component, OnInit, Inject } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-// import { Family } from "./family";
-import { FamilyService } from "./family.service";
 import { HttpClient } from "@angular/common/http";
 
 //Decorators
@@ -44,32 +42,6 @@ export class FamilyDetailEditComponent {
         this.title = "Create a new Family Entry";
       }
     }
-
-    // ngOnInit(){
-    //     var id = +this.activatedRoute.snapshot.params["id"];
-    //     if(id){
-    //         // this.familyService.get(id).subscribe(
-    //       this.http.get<IFamily>(this.url + "api/Families/" + id).subscribe(
-    //             family => this.family = family
-    //         );
-    //     }
-    //     else if (id === 0) {
-    //         console.log("Id is 0: adding a new family unit...");
-    //         // this.family = new IFamily(0,
-    //         //                         "Add New",  //FamilyName
-    //         //                         null,       //AptNumber
-    //         //                         null,       //House
-    //         //                         null,       //Street
-    //         //                         null,       //City
-    //         //                         null,       //State
-    //         //                         null       //Zip
-    //         //                     );
-    //     }
-    //     else{
-    //         console.log("Invalid id: routing back to home");
-    //         this.router.navigate(["families"]);
-    //     }
-    // }
 
     onInsert(family: IFamily){
       var url = this.baseUrl + "api/families/" + family.Id
