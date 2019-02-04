@@ -9,7 +9,7 @@ import { HttpClient } from "@angular/common/http";
 // Decorators
 @Component({
     selector: "member-detail-view",
-    templateUrl: "app/member/member-detail-view.component.html"
+    templateUrl: "./member-detail-view.component.html"
 })
 
 //Export

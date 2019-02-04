@@ -4,12 +4,12 @@ import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
     selector: "home",
-    templateUrl: "app/home/home.component.html"
+    templateUrl: "./home.component.html"
 })
 
 export class HomeComponent{
     title = "Inventory Management System";
-    
+
     card_1_title = "Families";
     card_1_button = "Family List";
 
@@ -18,7 +18,7 @@ export class HomeComponent{
 
     constructor(private router: Router,
                 private activatedRoute: ActivatedRoute){ }
-    
+
     goToFamilyList(){
         this.router.navigate(["families"]);
     }

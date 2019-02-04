@@ -5,7 +5,7 @@ import { Component, Input } from "@angular/core";
 //Decorator
 @Component({
     selector: "login",
-    templateUrl: "app/login/login.component.html"
+    templateUrl: "./login.component.html"
 })
 
 //Export

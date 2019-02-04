@@ -8,7 +8,7 @@ import { HttpClient } from "@angular/common/http";
 //Decorator
 @Component({
     selector: "family-list",
-    templateUrl: "app/family/family-list.component.html"
+    templateUrl: "./family-list.component.html"
 })
 
 //Exports

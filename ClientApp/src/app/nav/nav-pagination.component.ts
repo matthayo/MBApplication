@@ -3,7 +3,7 @@ import { Component, OnInit} from "@angular/core";
 
 @Component({
     selector: "nav-pagination",
-    templateUrl: "app/nav/nav-pagination.component.html"
+    templateUrl: "./nav-pagination.component.html"
 })
 
 export class NavPaginationComponent{

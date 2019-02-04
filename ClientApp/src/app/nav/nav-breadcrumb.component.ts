@@ -13,7 +13,7 @@ interface IBreadcrumb {
 //Decorator
 @Component({
     selector: "navbreadcrumb",
-    templateUrl: "app/nav/nav-breadcrumb.component.html"
+    templateUrl: "./nav-breadcrumb.component.html"
 })
 
 //Export

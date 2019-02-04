@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
 //Decorator
 @Component({
     selector: "logout",
-    templateUrl: "app/login/logout.component.html"
+    templateUrl: "./logout.component.html"
 })
 
 //Export

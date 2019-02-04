@@ -5,7 +5,7 @@ import { Route } from "@angular/router";
 //Decorators
 @Component({
     selector: "app-header",
-    templateUrl: "app/header/header.component.html"
+    templateUrl: "./header.component.html"
 })
 
 //Export

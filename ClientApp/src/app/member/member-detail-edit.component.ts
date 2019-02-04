@@ -8,7 +8,7 @@ import { Member } from "./member";
 //Decorators
 @Component({
     selector: "member-detail-edit",
-    templateUrl: `app/member/member-detail-edit.component.html`
+    templateUrl: `./member-detail-edit.component.html`
 })
 
 //Export
