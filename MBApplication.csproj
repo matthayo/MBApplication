@@ -1,57 +1,70 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
+
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
 
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="bootstrap" Version="3.3.7" />
-    <PackageReference Include="Microsoft.AspNetCore.All"/>
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.3.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.1.0" />
-    <PackageReference Include="Mysql.data.entityframeworkcore" Version="6.10.5" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.3.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
-    <PackageReference Include="AutoMapper" Version="5.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <DotNetCliToolReference Include="AutoMapper" Version="5.0.0" />
-    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.0" />
-    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0" />
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
-  </ItemGroup>
-  <ItemGroup>
 
+  <ItemGroup>
+  <PackageReference Include="AutoMapper" Version="8.0.0" />
+	<PackageReference Include="IdentityModel" Version="3.10.4" />
+    <PackageReference Include="IdentityServer4" Version="2.3.2" />
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.3.0" />
+    <PackageReference Include="IdentityServer4.EntityFramework" Version="2.3.2" />
+    <PackageReference Include="IdentityServer4.Storage" Version="2.3.1" />
+    <PackageReference Include="Mapster" Version="3.3.0" />	
+    <PackageReference Include="Microsoft.AspNetCore.All" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Npgsql" Version="4.0.4" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />				  
   </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
 </Project>
