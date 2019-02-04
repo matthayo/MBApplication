@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace MBApplication.Migrations
 {
-    public partial class InitialMigrations : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,16 +13,16 @@ namespace MBApplication.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    AptNumber = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: false),
-                    CreatedDate = table.Column<DateTime>(nullable: false),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     FamilyName = table.Column<string>(nullable: false),
+                    AptNumber = table.Column<string>(nullable: true),
                     House = table.Column<string>(nullable: false),
-                    LastModifiedDate = table.Column<DateTime>(nullable: false),
-                    State = table.Column<string>(nullable: false),
                     Street = table.Column<string>(nullable: false),
-                    Zip = table.Column<int>(nullable: false)
+                    City = table.Column<string>(nullable: false),
+                    State = table.Column<string>(nullable: false),
+                    Zip = table.Column<int>(nullable: false),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -34,19 +34,19 @@ namespace MBApplication.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    City = table.Column<string>(nullable: false),
-                    CreatedDate = table.Column<DateTime>(nullable: false),
-                    Email = table.Column<string>(nullable: false),
-                    House = table.Column<string>(nullable: false),
-                    LastModifiedDate = table.Column<DateTime>(nullable: false),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(nullable: false),
-                    State = table.Column<string>(nullable: false),
-                    Street = table.Column<string>(nullable: false),
                     Telephone = table.Column<string>(nullable: false),
-                    Type = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
                     Website = table.Column<string>(nullable: true),
-                    Zip = table.Column<int>(nullable: false)
+                    House = table.Column<string>(nullable: false),
+                    Street = table.Column<string>(nullable: false),
+                    City = table.Column<string>(nullable: false),
+                    State = table.Column<string>(nullable: false),
+                    Zip = table.Column<int>(nullable: false),
+                    Type = table.Column<string>(nullable: false),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -58,18 +58,18 @@ namespace MBApplication.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    CreatedDate = table.Column<DateTime>(nullable: false),
-                    DateOfBirth = table.Column<DateTime>(nullable: false),
-                    Email = table.Column<string>(nullable: false),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     FamilyId = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: false),
-                    Gender = table.Column<string>(nullable: false),
-                    LastModifiedDate = table.Column<DateTime>(nullable: false),
-                    LastName = table.Column<string>(nullable: false),
-                    MaritalStatus = table.Column<string>(nullable: false),
                     MiddleName = table.Column<string>(nullable: false),
-                    Telephone = table.Column<string>(nullable: false)
+                    LastName = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Telephone = table.Column<string>(nullable: false),
+                    Gender = table.Column<string>(nullable: false),
+                    MaritalStatus = table.Column<string>(nullable: false),
+                    DateOfBirth = table.Column<DateTime>(nullable: false),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -87,14 +87,14 @@ namespace MBApplication.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    Status = table.Column<string>(nullable: false),
+                    MembershipBy = table.Column<string>(nullable: false),
+                    OrganizationId = table.Column<int>(nullable: false),
+                    MemberId = table.Column<int>(nullable: false),
                     CreatedDate = table.Column<DateTime>(nullable: false),
                     LastModifiedDate = table.Column<DateTime>(nullable: false),
-                    MemberId = table.Column<int>(nullable: false),
-                    MembershipBy = table.Column<string>(nullable: false),
-                    MembershipDate = table.Column<DateTime>(nullable: false),
-                    OrganizationId = table.Column<int>(nullable: false),
-                    Status = table.Column<string>(nullable: false)
+                    MembershipDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

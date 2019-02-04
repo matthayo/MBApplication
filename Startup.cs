@@ -1,15 +1,15 @@
 using System;
+using System.Linq;
 using System.Reflection;
-using MBApplication.Data;
 using MBApplication.MappingProfile;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MBApplication.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MBApplication
 {
@@ -17,8 +17,15 @@ namespace MBApplication
     {
         public Startup(IConfiguration configuration, IHostingEnvironment environment)
         {
-            Configuration = configuration;
-            Environment = environment;
+            // Configuration = configuration;
+            // Environment = environment;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(environment.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.json.{environment.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+            
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -29,10 +36,17 @@ namespace MBApplication
         {
             var defaultConnectionString = Configuration.GetConnectionString("DefaultConnection");
 
-            var migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name; 
+            // var migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
 
-            services.AddDbContext<MBAppDBContext>(options => 
-                    options.UseSqlite(defaultConnectionString));
+            // services.AddDbContext<ApplicationDbContext>(options =>
+            //         options.UseSqlite(defaultConnectionString));
+            //         // options.UseNpgsql(defaultConnectionString));
+                    
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+                    // options.UseMySQL(Configuration["Data:DefaultConnection:ConnectionString"]));
+                    // options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
+                    options.UseSqlite("Data Source=MBApplication.db"));
 
             var config = new AutoMapper.MapperConfiguration(cfg =>
             {
@@ -50,7 +64,7 @@ namespace MBApplication
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

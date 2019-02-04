@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Http, Response, Headers, RequestOptions } from "@angular/http";
 import "rxjs";
 import { map } from "rxjs/operators";
-import { Family } from "./family";
+// import { Family } from "./family";
 import { throwError } from "rxjs";
 
 //Decorator
@@ -51,7 +51,7 @@ export class FamilyService {
     }
 
     //POST call for /api/families/
-    add(family: Family){
+    add(family: IFamily){
         var url = this.baseUrl;
 
         return this.http.post(url, JSON.stringify(family), this.getRequestOptions())
@@ -59,7 +59,7 @@ export class FamilyService {
     }
 
     //PUT call for /api/families/{id}
-    update(family: Family){
+    update(family: IFamily){
         var url = this.baseUrl + family.Id;
 
         return this.http.put(url, JSON.stringify(family), this.getRequestOptions())

@@ -12,10 +12,10 @@ namespace MBApplication.Controllers{
     [Route("api/[controller]")]
     public class Organizations : Controller
     {
-        private MBAppDBContext _dbContext;
+        private ApplicationDbContext _dbContext;
         private IMapper _mapper;
 
-        public Organizations(MBAppDBContext dbContext, IMapper mapper)
+        public Organizations(ApplicationDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

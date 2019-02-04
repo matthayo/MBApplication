@@ -1,7 +1,7 @@
 //imports
 import { Component, OnInit, Inject} from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { Family } from "./family";
+// import { Family } from "./family";
 import { FamilyService } from "./family.service";
 import { HttpClient } from "@angular/common/http";
 
@@ -14,8 +14,9 @@ import { HttpClient } from "@angular/common/http";
 //Export
 export class FamilyDetailViewComponent {
     title = "Detailed Family View";
-    family: Family;
-    url: any;
+    family: IFamily;
+    url: string;
+    id: number;
 
     constructor(//private familyService: FamilyService,
                 private http: HttpClient,
@@ -23,28 +24,29 @@ export class FamilyDetailViewComponent {
                 private activatedRoute: ActivatedRoute,
                 @Inject('BASE_URL') baseUrl: string) {
       this.http = http;
-      this.url = baseUrl;
+      this.url = baseUrl + "api/families/getfamilybyid";
+      this.id = this.activatedRoute.snapshot.params["id"];
+
+      // this.http.get<IFamily>(this.url + "/" + this.id).subscribe(
+      //     family => this.family = family
+      //   );
+
+      if (this.id) {
+        this.http.get<IFamily>(this.url + "/" + this.id).subscribe(
+        family => this.family = family);
+      }
+      else if (this.id === 0) {
+        console.log("Id is 0: adding a new family unit...");
+        this.router.navigate(["family/edit", 0]);
+      }
+      else {
+        console.log("Invalid id: routing back to home");
+        this.router.navigate([""]);
+      }
     }
 
-    ngOnInit() {
-        var id = +this.activatedRoute.snapshot.params["id"];
-        if (id) {
-            // this.familyService.get(id).subscribe(
-          this.http.get<Family>(this.url + "api/Families/" + id).subscribe(
-                family => this.family = family
-            );
-        }
-        else if (id === 0) {
-            console.log("Id is 0: adding a new family unit...");
-            this.router.navigate(["family/edit", 0]);
-        }
-        else {
-            console.log("Invalid id: routing back to home");
-            this.router.navigate([""]);
-        }
-    }
 
-    onFamilyDetailEdit(family: Family) {
+    onFamilyDetailEdit(family: IFamily) {
         this.router.navigate(["family/edit", family.Id]);
     }
 

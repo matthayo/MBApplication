@@ -6,29 +6,40 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Mapster;
 
 namespace MBApplication.Controllers
 {
     [Route("api/[controller]")]
+    [ApiController]
     public class FamiliesController : Controller
     {
-        private readonly MBAppDBContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public FamiliesController(MBAppDBContext dbContext, IMapper mapper)
+        public FamiliesController(ApplicationDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
         }
 
-        //GET api/families/Get/1
-        [HttpGet("Get/{id}")]
+        //GET api/families/GetFamilyById/1
+        [HttpGet("GetFamilyById/{id}")]
         public IActionResult Get(int? id)
         {
             var family = _dbContext.Families.Where(f => f.Id == id).FirstOrDefault();
             if (id != null)
             {
-                return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);
+                //Using AutoMapper
+                // return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings); 
+
+                //Using Mapster
+                return new JsonResult(
+                    family.Adapt<FamilyViewModel>(),
+                    new JsonSerializerSettings(){
+                        Formatting = Formatting.Indented
+                    }
+                );
             }
             else
             {
@@ -43,7 +54,15 @@ namespace MBApplication.Controllers
             var family = _dbContext.Families.Where(f => f.FamilyName.Equals(familyName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
             if (familyName != null)
             {
-                return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);
+                // return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);
+
+                //Using Mapster
+                return new JsonResult(
+                    family.Adapt<FamilyViewModel>(),
+                    new JsonSerializerSettings(){
+                        Formatting = Formatting.Indented
+                    }
+                );
             }
             else
             {
@@ -55,9 +74,16 @@ namespace MBApplication.Controllers
         [HttpGet("GetFamilies")]
         public IActionResult GetFamilies()
         {
-            var families = _dbContext.Families.OrderByDescending(f => f.LastModifiedDate).Take(AllFamilies).ToList();
+            var families = _dbContext.Families.OrderByDescending(f => f.LastModifiedDate).Take(AllFamilies).ToArray();
 
-            return new JsonResult(ToFamiliesViewModelList(families), DefaultJsonSettings);
+            // return new JsonResult(ToFamiliesViewModelList(families), DefaultJsonSettings);
+
+            return new JsonResult(
+                families.Adapt<FamilyViewModel[]>(),
+                new JsonSerializerSettings(){
+                    Formatting = Formatting.Indented
+                }
+            );
         }
 
         //GET api/families/GetFamilies/10
@@ -66,13 +92,21 @@ namespace MBApplication.Controllers
         {
             var families = _dbContext.Families.OrderBy(f => f.FamilyName).Take(n).ToList();
 
-            return new JsonResult(ToFamiliesViewModelList(families), DefaultJsonSettings);
+            // return new JsonResult(ToFamiliesViewModelList(families), DefaultJsonSettings);
+
+            return new JsonResult(
+               families.Adapt<FamilyViewModel[]>(),
+               new JsonSerializerSettings()
+               {
+                   Formatting = Formatting.Indented
+               }
+           );
         }
 
         //POST api/families
-        [HttpPost()]
+        [HttpPost]
         // [Authorize]
-        public IActionResult Add([FromBody]FamilyViewModel familyToAdd)
+        public IActionResult Post([FromBody]FamilyViewModel familyToAdd)
         {
             if(familyToAdd != null)
             {
@@ -93,7 +127,11 @@ namespace MBApplication.Controllers
                 _dbContext.SaveChanges();
 
                 //Return newly-created Family to browser
-                return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);
+                return new JsonResult(
+                    family.Adapt<FamilyViewModel>(),
+                    new JsonSerializerSettings(){
+                        Formatting = Formatting.Indented
+                    });
             }
             else
             {
@@ -103,49 +141,46 @@ namespace MBApplication.Controllers
 
         }
 
-        //PUT api/families/12
-        [HttpPut("{id}")]
+        //PUT api/families/
+        [HttpPut]
         // [Authorize]
-        public IActionResult Update(int? id, [FromBody]FamilyViewModel familyToUpdate)
+        public IActionResult Put([FromBody]FamilyViewModel familyToUpdate)
         {
-            if (id != null)
-            {
-                var family = _dbContext.Families.Where(i => i.Id == id).FirstOrDefault();
+            if(familyToUpdate == null)
+                return new StatusCodeResult(500);
 
-                if (family != null)
-                {
-                    //handle the update on property-basis
-                    family.FamilyName = familyToUpdate.FamilyName;
-                    family.AptNumber = familyToUpdate.AptNumber;
-                    family.City = familyToUpdate.City;
-                    family.House = familyToUpdate.House;
-                    family.State = familyToUpdate.State;
-                    family.Street = familyToUpdate.Street;
-                    family.Zip = familyToUpdate.Zip;
+            var family = _dbContext.Families.Where(i => i.Id == familyToUpdate.Id).FirstOrDefault();
 
-                    //Override system-based variable
-                    family.LastModifiedDate = DateTime.Now;
+            if (family == null)
+                return NotFound ( new {
+                    Error = String.Format("Family with ID {0} has not been found", familyToUpdate.Id)
+                });
+                 
+            //handle the update on property-basis
+            family.FamilyName = familyToUpdate.FamilyName;
+            family.AptNumber = familyToUpdate.AptNumber;
+            family.City = familyToUpdate.City;
+            family.House = familyToUpdate.House;
+            family.State = familyToUpdate.State;
+            family.Street = familyToUpdate.Street;
+            family.Zip = familyToUpdate.Zip;
 
-                    //If field is empty convert to a Null value.
-                    if(family.AptNumber == "") 
-                        family.AptNumber = null;
+            //Override system-based variable
+            family.LastModifiedDate = DateTime.Now;
 
-                    //persist changes to Database
-                    _dbContext.SaveChanges();
+            //If field is empty convert to a Null value.
+            if(family.AptNumber == "") 
+                family.AptNumber = null;
 
-                    //return the updated Family to browser
-                    return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);
-                }
-                else
-                {
-                    return NotFound(new { Error = String.Format("Family ID {0} has not been found.", id) });
-                }
-            }
-            else
-            {
-                return NotFound(new { Error = String.Format("Family ID {0} has not been found.", id) });
-            }
-            
+            //persist changes to Database
+            _dbContext.SaveChanges();
+
+            //return the updated Family to browser
+            return new JsonResult(
+                family.Adapt<FamilyViewModel>(), 
+                new JsonSerializerSettings(){
+                    Formatting = Formatting.Indented
+                });
         }
 
         //DELETE api/families/1

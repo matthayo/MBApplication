@@ -12,10 +12,10 @@ namespace MBApplication.Controllers
     [Route("api/[controller]")]
     public class MembersController : Controller
     {
-        private readonly MBAppDBContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
         private readonly IMapper _mapper;
         
-        public MembersController(MBAppDBContext dbContext, IMapper mapper) 
+        public MembersController(ApplicationDbContext dbContext, IMapper mapper) 
         {
             _dbContext = dbContext;
             _mapper = mapper;
