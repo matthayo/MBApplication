@@ -59,13 +59,13 @@
                 </div>
             </form>
             <div *ngIf="member.Id == 0" class="commands insert">
-                <input class="btn btn-primary" type="button" value="Save" (click)="onInsert(member)" />
-                <input class="btn btn-info" type="button" value="Cancel" (click)="onMemberDetailView(member)" />
+                <button class="btn btn-primary btn-md" type="button" value="Save" (click)="onInsert(member)">Save</button>
+                <button class="btn btn-info btn-md" type="button" value="Cancel" (click)="onMemberDetailView(member)">Cancel</button>
             </div>
             <div *ngIf="member.Id != 0" class="commands update">
-                <input class="btn btn-primary" type="button" value="Update" (click)="onUpdate(member)" />
-                <input class="btn btn-danger" type="button" value="Delete" (click)="onDelete(member)" />
-                <input class="btn btn-info" type="button" value="Cancel" (click)="onMemberDetailView(member)" />
+                <button class="btn btn-primary btn-md" type="button" value="Update" (click)="onUpdate(member)">Update</button>
+                <button class="btn btn-danger btn-md" type="button" value="Delete" (click)="onDelete(member)" >Delete</button>
+                <button class="btn btn-info btn-md" type="button" value="Cancel" (click)="onMemberDetailView(member)">Cancel</button>
             </div>
         </div>
     </div>

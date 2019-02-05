@@ -12,8 +12,7 @@ namespace MBApplication.Data
         //Attributes
         [Required]
         public int Id { get; set; }
-        [Required]
-        public int FamilyId { get; set; }
+
         [Required]
         public string FirstName { get; set; }
         [Required]
@@ -41,9 +40,10 @@ namespace MBApplication.Data
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime LastModifiedDate { get; set; }
 
-
-        [ForeignKey("FamilyId")]
+        public int FamilyId { get; set; }
         public virtual Family Family { get; set; }
+
+        // public int MembershipId { get; set; }
         public virtual Membership Membership { get; set; }
     }
 }
