@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-//import { expand } from "rxjs/operator/expand";
 import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -8,7 +7,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 
 export class HomeComponent{
-    title = "Inventory Management System";
+    title = "Membership Management System";
 
     card_1_title = "Families";
     card_1_button = "Family List";
