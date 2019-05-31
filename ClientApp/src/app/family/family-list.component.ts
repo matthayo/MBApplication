@@ -1,5 +1,5 @@
 //Imports
-import { Component, Inject, Input, SimpleChange, SimpleChanges } from "@angular/core";
+import { Component, Inject, Input, SimpleChanges } from "@angular/core";
 import { Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 
