@@ -1,8 +1,6 @@
 //imports
 import { Component, OnInit, Inject} from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-// import { Family } from "./family";
-import { FamilyService } from "./family.service";
 import { HttpClient } from "@angular/common/http";
 
 //Decorators

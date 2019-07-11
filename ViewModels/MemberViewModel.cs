@@ -13,7 +13,7 @@ namespace MBApplication.ViewModels
 
         //Attributes
         public int Id { get; set; }
-        public int FamilyId { get; set; }
+        
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
@@ -32,5 +32,10 @@ namespace MBApplication.ViewModels
         public DateTime LastModifiedDate { get; set; }
         [JsonIgnore]
         public int Count { get; set; }
+
+        public int FamilyId { get; set; }
+        public Family Family { get; set; }
+
+
     }
 }

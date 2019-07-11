@@ -1,5 +1,5 @@
 //Imports
-import { Component, OnInit, Inject } from "@angular/core";
+import { Component, Inject } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 

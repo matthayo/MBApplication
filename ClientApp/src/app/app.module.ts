@@ -21,8 +21,6 @@ import { NavFamilyComponent } from './nav/nav-family.component';
 import { NavPaginationComponent } from './nav/nav-pagination.component';
 import { PageNotFoundComponent } from './misc/page-not-found.component';
 import { AppRouting } from './app.routing';
-import { MemberService } from './member/member.service';
-import { FamilyService } from './family/family.service';
 
 @NgModule({
   declarations: [
@@ -51,10 +49,7 @@ import { FamilyService } from './family/family.service';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [
-    MemberService,
-    FamilyService
-  ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

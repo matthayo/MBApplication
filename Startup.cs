@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using MBApplication.MappingProfile;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -47,15 +46,6 @@ namespace MBApplication
                     // options.UseMySQL(Configuration["Data:DefaultConnection:ConnectionString"]));
                     // options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
                     options.UseSqlite("Data Source=MBApplication.db"));
-
-            var config = new AutoMapper.MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new AutoMapperProfile());
-            });
-
-            var mapper = config.CreateMapper();
-
-            services.AddSingleton(mapper);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 

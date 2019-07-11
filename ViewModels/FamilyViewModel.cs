@@ -24,5 +24,6 @@ namespace MBApplication.ViewModels
         public int Count { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime LastModifiedDate { get; set; }
+
     }
 }

@@ -1,9 +1,7 @@
 //Imports
-import { Component, OnInit, Inject } from "@angular/core";
+import { Component, Inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Router, ActivatedRoute } from "@angular/router";
-import { Member } from "./member";
-//import { MemberService } from "./member.service";
 
 //Decorators
 @Component({
@@ -14,51 +12,49 @@ import { Member } from "./member";
 //Export
 export class MemberDetailEditComponent {
     title = "Editing member details"
-    member: Member;
-    url : any;
+    member: IMember;
 
-    constructor(//private memberService: MemberService,
-                private http: HttpClient,
+    constructor(private http: HttpClient,
                 private router: Router,
                 private activatedRoute: ActivatedRoute,
-                @Inject('BASE_URL') baseUrl: string) {
+                @Inject('BASE_URL') private baseUrl: string) {
         this.http = http;
-        this.url = baseUrl;
+
+      this.loadData();
     }
 
-    ngOnInit() {
-        var id = +this.activatedRoute.snapshot.params["id"];
-        if (id) {
-            // this.memberService.get(id).subscribe(
-            //     member => this.member = member
-            // );
-            this.http.get<Member>(this.url + "api/Members/" + id).subscribe(member => {
-              this.member = member;
-            }, error => console.error(error))
-        }
-        else if (id === 0) {
-            console.log("Id is 0: adding a new member unit...");
-            this.member = new Member(0, //Id
-                                    null, // FamilyId
-                                    "Add New Member", // FirstName
-                                    null, // MiddleName
-                                    null, // LastName
-                                    null, // Email
-                                    null, // Telephone
-                                    null, // Gender
-                                    null, // MaritalStatus
-                                    null  // DateOfBirth
-            );
-        }
-        else {
-            console.log("Invalid id: routing back to home");
-            this.router.navigate(["members"]);
-        }
+    loadData() {
+      var id = +this.activatedRoute.snapshot.params["id"];
+      var url = this.baseUrl + "api/Members/GetMemberById/" + id
+
+      if (id) {
+          this.http.get<IMember>(url).subscribe(member => {
+            this.member = member;
+          }, error => console.error(error))
+      }
+      else if (id === 0) {
+          console.log("Id is 0: adding a new member unit...");
+          // this.member = new Member(0, //Id
+          //                         null, // FamilyId
+          //                         "Add New Member", // FirstName
+          //                         null, // MiddleName
+          //                         null, // LastName
+          //                         null, // Email
+          //                         null, // Telephone
+          //                         null, // Gender
+          //                         null, // MaritalStatus
+          //                         null  // DateOfBirth
+          // );
+      }
+      else {
+          console.log("Invalid id: routing back to home");
+          this.router.navigate(["members"]);
+      }
     }
 
-    onInsert(member: Member) {
-        // this.memberService.add(member).subscribe(
-      this.http.post<Member>(this.url + "api/Members/" + member.Id, member).subscribe(
+    onInsert(member: IMember) {
+      var url = this.baseUrl + "api/Members/" + member.Id;
+      this.http.put<IMember>(url, member).subscribe(
             (data) => {
                 this.member = data;
                 console.log("member " + member.Id + " has been added")
@@ -68,10 +64,10 @@ export class MemberDetailEditComponent {
         );
     }
 
-    onUpdate(member: Member) {
-        // this.memberService.update(member).subscribe(
-      this.http.put<Member>(this.url + "api/Members/" + member.Id, member).subscribe(
-            (data) => {
+    onUpdate(member: IMember) {
+      var url = this.baseUrl + "api/Members/";
+      this.http.post<IMember>(url, member).subscribe(
+            data => {
                 this.member = data;
                 console.log("member " + member.Id + " has been updated.");
                 this.router.navigate(["member/view", member.Id]);
@@ -81,9 +77,8 @@ export class MemberDetailEditComponent {
     }
 
     onDelete(id: number) {
-        var id = this.member.Id;
-        // this.memberService.delete(id).subscribe(
-      this.http.delete<Member>(this.url + "api/Members/" + id).subscribe(
+      var url = this.baseUrl + "api/Members/" + id;
+      this.http.delete<IMember>(url).subscribe(
             (data) => {
                 console.log("member " + id + " has been deleted.");
                 this.router.navigate(["members"]);
@@ -92,7 +87,7 @@ export class MemberDetailEditComponent {
         );
     }
 
-    onMemberDetailView(member: Member) {
+    onMemberDetailView(member: IMember) {
         this.router.navigate(["member/view", member.Id]);
         return false;
     }

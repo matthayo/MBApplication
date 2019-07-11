@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using Mapster;
+using Microsoft.EntityFrameworkCore;
 
 namespace MBApplication.Controllers
 {
@@ -15,19 +16,19 @@ namespace MBApplication.Controllers
     public class FamiliesController : Controller
     {
         private readonly ApplicationDbContext _dbContext;
-        private readonly IMapper _mapper;
 
-        public FamiliesController(ApplicationDbContext dbContext, IMapper mapper)
+        public FamiliesController(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
-            _mapper = mapper;
         }
 
         //GET api/families/GetFamilyById/1
         [HttpGet("GetFamilyById/{id}")]
         public IActionResult Get(int? id)
         {
-            var family = _dbContext.Families.Where(f => f.Id == id).FirstOrDefault();
+            var family = _dbContext.Families
+                                    .Where(f => f.Id == id)
+                                    .FirstOrDefault();
             if (id != null)
             {
                 //Using AutoMapper
@@ -51,7 +52,9 @@ namespace MBApplication.Controllers
         [HttpGet("GetByName/{familyname}")]
         public IActionResult GetByName(string familyName)
         {
-            var family = _dbContext.Families.Where(f => f.FamilyName.Equals(familyName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+            var family = _dbContext.Families
+                                    .Where(f => f.FamilyName.Equals(familyName, StringComparison.OrdinalIgnoreCase))
+                                    .FirstOrDefault();
             if (familyName != null)
             {
                 // return new JsonResult(_mapper.Map<FamilyViewModel>(family), DefaultJsonSettings);
@@ -74,7 +77,10 @@ namespace MBApplication.Controllers
         [HttpGet("GetFamilies")]
         public IActionResult GetFamilies()
         {
-            var families = _dbContext.Families.OrderByDescending(f => f.LastModifiedDate).Take(AllFamilies).ToArray();
+            var families = _dbContext.Families
+                                        .OrderByDescending(f => f.LastModifiedDate)
+                                        .Take(AllFamilies)
+                                        .ToArray();
 
             // return new JsonResult(ToFamiliesViewModelList(families), DefaultJsonSettings);
 
@@ -213,32 +219,6 @@ namespace MBApplication.Controllers
             get
             {
                 return _dbContext.Families.Count();
-            }
-        }
-
-        // Maps a collection of Member entities into a list of MemberViewModel objects.
-        // Returns a mapped list of MemberViewModel objects.
-        private List<FamilyViewModel> ToFamiliesViewModelList(IEnumerable<Family> families)
-        {
-            var familiesList = new List<FamilyViewModel>();
-
-            foreach (var family in families)
-            {
-                familiesList.Add(_mapper.Map<FamilyViewModel>(family));
-            }
-            return familiesList;
-        }
-
-        // Returns a suitable JsonSerializerSettings object that can be used to generate the 
-        // JsonResult return value for this Controller's methods.
-        private JsonSerializerSettings DefaultJsonSettings
-        {
-            get
-            {
-                return new JsonSerializerSettings()
-                {
-                    Formatting = Formatting.Indented
-                };
             }
         }
     }

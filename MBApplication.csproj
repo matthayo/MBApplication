@@ -10,11 +10,11 @@
 
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    <UserSecretsId>9859e268-5f63-4b6a-82d3-29724f20a7df</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-  <PackageReference Include="AutoMapper" Version="8.0.0" />
-	<PackageReference Include="IdentityModel" Version="3.10.4" />
+	  <PackageReference Include="IdentityModel" Version="3.10.4" />
     <PackageReference Include="IdentityServer4" Version="2.3.2" />
     <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.3.0" />
     <PackageReference Include="IdentityServer4.EntityFramework" Version="2.3.2" />
@@ -29,9 +29,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="Npgsql" Version="4.0.4" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.0" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />				  
   </ItemGroup>
 

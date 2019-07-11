@@ -1,7 +1,5 @@
 //Imports
-import { Component, Inject, Input, SimpleChange, SimpleChanges } from "@angular/core";
-// import { IFamily } from "./Family";
-// import { FamilyService } from "./family.service";
+import { Component, Inject, Input, SimpleChanges } from "@angular/core";
 import { Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 

@@ -32,8 +32,6 @@ namespace MBApplication.Data
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:MM:ss}", ApplyFormatInEditMode = true)]
         public DateTime LastModifiedDate { get; set; }
-
-        public virtual List<Member> Members { get; set; }
     }
 
 }
