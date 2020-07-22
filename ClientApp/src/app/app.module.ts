@@ -20,7 +20,7 @@ import { NavBreadcrumbComponent } from './nav/nav-breadcrumb.component';
 import { NavFamilyComponent } from './nav/nav-family.component';
 import { NavPaginationComponent } from './nav/nav-pagination.component';
 import { PageNotFoundComponent } from './misc/page-not-found.component';
-import { AppRouting } from './app.routing';
+import { AppRoutingModule } from "./app.routing";
 
 @NgModule({
   declarations: [
@@ -41,15 +41,15 @@ import { AppRouting } from './app.routing';
     NavBreadcrumbComponent,
     NavFamilyComponent,
     NavPaginationComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
-    AppRouting,
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    AppRoutingModule,
+    BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
     HttpClientModule,
     FormsModule,
   ],
-  providers: [ ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
